@@ -407,22 +407,36 @@
 
                     </div>
                     <div class='actions'>
-                        <a target="_blank" class="map_button" href="https://goo.gl/maps/WUq5wyerMt62"><i
-                                class='fa fa-map-marker'></i>
-                            View Map
-                        </a><a class="contact_us" href="#"><i class='fa fa-envelope-o'></i>
-                        Contact Us
+                        <h3>Сслыка на карту Гугл</h3>
+                        <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ mapLinkForm.as_p }}</form>
+                        </a><a class="contact_us" href="{% url 'main:contact' %}"><i class='fa fa-envelope-o'></i>
+                        Контакты
                     </a></div>
                 </div>
                 <div class='main'>
                     <div class='photo_overlay overlay' id='property_overlay'>
                         <div class='header'>
-                            <h3>Residencia El Balata</h3>
+                            <h3><form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ nameOfHotel_form.as_p }}</form></h3>
                         </div>
                         <div class='hero'>
                             <div class='thumbs'>
-                                <ul class='carousel-thumb'>
-                                    <li class='photo'>
+                                
+                                    Добавте фото
+                                     <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ uploadPhotoInfoForm1.as_p }}</form>
+
+                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ uploadPhotoInfoForm2.as_p }}</form>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ uploadPhotoInfoForm3.as_p }}</form>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ uploadPhotoInfoForm4.as_p }}</form>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ uploadPhotoInfoForm5.as_p }}</form>
+                                <!-- <ul class='carousel-thumb'> -->
+                                    <!-- <li class='photo'>
                                         <a data-slide-index="0" href="#"><img alt="Residencia El Balata"
                                                                               data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Property/000/144/201/thumb/vista_esterna_balata.1jpg.jpg?1525131483"
                                                                               src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
@@ -470,7 +484,7 @@
                                                                               src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
                                                                               width="100" height="100"/>
                                         </a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                             <span class='edge'></span>
                             <span class='container'>
