@@ -349,70 +349,8 @@
                                     {% endfor %}
                                 </table>
                                     <button type="submit" value="Сохранить" class="btn btn-default btn-round form-control-last">Сохранить</button>
-
-
-
                             </form>
                         </td>
-
-
-                        {% for room in rooms %}
-                        <td class='room_name'>
-                            <p>{{ room.name }} </p>
-                            <a rel=".photo_overlay[data-id=room_107199]" class="photos" href="#">Фото</a>
-                            <a class="details" href="#room_107199">Подробности</a>
-                        </td>
-                        <td class='book_now'>
-                            <a class="book dynamic en"
-                               href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-08"><span
-                                    class='fa fa-chevron-circle-right'></span>
-                                Бронирование
-                            </a></td>
-                        <td class='rack_rate'>$</td>
-                        <td class='rate start weekend' data-id='124780416'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-08">30</a>
-                        </td>
-                        <td class='end rate weekend' data-id='124780417'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-09">30</a>
-                        </td>
-                        <td class='rate' data-id='124780418'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-10">30</a>
-                        </td>
-                        <td class='rate' data-id='124780419'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-11">30</a>
-                        </td>
-                        <td class='rate' data-id='124780420'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-12">30</a>
-                        </td>
-                        <td class='rate' data-id='124780421'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-13">30</a>
-                        </td>
-                        <td class='rate' data-id='124780422'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-14">30</a>
-                        </td>
-                        <td class='rate start weekend' data-id='124780423'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-15">30</a>
-                        </td>
-                        <td class='end rate weekend' data-id='124780424'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-16">30</a>
-                        </td>
-                        <td class='rate' data-id='124780425'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-17">30</a>
-                        </td>
-                        <td class='rate' data-id='124780426'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-18">30</a>
-                        </td>
-                        <td class='rate' data-id='124780427'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-19">30</a>
-                        </td>
-                        <td class='rate' data-id='124780428'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-20">30</a>
-                        </td>
-                        <td class='rate' data-id='124780429'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-21">30</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
                     </tbody>
                     <tfoot>
                     <tr>
@@ -423,85 +361,48 @@
                     </tfoot>
                 </table>
                 <script id='tool_tip_template' type='text/x-jquery-tmpl'>
-<!-- <tbody>
-<tr>
-<th>Minimum Stay</th>
-<td>${min_stay}</td>
-{{if max_stay}}
-<tr>
-<th>Maximum Stay</th>
-<td>${max_stay}</td>
-</tr>
-{{/if}}
-{{if availability }}
-<tr>
-<th>Availability</th>
-<td>${availability}</td>
-</tr>
-{{/if}}
-<tr>
-<th>Included Occupancy</th>
-<td>${incl_occ}</td>
-</tr>
-<tr>
-<th>Maximum Occupancy</th>
-<td>${max_occ}</td>
-</tr>
-{{if cta }}
-<tr>
-<th>Closed To Arrival</th>
-<td></td>
-</tr>
-{{/if}}
-{{if ctd }}
-<tr>
-<th>Closed To Departure</th>
-<td></td>
-</tr>
-{{/if}}
-{{if inclusions }}
-<tr class='inclusions'>
-<td colspan='2'></td>
-</tr>
-{{/if}}
-<tr>
-<th>${display_rates}</th>
-</tr>
-</tr>
-</tbody> -->
+
 
                 </script>
 
 
             </div>
             <div class='property'>
-                <h2>Property Information</h2>
+                <h2>Информация об отеле</h2>
                 <div class='location'>
                     <div class='vcard'>
                         <div class='fn org'>
-                            <strong>Residencia El Balata</strong>
+                            <strong>Информация об отеле
+                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                    {{ nameOfHotelInfo.as_p }}
+                                </form>
+                            </strong>
                         </div>
-                        <div class='phone'>
-                            <span class='tel'><input type="text" name="" placeholder="+1 8092405076"></span>
-                        </div>
-                        <div class='phone'>
-                            <span class='tel'>8296678071</span>
+                        <div class='phone'> Телефон
+                            <span class='tel'><form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ telephoneNumberForm.as_p }}</span>
                         </div>
                         <div class='adr'>
-                            <div class='street-address'>
-                                Carretera El Boulevard del Atlántico, 7
+                            <div class='street-address'> Адрес
+                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ addresForm.as_p }}</form>
                                 <br>
 
                             </div>
                             <div>
-                                <span class='locality'>Abra Grande</span>
-                                <span class='region'>Las Terrenas </span>
-                                <span class='postal-code'>32000 Dominican Republic</span>
+                                <span class='locality'> местонахождение
+                                    <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ localityForm.as_p }}</form></span>
+                                <span class='region'> регион
+                                    <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ regionForm.as_p }}</form> </span>
+                                <span class='postal-code'> Почтовый код <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ postal_codeForm.as_p }}</form></span>
                             </div>
                         </div>
                         <div class='website'>
-                            <a class='website_url' href='https://www.residenciaelbalata-lasterrenas.com/'
-                               title='Return to main website'>Return to main website</a>
+                            <a class='website_url' href='{% url "main:main_page" %}'
+                               title='Return to main website'>Вернуться на главную</a>
                         </div>
 
                     </div>
