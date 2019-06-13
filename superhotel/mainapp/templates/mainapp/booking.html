@@ -24,9 +24,21 @@
 </div>
 
 <div id='main'>
-    <div id='banner'><img
+    <div id='banner'>
+        {% if headerPhoto %}
+            <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                    {{ headerPhoto.as_p }}
+            </form>
+        {% else %}    
+        <img
             src="https://photos-app-prod.littlehotelier.com/attachments/properties/banners/9012/standard/20180710_141615.jpg?1531354274"
-            alt="20180710 141615"/></div>
+            alt="20180710 141615"/>
+            <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                    {{ headerPhoto.as_p }}
+            </form>
+        {% endif %}    
+
+        </div>
     <div id='content'>
         <div class='overview'>
             <div class='header'>
@@ -424,17 +436,21 @@
                             <div class='thumbs'>
                                 
                                     Добавте фото
-                                     <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
-                                {{ uploadPhotoInfoForm1.as_p }}</form>
-
                                 <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
-                                {{ uploadPhotoInfoForm2.as_p }}</form>
+                                    {{ uploadPhotoInfoForm1.as_p }}
+                                </form>
                                 <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
-                                {{ uploadPhotoInfoForm3.as_p }}</form>
+                                    {{ uploadPhotoInfoForm2.as_p }}
+                                </form>
                                 <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
-                                {{ uploadPhotoInfoForm4.as_p }}</form>
+                                    {{ uploadPhotoInfoForm3.as_p }}
+                                </form>
                                 <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
-                                {{ uploadPhotoInfoForm5.as_p }}</form>
+                                    {{ uploadPhotoInfoForm4.as_p }}
+                                </form>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                    {{ uploadPhotoInfoForm5.as_p }}
+                                </form>
                                 <!-- <ul class='carousel-thumb'> -->
                                     <!-- <li class='photo'>
                                         <a data-slide-index="0" href="#"><img alt="Residencia El Balata"
@@ -509,7 +525,7 @@
                     </div>
                 </div>
                 <h2>Accommodation Details</h2>
-                <div class='rooms'>
+                <!-- <div class='rooms'>
                     <div class='room' id='room_107199'>
                         <div class='photo_overlay overlay' data-id='room_107199'>
                             <div class='header'>
@@ -1862,24 +1878,19 @@
                             </div>
                         </div>
                     </div>
-
+ -->
                 </div>
                 <div class='terms_conditions' id='terms_conditions'>
-                    <h2>Terms &amp; Conditions</h2>
-                    <p>No se admiten mascotas
-                        <br>Hay zonas específicas para fumar</p>
-
-                    <h4>Cancellation Policy</h4>
-                    <p>El cliente puede cancelar la reserva de forma gratuita hasta 3 días antes de la fecha de
-                        llegada.</p>
-
-                    <p>El cliente tendrá que pagar el precio de las 2 primeras noches si cancela durante los 3 días
-                        antes de la fecha de llegada.</p>
+                    <h2>Условия</h2>
+                    <p><form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                {{ termsAndConditions.as_p }}
+                        </form>
+                    </p>
                 </div>
 
             </div>
 
-            <div class='overlay' id='enquiry'>
+            <!-- <div class='overlay' id='enquiry'>
                 <h3>Make an enquiry</h3>
                 <form novalidate="novalidate" class="formtastic enquiry"
                       action="/properties/resielbalatadirect/enquiry?locale=en" accept-charset="UTF-8" method="post">
@@ -1940,7 +1951,7 @@
                         </ol>
                     </fieldset>
                 </form>
-            </div>
+            </div> -->
 
         </div>
 
@@ -1954,7 +1965,7 @@
 <!--[if lte IE 6]>
 <script src="/assets/jquery.bgiframe.min-6847f8236de631ebb5dec189bd82a82d.js"></script>
 <![endif]-->
-<script>
+<!-- <script>
   $(document).ready(function() {
     $('ul.carousel-property').bxSlider({ slideWidth: 300, pager: false, minSlides: 5, maxSlides: 5, moveSlides: 4, infiniteLoop: false, hideControlOnEnd: true });
 
@@ -1991,7 +2002,7 @@
 
   });
 
-</script>
+</script> -->
 <div class='tip' id='room_type_date_tooltip'>
     <div class='special_header'>Hot Deal!</div>
     <table>
