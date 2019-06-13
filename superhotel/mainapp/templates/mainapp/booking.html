@@ -506,6 +506,34 @@
                     </div>
                 </div>
                 <h2>Детали размещения</h2>
+                {% if rooms %}
+                    {% for room in rooms %}
+                    <div class="room">
+                        <div class='header'>
+                                <h4>{{ room.name }}</h4>
+                            </div>
+                          <div class='description_features'>
+                            <div class='description'>
+                                <h3>
+                                    <a class="book dynamic"
+                                       href="{% url 'main:roomView' %}"><span
+                                            class='fa fa-chevron-circle-right'></span>
+                                        Бронь
+                                    </a></h3>
+                            </div>
+                            <div class='features'>
+                                <ol>
+                                    {% for feature in room %}
+                                        <li class='feature'>{{ feature }}</li>
+                                    {% endfor %}
+                                </ol>
+                            </div>
+                        </div>    
+
+                    </div>
+
+                    {% endfor %}
+                {% endif %}
                 <!-- <div class='rooms'>
                     <div class='room' id='room_107199'>
                         <div class='photo_overlay overlay' data-id='room_107199'>
