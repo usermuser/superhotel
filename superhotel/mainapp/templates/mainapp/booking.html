@@ -80,9 +80,9 @@
                     <thead class='controls'>
                         <!-- Так и не понял для чего этот нужен быть input -->
                     <form action="/properties/resielbalatadirect?locale=en" accept-charset="UTF-8" method="get"><input
-                            name="utf8" type="hidden" value="&#x2713;"/>
+                                name="utf8" type="hidden" value="&#x2713;"/>
                         <input type="hidden" name="locale" id="locale" value="en"/>
-                        
+
                         <!--  <tr>
                             <th class='currency_picker' colspan='3'>
                                 <label for='currency'>Показывать цену в</label>
@@ -96,7 +96,7 @@
                                     <option value="BWP">Botswana Pulas (BWP)</option>
                                     <option value="CNY">China Yuan Renminbi (CNY)</option>
                                     <option value="JPY">Japan Yen (JPY)</option>
-                                </select> 
+                                </select>
                             </th>
                             <th class='date_navigation' colspan='14'>
                                 <table>
@@ -142,108 +142,19 @@
                                             </ul>
 
                                         </th>
-                                    </tr> --> 
+                                    </tr> -->
+                                </form>
                                 </table>
                             </th>
                         </tr>
 
-                    </form>
+
 
 
                     </thead>
                 </table>
                 <table cellspacing='0' class='rates' id='rates'>
-                   <!--  <thead>
-                    <tr>
-                        <th class='note' colspan='2'>Цены будут показаны в Долларах США</th>
-                        <th class='rack_rate'></th>
-                        <th class='date start weekend'>
-                            <span class='day_name'>Суб</span>
-                            <span class='day'>08</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date end weekend'>
-                            <span class='day_name'>Вос</span>
-                            <span class='day'>09</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date'>
-                            <span class='day_name'>Пон</span>
-                            <span class='day'>10</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date'>
-                            <span class='day_name'>Вт</span>
-                            <span class='day'>11</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date'>
-                            <span class='day_name'>Ср</span>
-                            <span class='day'>12</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date'>
-                            <span class='day_name'>Чт</span>
-                            <span class='day'>13</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date'>
-                            <span class='day_name'>Пт</span>
-                            <span class='day'>14</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date start weekend'>
-                            <span class='day_name'>Суб</span>
-                            <span class='day'>15</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date end weekend'>
-                            <span class='day_name'>Вос</span>
-                            <span class='day'>16</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date'>
-                            <span class='day_name'>Пон</span>
-                            <span class='day'>17</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date'>
-                            <span class='day_name'>Вт</span>
-                            <span class='day'>18</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date'>
-                            <span class='day_name'>Ср</span>
-                            <span class='day'>19</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date'>
-                            <span class='day_name'>Чт</span>
-                            <span class='day'>20</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
-                        <th class='date'>
-                            <span class='day_name'>Пт</span>
-                            <span class='day'>21</span>
-                            <span class='month'>Июнь</span>
-                            <span class='year'>2019</span>
-                        </th>
 
-                    </tr>
-                    </thead> -->
                     <tbody>
                     <!-- <tr>
                         <td class='room_name'>
@@ -374,6 +285,7 @@
                         <div class='phone'> Телефон
                             <span class='tel'><form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
                                 {{ telephoneNumberForm.as_p }}</span>
+                        </form>
                         </div>
                         <div class='adr'>
                             <div class='street-address'> Адрес
@@ -432,56 +344,6 @@
                                 <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
                                     {{ uploadPhotoInfoForm5.as_p }}
                                 </form>
-                                <!-- <ul class='carousel-thumb'> -->
-                                    <!-- <li class='photo'>
-                                        <a data-slide-index="0" href="#"><img alt="Residencia El Balata"
-                                                                              data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Property/000/144/201/thumb/vista_esterna_balata.1jpg.jpg?1525131483"
-                                                                              src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                              width="100" height="100"/>
-                                        </a></li>
-                                    <li class='photo'>
-                                        <a data-slide-index="1" href="#"><img alt="Residencia El Balata"
-                                                                              data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Property/000/144/210/thumb/20180331_124533.jpg?1525132324"
-                                                                              src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                              width="100" height="100"/>
-                                        </a></li>
-                                    <li class='photo'>
-                                        <a data-slide-index="2" href="#"><img alt="Residencia El Balata"
-                                                                              data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Property/000/144/202/thumb/area_desayuno.jpg?1525131500"
-                                                                              src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                              width="100" height="100"/>
-                                        </a></li>
-                                    <li class='photo'>
-                                        <a data-slide-index="3" href="#"><img alt="Residencia El Balata"
-                                                                              data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Property/000/144/206/thumb/20171217_085608.jpg?1525132044"
-                                                                              src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                              width="100" height="100"/>
-                                        </a></li>
-                                    <li class='photo'>
-                                        <a data-slide-index="4" href="#"><img alt="Residencia El Balata"
-                                                                              data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Property/000/144/207/thumb/20171217_085540.jpg?1525132085"
-                                                                              src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                              width="100" height="100"/>
-                                        </a></li>
-                                    <li class='photo'>
-                                        <a data-slide-index="5" href="#"><img alt="Residencia El Balata"
-                                                                              data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Property/000/144/209/thumb/20171217_085956.jpg?1525132225"
-                                                                              src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                              width="100" height="100"/>
-                                        </a></li>
-                                    <li class='photo'>
-                                        <a data-slide-index="6" href="#"><img alt="Residencia El Balata"
-                                                                              data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Property/000/144/211/thumb/20180331_122618.jpg?1525132385"
-                                                                              src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                              width="100" height="100"/>
-                                        </a></li>
-                                    <li class='photo'>
-                                        <a data-slide-index="7" href="#"><img alt="Residencia El Balata"
-                                                                              data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Property/000/144/214/thumb/20180331_121802.jpg?1525132603"
-                                                                              src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                              width="100" height="100"/>
-                                        </a></li>
-                                </ul> -->
                             </div>
                     <div class='description'>
                         <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
@@ -516,7 +378,7 @@
                             <div class='description'>
                                 <h3>
                                     <a class="book dynamic"
-                                       href="{% url 'main:roomView' %}"><span
+                                       href="{% url 'main:roomView' id %}"><span
                                             class='fa fa-chevron-circle-right'></span>
                                         Бронь
                                     </a></h3>
@@ -534,1360 +396,100 @@
 
                     {% endfor %}
                 {% endif %}
-                <!-- <div class='rooms'>
-                    <div class='room' id='room_107199'>
-                        <div class='photo_overlay overlay' data-id='room_107199'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Habitación Economy Standard </h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img alt="Habitación Economy Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/thumb/20180525_161001_1_.jpg?1527303679"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img alt="Habitación Economy Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/668/thumb/20180525_161035_1_.jpg?1527303748"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img alt="Habitación Economy Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/669/thumb/20180525_161344_1_.jpg?1527303825"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img alt="Habitación Economy Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/670/thumb/20180525_161512_1_.jpg?1527303917"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Habitación Economy Standard "
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/standard/20180525_161001_1_.jpg?1527303679"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                   height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/668/standard/20180525_161035_1_.jpg?1527303748"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/669/standard/20180525_161344_1_.jpg?1527303825"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><li class='photo'><img alt="Habitación Economy Standard "
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/670/standard/20180525_161512_1_.jpg?1527303917"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                           height="225"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
+                <div class='rooms'>
+                    <!--<div class='room' id='room_107199'>-->
+                        <!--<div class='photo_overlay overlay' data-id='room_107199'>-->
+                            <!--<div class='header'>-->
+                                <!--<h3>Residencia El Balata</h3>-->
+                                <!--<h4>Habitación Economy Standard </h4>-->
+                            <!--</div>-->
+                            <!--<div class='hero'>-->
+                                <!--<div class='thumbs'>-->
+                                    <!--<ul class='carousel-thumb'>-->
+                                        <!--<li class='photo'>-->
+                                            <!--<a data-slide-index="0" href="#"><img alt="Habitación Economy Standard "-->
+                                                                                  <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/thumb/20180525_161001_1_.jpg?1527303679"-->
+                                                                                  <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
+                                                                                  <!--width="100" height="100"/>-->
+                                            <!--</a></li>-->
+                                        <!--<li class='photo'>-->
+                                            <!--<a data-slide-index="1" href="#"><img alt="Habitación Economy Standard "-->
+                                                                                  <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/668/thumb/20180525_161035_1_.jpg?1527303748"-->
+                                                                                  <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
+                                                                                  <!--width="100" height="100"/>-->
+                                            <!--</a></li>-->
+                                        <!--<li class='photo'>-->
+                                            <!--<a data-slide-index="2" href="#"><img alt="Habitación Economy Standard "-->
+                                                                                  <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/669/thumb/20180525_161344_1_.jpg?1527303825"-->
+                                                                                  <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
+                                                                                  <!--width="100" height="100"/>-->
+                                            <!--</a></li>-->
+                                        <!--<li class='photo'>-->
+                                            <!--<a data-slide-index="3" href="#"><img alt="Habitación Economy Standard "-->
+                                                                                  <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/670/thumb/20180525_161512_1_.jpg?1527303917"-->
+                                                                                  <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
+                                                                                  <!--width="100" height="100"/>-->
+                                            <!--</a></li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<span class='edge'></span>-->
+                                <!--<span class='container'>-->
+<!--<ul class='carousel-standard'>-->
+<!--<a href="#"><li class='photo'><img alt="Habitación Economy Standard "-->
+                                   <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/standard/20180525_161001_1_.jpg?1527303679"-->
+                                   <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
+                                   <!--height="225"/></li>-->
+<!--</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "-->
+                                       <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/668/standard/20180525_161035_1_.jpg?1527303748"-->
+                                       <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
+                                       <!--height="225"/></li>-->
+<!--</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "-->
+                                       <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/669/standard/20180525_161344_1_.jpg?1527303825"-->
+                                       <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
+                                       <!--height="225"/></li>-->
+<!--</a><li class='photo'><img alt="Habitación Economy Standard "-->
+                           <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/670/standard/20180525_161512_1_.jpg?1527303917"-->
+                           <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
+                           <!--height="225"/></li>-->
+<!--</ul>-->
+<!--</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
 
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107199]" class="photo_small" href="#"><img
-                                    alt="Habitación Economy Standard "
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/thumb/20180525_161001_1_.jpg?1527303679"/>
-                            </a><a rel=".photo_overlay[data-id=room_107199]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Habitación Economy Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107199?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>1 Full Bed</li>
-                                    <li class='feature'>Shower over bath</li>
-                                    <li class='feature'>Linen and Towels Provided</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>WIFI</li>
-                                    <li class='feature'>Shower</li>
-                                    <li class='feature'>Daily Room Service</li>
-                                    <li class='feature'>Flat Screen TV</li>
-                                    <li class='feature'>Queen Bed</li>
-                                    <li class='feature'>En-Suite</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
+                        <!--<div class='photo'>-->
+                            <!--<a rel=".photo_overlay[data-id=room_107199]" class="photo_small" href="#"><img-->
+                                    <!--alt="Habitación Economy Standard "-->
+                                    <!--src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/thumb/20180525_161001_1_.jpg?1527303679"/>-->
+                            <!--</a><a rel=".photo_overlay[data-id=room_107199]" class="photos" href="#">Photos</a>-->
+                        <!--</div>-->
+                        <!--<div class='description_features'>-->
+                            <!--<div class='description'>-->
+                                <!--<h3>-->
+                                    <!--Habitación Economy Standard-->
+                                    <!--<a class="book dynamic"-->
+                                       <!--href="/reservations/resielbalatadirect/107199?locale=en"><span-->
+                                            <!--class='fa fa-chevron-circle-right'></span>-->
+                                        <!--Book-->
+                                    <!--</a></h3>-->
+                                <!--<p>Actualice por favor</p>-->
+                            <!--</div>-->
+                            <!--<div class='features'>-->
+                                <!--<ol>-->
+                                    <!--<li class='feature'>1 Full Bed</li>-->
+                                    <!--<li class='feature'>Shower over bath</li>-->
+                                    <!--<li class='feature'>Linen and Towels Provided</li>-->
+                                    <!--<li class='feature'>Ceiling Fans</li>-->
+                                    <!--<li class='feature'>WIFI</li>-->
+                                    <!--<li class='feature'>Shower</li>-->
+                                    <!--<li class='feature'>Daily Room Service</li>-->
+                                    <!--<li class='feature'>Flat Screen TV</li>-->
+                                    <!--<li class='feature'>Queen Bed</li>-->
+                                    <!--<li class='feature'>En-Suite</li>-->
+                                <!--</ol>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
 
-                    <div class='room' id='room_107215'>
-                        <div class='photo_overlay overlay' data-id='room_107215'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>One Bedroom Apartment Standard</h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img alt="One Bedroom Apartment Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/639/thumb/20170421_095350.jpg?1525368974"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img alt="One Bedroom Apartment Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/408/thumb/20180710_120431_1_.jpg?1531245883"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img alt="One Bedroom Apartment Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/409/thumb/20180710_120336_1_.jpg?1531245945"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img alt="One Bedroom Apartment Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/640/thumb/20170421_095331.jpg?1525369420"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="4" href="#"><img alt="One Bedroom Apartment Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/406/thumb/20180710_120553_1_.jpg?1531245715"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="5" href="#"><img alt="One Bedroom Apartment Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/407/thumb/20180710_120526_1_.jpg?1531245823"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="One Bedroom Apartment Standard"
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/639/standard/20170421_095350.jpg?1525368974"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                   height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="One Bedroom Apartment Standard"
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/408/standard/20180710_120431_1_.jpg?1531245883"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="One Bedroom Apartment Standard"
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/409/standard/20180710_120336_1_.jpg?1531245945"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="One Bedroom Apartment Standard"
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/640/standard/20170421_095331.jpg?1525369420"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="One Bedroom Apartment Standard"
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/406/standard/20180710_120553_1_.jpg?1531245715"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                       height="400"/></li>
-</a><li class='photo'><img alt="One Bedroom Apartment Standard"
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/407/standard/20180710_120526_1_.jpg?1531245823"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                           height="225"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107215]" class="photo_small" href="#"><img
-                                    alt="One Bedroom Apartment Standard"
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/639/thumb/20170421_095350.jpg?1525368974"/>
-                            </a><a rel=".photo_overlay[data-id=room_107215]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    One Bedroom Apartment Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107215?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>1 Full Bed</li>
-                                    <li class='feature'>Television</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>Garden View</li>
-                                    <li class='feature'>Kitchen</li>
-                                    <li class='feature'>Shower over bath</li>
-                                    <li class='feature'>Fridge</li>
-                                    <li class='feature'>Verandah</li>
-                                    <li class='feature'>Double Bed</li>
-                                    <li class='feature'>Pre-Paid Air Conditioning</li>
-                                    <li class='feature'>Daily Housekeeping</li>
-                                    <li class='feature'>En-Suite</li>
-                                    <li class='feature'>Housekeeping</li>
-                                    <li class='feature'>WIFI</li>
-                                    <li class='feature'>Flat Screen TV</li>
-                                    <li class='feature'>Stove top</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107218'>
-                        <div class='photo_overlay overlay' data-id='room_107218'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Apartamento con terraza Standard </h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img
-                                                    alt="Apartamento con terraza Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/109/thumb/20181204_144209.jpg?1548103997"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img
-                                                    alt="Apartamento con terraza Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/110/thumb/20181204_144404.jpg?1548104012"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img
-                                                    alt="Apartamento con terraza Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/111/thumb/20181204_144341.jpg?1548104044"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img
-                                                    alt="Apartamento con terraza Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/112/thumb/20181204_144527.jpg?1548104062"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="4" href="#"><img
-                                                    alt="Apartamento con terraza Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/113/thumb/20181204_144825.jpg?1548104080"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="5" href="#"><img
-                                                    alt="Apartamento con terraza Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/114/thumb/20181204_144804.jpg?1548104096"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="6" href="#"><img
-                                                    alt="Apartamento con terraza Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/115/thumb/20181204_144911.jpg?1548104107"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Apartamento con terraza Standard "
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/109/standard/20181204_144209.jpg?1548103997"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                   height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Apartamento con terraza Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/110/standard/20181204_144404.jpg?1548104012"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                       height="400"/></li>
-</a><a href="#"><li class='photo'><img alt="Apartamento con terraza Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/111/standard/20181204_144341.jpg?1548104044"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Apartamento con terraza Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/112/standard/20181204_144527.jpg?1548104062"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Apartamento con terraza Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/113/standard/20181204_144825.jpg?1548104080"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Apartamento con terraza Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/114/standard/20181204_144804.jpg?1548104096"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><li class='photo'><img alt="Apartamento con terraza Standard "
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/115/standard/20181204_144911.jpg?1548104107"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                           height="400"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107218]" class="photo_small" href="#"><img
-                                    alt="Apartamento con terraza Standard "
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/109/thumb/20181204_144209.jpg?1548103997"/>
-                            </a><a rel=".photo_overlay[data-id=room_107218]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Apartamento con terraza Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107218?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>1 Full Bed</li>
-                                    <li class='feature'>2 Bedrooms</li>
-                                    <li class='feature'>Internet Access</li>
-                                    <li class='feature'>Flat Screen TV</li>
-                                    <li class='feature'>Housekeeping</li>
-                                    <li class='feature'>Kitchen</li>
-                                    <li class='feature'>24hr Security</li>
-                                    <li class='feature'>Stove top</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>WIFI</li>
-                                    <li class='feature'>2 Queen Beds</li>
-                                    <li class='feature'>Shower over bath</li>
-                                    <li class='feature'>Terrace</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107216'>
-                        <div class='photo_overlay overlay' data-id='room_107216'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Two Bedroom Apartment 4 pax Standard </h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img
-                                                    alt="Two Bedroom Apartment 4 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/417/thumb/20170421_163221.jpg?1525235612"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img
-                                                    alt="Two Bedroom Apartment 4 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/422/thumb/20170421_164027.jpg?1525235921"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img
-                                                    alt="Two Bedroom Apartment 4 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/418/thumb/DSC01384.JPG?1525235652"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img
-                                                    alt="Two Bedroom Apartment 4 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/419/thumb/20170421_163254.jpg?1525235785"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="4" href="#"><img
-                                                    alt="Two Bedroom Apartment 4 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/420/thumb/20170421_163514.jpg?1525235832"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="5" href="#"><img
-                                                    alt="Two Bedroom Apartment 4 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/421/thumb/20170421_163656.jpg?1525235872"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Two Bedroom Apartment 4 pax Standard "
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/417/standard/20170421_163221.jpg?1525235612"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                   height="400"/></li>
-</a><a href="#"><li class='photo'><img alt="Two Bedroom Apartment 4 pax Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/422/standard/20170421_164027.jpg?1525235921"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Two Bedroom Apartment 4 pax Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/418/standard/DSC01384.JPG?1525235652"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Two Bedroom Apartment 4 pax Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/419/standard/20170421_163254.jpg?1525235785"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Two Bedroom Apartment 4 pax Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/420/standard/20170421_163514.jpg?1525235832"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                       height="400"/></li>
-</a><li class='photo'><img alt="Two Bedroom Apartment 4 pax Standard "
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/421/standard/20170421_163656.jpg?1525235872"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                           height="225"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107216]" class="photo_small" href="#"><img
-                                    alt="Two Bedroom Apartment 4 pax Standard "
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/417/thumb/20170421_163221.jpg?1525235612"/>
-                            </a><a rel=".photo_overlay[data-id=room_107216]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Two Bedroom Apartment 4 pax Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107216?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>1 Queen Bed</li>
-                                    <li class='feature'>En-suite Bathroom</li>
-                                    <li class='feature'>Shower above bath</li>
-                                    <li class='feature'>Fridge</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>1 Queen bed plus 1 single bed</li>
-                                    <li class='feature'>Daily Room Service</li>
-                                    <li class='feature'>Stove top</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107217'>
-                        <div class='photo_overlay overlay' data-id='room_107217'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Two Bedroom Apartment 6 pax Standard </h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img
-                                                    alt="Two Bedroom Apartment 6 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/660/thumb/20170113_122404.jpg?1525373147"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img
-                                                    alt="Two Bedroom Apartment 6 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/663/thumb/20170113_122414_-_Copy.jpg?1525373181"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img
-                                                    alt="Two Bedroom Apartment 6 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/664/thumb/20170113_122542.jpg?1525373235"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img
-                                                    alt="Two Bedroom Apartment 6 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/666/thumb/DSC00701.JPG?1525373307"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="4" href="#"><img
-                                                    alt="Two Bedroom Apartment 6 pax Standard "
-                                                    data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/669/thumb/20170113_122618.jpg?1525373353"
-                                                    src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                    width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Two Bedroom Apartment 6 pax Standard "
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/660/standard/20170113_122404.jpg?1525373147"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                   height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Two Bedroom Apartment 6 pax Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/663/standard/20170113_122414_-_Copy.jpg?1525373181"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                       height="400"/></li>
-</a><a href="#"><li class='photo'><img alt="Two Bedroom Apartment 6 pax Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/664/standard/20170113_122542.jpg?1525373235"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Two Bedroom Apartment 6 pax Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/666/standard/DSC00701.JPG?1525373307"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                       height="400"/></li>
-</a><li class='photo'><img alt="Two Bedroom Apartment 6 pax Standard "
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/669/standard/20170113_122618.jpg?1525373353"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                           height="400"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107217]" class="photo_small" href="#"><img
-                                    alt="Two Bedroom Apartment 6 pax Standard "
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/660/thumb/20170113_122404.jpg?1525373147"/>
-                            </a><a rel=".photo_overlay[data-id=room_107217]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Two Bedroom Apartment 6 pax Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107217?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>1 Queen Bed</li>
-                                    <li class='feature'>Cable/Satellite TV</li>
-                                    <li class='feature'>Shower over bath</li>
-                                    <li class='feature'>Internet Access</li>
-                                    <li class='feature'>Pre-Paid Air Conditioning</li>
-                                    <li class='feature'>Bathroom</li>
-                                    <li class='feature'>2 Bedrooms, Each with King Bed</li>
-                                    <li class='feature'>Daily Room Service</li>
-                                    <li class='feature'>Linen and Towels Provided</li>
-                                    <li class='feature'>Fridge</li>
-                                    <li class='feature'>Lounge Area</li>
-                                    <li class='feature'>24hr Security</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107206'>
-                        <div class='photo_overlay overlay' data-id='room_107206'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Habitación Family Standard </h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img alt="Habitación Family Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/142/thumb/20181207_130339.jpg?1548114470"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img alt="Habitación Family Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/143/thumb/20181207_130422.jpg?1548114482"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img alt="Habitación Family Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/144/thumb/20181207_130451.jpg?1548114495"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img alt="Habitación Family Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/145/thumb/20181207_130608.jpg?1548114520"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Habitación Family Standard "
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/142/standard/20181207_130339.jpg?1548114470"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                   height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Habitación Family Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/143/standard/20181207_130422.jpg?1548114482"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Habitación Family Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/144/standard/20181207_130451.jpg?1548114495"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><li class='photo'><img alt="Habitación Family Standard "
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/145/standard/20181207_130608.jpg?1548114520"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                           height="225"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107206]" class="photo_small" href="#"><img
-                                    alt="Habitación Family Standard "
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/185/142/thumb/20181207_130339.jpg?1548114470"/>
-                            </a><a rel=".photo_overlay[data-id=room_107206]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Habitación Family Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107206?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor
-                                </p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>1 Queen Bed</li>
-                                    <li class='feature'>Daily Room Service</li>
-                                    <li class='feature'>Linen and Towels Provided</li>
-                                    <li class='feature'>En-Suite</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>24hr Security</li>
-                                    <li class='feature'>Sofa Bed</li>
-                                    <li class='feature'>Television</li>
-                                    <li class='feature'>Flat Screen TV</li>
-                                    <li class='feature'>WIFI</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107209'>
-                        <div class='photo_overlay overlay' data-id='room_107209'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Habitación Standard Standard </h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img alt="Habitación Standard Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/403/thumb/20180710_121921_1_.jpg?1531244806"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img alt="Habitación Standard Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/402/thumb/20180710_121945_1_.jpg?1531244763"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img alt="Habitación Standard Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/404/thumb/20180710_122010_1_.jpg?1531244871"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img alt="Habitación Standard Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/405/thumb/20180710_122023_1_.jpg?1531244926"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Habitación Standard Standard "
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/403/standard/20180710_121921_1_.jpg?1531244806"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                   height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Habitación Standard Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/402/standard/20180710_121945_1_.jpg?1531244763"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Habitación Standard Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/404/standard/20180710_122010_1_.jpg?1531244871"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><li class='photo'><img alt="Habitación Standard Standard "
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/405/standard/20180710_122023_1_.jpg?1531244926"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                           height="225"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107209]" class="photo_small" href="#"><img
-                                    alt="Habitación Standard Standard "
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/403/thumb/20180710_121921_1_.jpg?1531244806"/>
-                            </a><a rel=".photo_overlay[data-id=room_107209]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Habitación Standard Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107209?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>1 Full Bed</li>
-                                    <li class='feature'>Linen and Towels Provided</li>
-                                    <li class='feature'>Television</li>
-                                    <li class='feature'>Dressing Room</li>
-                                    <li class='feature'>1 Queen Bed</li>
-                                    <li class='feature'>Shower over bath</li>
-                                    <li class='feature'>Pre-Paid Air Conditioning</li>
-                                    <li class='feature'>Housekeeping</li>
-                                    <li class='feature'>WIFI</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>Daily Housekeeping</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107201'>
-                        <div class='photo_overlay overlay' data-id='room_107201'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Habitación Panoramic Standard</h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img alt="Habitación Panoramic Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/399/thumb/20180710_121728_1_.jpg?1531244566"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img alt="Habitación Panoramic Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/400/thumb/20180710_121750_1_.jpg?1531244612"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img alt="Habitación Panoramic Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/635/thumb/20170425_140248.jpg?1525368307"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img alt="Habitación Panoramic Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/401/thumb/20180710_121824_1_.jpg?1531244668"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Habitación Panoramic Standard"
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/399/standard/20180710_121728_1_.jpg?1531244566"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                   height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Habitación Panoramic Standard"
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/400/standard/20180710_121750_1_.jpg?1531244612"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Habitación Panoramic Standard"
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/635/standard/20170425_140248.jpg?1525368307"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><li class='photo'><img alt="Habitación Panoramic Standard"
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/401/standard/20180710_121824_1_.jpg?1531244668"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                           height="225"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107201]" class="photo_small" href="#"><img
-                                    alt="Habitación Panoramic Standard"
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/155/399/thumb/20180710_121728_1_.jpg?1531244566"/>
-                            </a><a rel=".photo_overlay[data-id=room_107201]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Habitación Panoramic Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107201?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>Shower over bath</li>
-                                    <li class='feature'>En-Suite</li>
-                                    <li class='feature'>Housekeeping</li>
-                                    <li class='feature'>24hr Security</li>
-                                    <li class='feature'>Daily Room Service</li>
-                                    <li class='feature'>Television</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>1 Queen Bed</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107210'>
-                        <div class='photo_overlay overlay' data-id='room_107210'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Loft Romántica Standard </h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img alt="Loft Romántica Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/412/thumb/20171217_084233.jpg?1525234492"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img alt="Loft Romántica Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/413/thumb/20171217_084316.jpg?1525234567"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img alt="Loft Romántica Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/414/thumb/20171217_085914.jpg?1525234647"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img alt="Loft Romántica Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/415/thumb/20171208_135029.jpg?1525234701"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="4" href="#"><img alt="Loft Romántica Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/416/thumb/20171208_134900.jpg?1525234736"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Loft Romántica Standard "
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/412/standard/20171217_084233.jpg?1525234492"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                   height="400"/></li>
-</a><a href="#"><li class='photo'><img alt="Loft Romántica Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/413/standard/20171217_084316.jpg?1525234567"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Loft Romántica Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/414/standard/20171217_085914.jpg?1525234647"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Loft Romántica Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/415/standard/20171208_135029.jpg?1525234701"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><li class='photo'><img alt="Loft Romántica Standard "
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/416/standard/20171208_134900.jpg?1525234736"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                           height="225"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107210]" class="photo_small" href="#"><img
-                                    alt="Loft Romántica Standard "
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/412/thumb/20171217_084233.jpg?1525234492"/>
-                            </a><a rel=".photo_overlay[data-id=room_107210]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Loft Romántica Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107210?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>Wireless Internet</li>
-                                    <li class='feature'>Shower above bath</li>
-                                    <li class='feature'>Terrace</li>
-                                    <li class='feature'>Queen Bed</li>
-                                    <li class='feature'>Daily Housekeeping</li>
-                                    <li class='feature'>En-suite Bathroom</li>
-                                    <li class='feature'>Internet Access</li>
-                                    <li class='feature'>Flat Screen TV</li>
-                                    <li class='feature'>2 Queen Beds</li>
-                                    <li class='feature'>Linen and Towels Provided</li>
-                                    <li class='feature'>Daily Room Service</li>
-                                    <li class='feature'>Pre-Paid Air Conditioning</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>Guest Laundry (Charges Apply)</li>
-                                    <li class='feature'>WIFI</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107211'>
-                        <div class='photo_overlay overlay' data-id='room_107211'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Loft Quádruple Standard </h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img alt="Loft Quádruple Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/411/thumb/20171217_085956.jpg?1525234122"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img alt="Loft Quádruple Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/407/thumb/20171217_085007.jpg?1525233947"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img alt="Loft Quádruple Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/405/thumb/20171217_084656.jpg?1525233862"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img alt="Loft Quádruple Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/406/thumb/20171217_084905.jpg?1525233895"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="4" href="#"><img alt="Loft Quádruple Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/408/thumb/20171217_084942.jpg?1525233990"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="5" href="#"><img alt="Loft Quádruple Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/409/thumb/20171217_084259.jpg?1525234027"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="6" href="#"><img alt="Loft Quádruple Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/410/thumb/20171217_084630.jpg?1525234082"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Loft Quádruple Standard "
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/411/standard/20171217_085956.jpg?1525234122"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                   height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Loft Quádruple Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/407/standard/20171217_085007.jpg?1525233947"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Loft Quádruple Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/405/standard/20171217_084656.jpg?1525233862"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Loft Quádruple Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/406/standard/20171217_084905.jpg?1525233895"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Loft Quádruple Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/408/standard/20171217_084942.jpg?1525233990"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Loft Quádruple Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/409/standard/20171217_084259.jpg?1525234027"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                       height="400"/></li>
-</a><li class='photo'><img alt="Loft Quádruple Standard "
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/410/standard/20171217_084630.jpg?1525234082"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                           height="400"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107211]" class="photo_small" href="#"><img
-                                    alt="Loft Quádruple Standard "
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/411/thumb/20171217_085956.jpg?1525234122"/>
-                            </a><a rel=".photo_overlay[data-id=room_107211]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Loft Quádruple Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107211?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>2 Queen Beds</li>
-                                    <li class='feature'>Daily Housekeeping</li>
-                                    <li class='feature'>Terrace</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>En-suite Bathroom</li>
-                                    <li class='feature'>Shower over bath</li>
-                                    <li class='feature'>Linen and Towels Provided</li>
-                                    <li class='feature'>Flat Screen TV</li>
-                                    <li class='feature'>WIFI</li>
-                                    <li class='feature'>Mountain View</li>
-                                    <li class='feature'>Guest Laundry (Charges Apply)</li>
-                                    <li class='feature'>Pre-Paid Air Conditioning</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107212'>
-                        <div class='photo_overlay overlay' data-id='room_107212'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Deluxe Rústica Standard</h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img alt="Deluxe Rústica Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/622/thumb/Delux_rustica_1.jpg?1525367173"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img alt="Deluxe Rústica Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/623/thumb/Delux_Rustica.jpeg?1525367196"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img alt="Deluxe Rústica Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/624/thumb/20171217_085502.jpg?1525367247"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img alt="Deluxe Rústica Standard"
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/625/thumb/Delux_Rustica_%282%29.jpg?1525367294"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Deluxe Rústica Standard"
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/622/standard/Delux_rustica_1.jpg?1525367173"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                   height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Deluxe Rústica Standard"
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/623/standard/Delux_Rustica.jpeg?1525367196"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                       height="400"/></li>
-</a><a href="#"><li class='photo'><img alt="Deluxe Rústica Standard"
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/624/standard/20171217_085502.jpg?1525367247"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><li class='photo'><img alt="Deluxe Rústica Standard"
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/625/standard/Delux_Rustica_%282%29.jpg?1525367294"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                           height="225"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107212]" class="photo_small" href="#"><img
-                                    alt="Deluxe Rústica Standard"
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/622/thumb/Delux_rustica_1.jpg?1525367173"/>
-                            </a><a rel=".photo_overlay[data-id=room_107212]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Deluxe Rústica Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107212?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>2 Queen Beds</li>
-                                    <li class='feature'>Daily Housekeeping</li>
-                                    <li class='feature'>Pre-Paid Air Conditioning</li>
-                                    <li class='feature'>Flat Screen TV</li>
-                                    <li class='feature'>Housekeeping</li>
-                                    <li class='feature'>Shower over bath</li>
-                                    <li class='feature'>Linen and Towels Provided</li>
-                                    <li class='feature'>En-Suite</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>WIFI</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107213'>
-                        <div class='photo_overlay overlay' data-id='room_107213'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Deluxe Caribe Standard </h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img alt="Deluxe Caribe Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/609/thumb/Delux_Caribe_%288%29.jpg?1525366252"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img alt="Deluxe Caribe Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/610/thumb/Delux_Caribe_%285%29.jpg?1525366306"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img alt="Deluxe Caribe Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/611/thumb/Delux_Caribe_%2810%29.jpg?1525366350"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="3" href="#"><img alt="Deluxe Caribe Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/613/thumb/Delux_Caribe_%289%29.jpg?1525366423"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Deluxe Caribe Standard "
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/609/standard/Delux_Caribe_%288%29.jpg?1525366252"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                   height="400"/></li>
-</a><a href="#"><li class='photo'><img alt="Deluxe Caribe Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/610/standard/Delux_Caribe_%285%29.jpg?1525366306"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                       height="400"/></li>
-</a><a href="#"><li class='photo'><img alt="Deluxe Caribe Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/611/standard/Delux_Caribe_%2810%29.jpg?1525366350"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                       height="225"/></li>
-</a><li class='photo'><img alt="Deluxe Caribe Standard "
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/613/standard/Delux_Caribe_%289%29.jpg?1525366423"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                           height="400"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107213]" class="photo_small" href="#"><img
-                                    alt="Deluxe Caribe Standard "
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/609/thumb/Delux_Caribe_%288%29.jpg?1525366252"/>
-                            </a><a rel=".photo_overlay[data-id=room_107213]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Deluxe Caribe Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107213?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>En-suite Bathroom</li>
-                                    <li class='feature'>Daily Room Service</li>
-                                    <li class='feature'>Guest toilet in living room area</li>
-                                    <li class='feature'>Ceiling Fans</li>
-                                    <li class='feature'>WIFI</li>
-                                    <li class='feature'>2 Queen Beds</li>
-                                    <li class='feature'>Pre-Paid Air Conditioning</li>
-                                    <li class='feature'>Flat Screen TV</li>
-                                    <li class='feature'>Housekeeping</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='room' id='room_107214'>
-                        <div class='photo_overlay overlay' data-id='room_107214'>
-                            <div class='header'>
-                                <h3>Residencia El Balata</h3>
-                                <h4>Deluxe Jardín Standard </h4>
-                            </div>
-                            <div class='hero'>
-                                <div class='thumbs'>
-                                    <ul class='carousel-thumb'>
-                                        <li class='photo'>
-                                            <a data-slide-index="0" href="#"><img alt="Deluxe Jardín Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/614/thumb/DElux_jardin_1.jpg?1525366752"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="1" href="#"><img alt="Deluxe Jardín Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/616/thumb/DeElux_Jardin.jpg?1525366803"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                        <li class='photo'>
-                                            <a data-slide-index="2" href="#"><img alt="Deluxe Jardín Standard "
-                                                                                  data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/618/thumb/20171217_090129.jpg?1525366892"
-                                                                                  src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"
-                                                                                  width="100" height="100"/>
-                                            </a></li>
-                                    </ul>
-                                </div>
-                                <span class='edge'></span>
-                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Deluxe Jardín Standard "
-                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/614/standard/DElux_jardin_1.jpg?1525366752"
-                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
-                                   height="225"/></li>
-</a><a href="#"><li class='photo'><img alt="Deluxe Jardín Standard "
-                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/616/standard/DeElux_Jardin.jpg?1525366803"
-                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                                       height="400"/></li>
-</a><li class='photo'><img alt="Deluxe Jardín Standard "
-                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/618/standard/20171217_090129.jpg?1525366892"
-                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="225"
-                           height="400"/></li>
-</ul>
-</span>
-                            </div>
-                        </div>
-
-                        <div class='photo'>
-                            <a rel=".photo_overlay[data-id=room_107214]" class="photo_small" href="#"><img
-                                    alt="Deluxe Jardín Standard "
-                                    src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/144/614/thumb/DElux_jardin_1.jpg?1525366752"/>
-                            </a><a rel=".photo_overlay[data-id=room_107214]" class="photos" href="#">Photos</a>
-                        </div>
-                        <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    Deluxe Jardín Standard
-                                    <a class="book dynamic"
-                                       href="/reservations/resielbalatadirect/107214?locale=en"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Book
-                                    </a></h3>
-                                <p>Actualice por favor</p>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    <li class='feature'>2 Double Beds</li>
-                                    <li class='feature'>Guest Laundry (Charges Apply)</li>
-                                    <li class='feature'>Pre-Paid Air Conditioning</li>
-                                    <li class='feature'>Terrace</li>
-                                    <li class='feature'>Fan</li>
-                                    <li class='feature'>Daily Room Service</li>
-                                    <li class='feature'>Stairs</li>
-                                    <li class='feature'>Television</li>
-                                    <li class='feature'>Flat Screen TV</li>
-                                    <li class='feature'>Garden View</li>
-                                    <li class='feature'>Shower above bath</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
- -->
                 </div>
                 <div class='terms_conditions' id='terms_conditions'>
                     <h2>Условия</h2>
@@ -1896,72 +498,7 @@
                         </form>
                     </p>
                 </div>
-
             </div>
-
-            <!-- <div class='overlay' id='enquiry'>
-                <h3>Make an enquiry</h3>
-                <form novalidate="novalidate" class="formtastic enquiry"
-                      action="/properties/resielbalatadirect/enquiry?locale=en" accept-charset="UTF-8" method="post">
-                    <input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token"
-                                                                              value="RWuJ6jIHnd81MrpWO49Ytor2mjbdz+UbJesjHNapuSEGbIlN/B3YzDf7WjOJmExZ0DVZKlx7DrdYqMdCxr7ETA=="/><input
-                        type="hidden" name="st" id="st" value="BAhvOg1TcGFtVGVzdAY6DkBxdWVzdGlvbkkiCjYgLSAzBjoGRVQ="/>
-                    <fieldset class="inputs">
-                        <ol>
-                            <li class="hidden input required" id="enquiry_rate_plan_id_input"><input
-                                    id="enquiry_rate_plan_id" type="hidden" name="enquiry[rate_plan_id]"/>
-
-                            </li>
-                            <li class="hidden input required" id="enquiry_date_input"><input id="enquiry_date"
-                                                                                             type="hidden"
-                                                                                             name="enquiry[date]"/>
-
-                            </li>
-                            <li class="string input optional stringish" id="enquiry_name_input"><label
-                                    for="enquiry_name" class="label">Name</label><input id="enquiry_name" type="text"
-                                                                                        name="enquiry[name]"/>
-
-                            </li>
-                            <li class="string input optional stringish" id="enquiry_phone_input"><label
-                                    for="enquiry_phone" class="label">Phone</label><input id="enquiry_phone" type="text"
-                                                                                          name="enquiry[phone]"/>
-
-                            </li>
-                            <li class="string input optional stringish" id="enquiry_email_input"><label
-                                    for="enquiry_email" class="label">Email</label><input id="enquiry_email" type="text"
-                                                                                          name="enquiry[email]"/>
-
-                            </li>
-                            <li class='string optional' id='enquiry_answer_input'>
-                                <label for='enquiry_answer'>
-                                    Please answer the following maths question:
-                                    <br>
-                                    6 - 3 =
-                                    <input id='enquiry_answer' name='enquiry[answer]' size='50' type='text'>
-                                    <p class='inline-hints'>Required to bypass the spam filter</p>
-                                </label>
-                            </li>
-                            <li class="text input optional" id="enquiry_message_input"><label for="enquiry_message"
-                                                                                              class="label">Message</label><textarea
-                                    rows="20" id="enquiry_message" name="enquiry[message]">
-</textarea>
-
-                            </li>
-                        </ol>
-                    </fieldset>
-                    <fieldset class="buttons">
-                        <ol>
-                            <li>
-                                <a class='enquire dynamic'>
-                                    <i class='fa fa-chevron-circle-right'></i>
-                                    Enquire
-                                </a>
-                            </li>
-                        </ol>
-                    </fieldset>
-                </form>
-            </div> -->
-
         </div>
 
 
@@ -1969,57 +506,16 @@
     <div id='footer'></div>
 </div>
 <div id='loading'></div>
-<script src="/assets/public-2543e3bbf9498af7a04eb305280afed3.js"></script>
+<!--<script src="/assets/public-2543e3bbf9498af7a04eb305280afed3.js"></script>-->
 
-<!--[if lte IE 6]>
-<script src="/assets/jquery.bgiframe.min-6847f8236de631ebb5dec189bd82a82d.js"></script>
-<![endif]-->
-<!-- <script>
-  $(document).ready(function() {
-    $('ul.carousel-property').bxSlider({ slideWidth: 300, pager: false, minSlides: 5, maxSlides: 5, moveSlides: 4, infiniteLoop: false, hideControlOnEnd: true });
 
-    SM.init.overlay();
-    SM.init.datePicker();
-    SM.init.setupLanguageSwitchers();
-    $.datepicker.setDefaults({
-    minDate: '0',
-    maxDate: '715/1',
-    numberOfMonths: 1,
-    onSelect: function(){
-      $('.controls form').submit();
-    }
-  });
-  $('.date_nav input.calendar').each(function() {
-    $(this).datepicker({
-      altField: $(this).siblings("input[type='hidden']"),
-      altFormat: 'yy-mm-dd'
-    });
-  });
-  $('.currency_picker select').change(function(){
-    $('.controls form').submit();
-  });
-
-  PUBLIC.reservation.setupOverlays($('a.photos'), $('.photo_overlay .thumbs img'));
-  PUBLIC.reservation.setupDetailLinks($('.room_name .details'));
-  PUBLIC.reservation.tooltips = {"124780416":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780417":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780418":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780419":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780420":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780421":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780422":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780423":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780424":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780425":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780426":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780427":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780428":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124780429":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792118":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792119":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792120":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792121":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792122":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792123":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792124":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792125":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794305":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794306":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794307":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794308":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794309":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794310":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794311":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794312":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794313":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794314":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794315":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794316":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794317":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124794318":{"min_stay":"1 night","max_stay":null,"availability":"1 apartment","incl_occ":"8 people","max_occ":"8 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792844":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792845":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792846":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792847":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792848":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792849":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792850":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792851":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792852":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792853":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124792854":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"5 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793574":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793575":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793576":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793577":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793578":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793579":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793580":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793581":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793582":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793583":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793584":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793585":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793586":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124793587":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"6 people","max_occ":"6 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785534":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785535":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785536":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785537":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785538":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785539":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785541":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785542":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785543":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785544":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785545":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124785546":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787726":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787727":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787728":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787729":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787730":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787731":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787732":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787734":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787735":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787736":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787737":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787738":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124787739":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781878":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781879":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781880":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781881":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781882":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781883":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781884":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781886":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781887":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781888":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781889":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781890":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124781891":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788457":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788458":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788459":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788460":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788461":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788462":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788463":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788464":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788465":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788466":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788467":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788468":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788469":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124788470":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"2 people","max_occ":"2 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789188":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789189":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789190":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789191":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789192":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789193":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789194":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789195":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789196":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789197":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789198":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789199":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789200":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789201":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789919":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789920":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789921":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789922":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789923":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789924":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789925":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789926":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789927":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789928":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789929":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789930":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789931":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124789932":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790650":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790651":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790652":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790653":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790654":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790655":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790656":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790657":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790658":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790659":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790660":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790661":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790662":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124790663":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791381":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791382":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791383":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791384":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791385":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791386":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791387":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791388":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791389":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791390":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791391":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791392":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"},"124791393":{"min_stay":"1 night","max_stay":null,"availability":"1 room","incl_occ":"4 people","max_occ":"4 people","cta":false,"ctd":false,"display_rates":"Taxes excluded","inclusions":"\u003cp\u003e\u003c/p\u003e"}};
-  PUBLIC.reservation.setupTooltips($('table.rates td.rate:not(:has(.unavailable))'));
-  PUBLIC.reservation.setupExtraTooltips($('td.description .brief'));
-  PUBLIC.reservation.setupRoomTooltips($('td.room_name'));
-
-  PUBLIC.reservation.setupEnquireDialogs();
-  PUBLIC.property.copyBookNowLinksFromGrid();
-
-  });
-
-</script> -->
 <div class='tip' id='room_type_date_tooltip'>
     <div class='special_header'>Hot Deal!</div>
     <table>
-        <tbody></tbody>
+        <tbody>ча фигняе з</tbody>
     </table>
 </div>
 <div class='tip' id='extra_tooltip'></div>
 <div class='tip' id='room_tooltip'></div>
-
 </body>
 </html>
