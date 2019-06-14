@@ -38,9 +38,13 @@
         <div class='overview'>
             <div class='header'>
                  <!-- <h1><input type="text" placeholder="Отель Победа"></h1> -->
+                <label for="inp" class="inp">
                  <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
                     {{ nameOfHotel_form.as_p }}
+                     <span class="label">El Balata</span>
+                     <span class="border"></span>
                 </form>
+                </label>
                 <form class="form-horizontal" action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ register_form.as_p }}
