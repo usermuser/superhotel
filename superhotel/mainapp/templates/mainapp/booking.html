@@ -24,7 +24,7 @@
 <div id='main'>
     <div id='banner'>
         {% if headerPhoto %}
-            <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+            <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                     {{ headerPhoto.as_p }}
             </form>
         {% else %}    
@@ -39,7 +39,7 @@
             <div class='header'>
                  <!-- <h1><input type="text" placeholder="Отель Победа"></h1> -->
                 <label for="inp" class="inp">
-                 <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                 <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                     {{ nameOfHotel_form.as_p }}
                      <span class="label">El Balata</span>
                      <span class="border"></span>
@@ -60,7 +60,7 @@
                     </div>
                 {% endfor %} -->
 
-                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                     {{ starsForm.as_p }}
                 </form>
                 <div class='top-right'>
@@ -102,7 +102,7 @@
                             <th class='currency_picker' colspan='3'>
                                 <label for='currency'>Показывать цену в</label>
 
-                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                     {{ currencyForm.as_p }}
                                 </form>
                                 <select name="currency">
@@ -233,7 +233,7 @@
                         <!-- Здесь я думаю использовать formset -->
                         <!-- TODO здесь возникли сложности  -->
                         <td class="room_name">
-                            <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                            <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                 {{ nameOfRoom.as_p }}
                                 <table class="table">
                                     {{ roomitems.management_form }}
@@ -292,31 +292,31 @@
                     <div class='vcard'>
                         <div class='fn org'>
                             <strong>Информация об отеле
-                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                     {{ nameOfHotelInfo.as_p }}
                                 </form>
                             </strong>
                         </div>
                         <div class='phone'> Телефон
-                            <span class='tel'><form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                            <span class='tel'><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                 {{ telephoneNumberForm.as_p }}</span>
                         </form>
                         </div>
                         <div class='adr'>
                             <div class='street-address'> Адрес
-                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                 {{ addresForm.as_p }}</form>
                                 <br>
 
                             </div>
                             <div>
                                 <span class='locality'> местонахождение
-                                    <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                 {{ localityForm.as_p }}</form></span>
                                 <span class='region'> регион
-                                    <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                 {{ regionForm.as_p }}</form> </span>
-                                <span class='postal-code'> Почтовый код <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                <span class='postal-code'> Почтовый код <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                 {{ postal_codeForm.as_p }}</form></span>
                             </div>
                         </div>
@@ -328,7 +328,7 @@
                     </div>
                     <div class='actions'>
                         <h3>Сслыка на карту Гугл</h3>
-                        <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                        <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                 {{ mapLinkForm.as_p }}</form>
                         </a><a class="contact_us" href="{% url 'main:contact' %}"><i class='fa fa-envelope-o'></i>
                         Контакты
@@ -337,31 +337,31 @@
                 <div class='main'>
                     <div class='photo_overlay overlay' id='property_overlay'>
                         <div class='header'>
-                            <h3><form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                            <h3><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                 {{ nameOfHotel_form.as_p }}</form></h3>
                         </div>
                         <div class='hero'>
                             <div class='thumbs'>
                                 
                                     Добавте фото
-                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                     {{ uploadPhotoInfoForm1.as_p }}
                                 </form>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                     {{ uploadPhotoInfoForm2.as_p }}
                                 </form>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                     {{ uploadPhotoInfoForm3.as_p }}
                                 </form>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                     {{ uploadPhotoInfoForm4.as_p }}
                                 </form>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                     {{ uploadPhotoInfoForm5.as_p }}
                                 </form>
                             </div>
                     <div class='description'>
-                        <form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                        <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                 {{ longDescriptionOfHotel.as_p }}</form>
                     </div>
                     <div class='features'>
@@ -508,7 +508,7 @@
                 </div>
                 <div class='terms_conditions' id='terms_conditions'>
                     <h2>Условия</h2>
-                    <p><form class="form-horizontal" action="{% url 'main:dataFromInput' %}" method="post">
+                    <p><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
                                 {{ termsAndConditions.as_p }}
                         </form>
                     </p>

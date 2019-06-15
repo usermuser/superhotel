@@ -1,34 +1,45 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/formStyles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" media="screen" href="{% static 'public-f6ccfa2f22ed0069d927e67be1fddc44.css' %}"/>
+    <link rel="stylesheet" media="screen" href="{% static 'public.css' %} "/>
+    <link rel="stylesheet" media="print" href="{% static 'public-print-f785708b5849f5f94a6a787a67fe4952.css' %} "/>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="jquery.js"></script>
 </head>
 <body>
-    <form id="nameOfHotel">
-        <input type="text" id="nameOfh" placeholder="El Balata"> <br>
+<label for="inp" class="inp">
+    <!--<form class="form-horizontal"  method="post">-->
+        <input type="text" id="inp">
+        <span class="label">name of hotel</span>
+        <span class="border"></span>
+    <!--</form>-->
+</label>
+    <form action="" class="form-horizontal">
+        <input type="text" placeholder="Eco Boutique Hotel">
+    </form>
+    <form action="" class="form-horizontal">
+        <input type="text" placeholder="Home">
+        <input type="text" placeholder="Room">
+        <input type="text" placeholder="About us">
+        <input type="text" placeholder="Contact">
+    </form>
+    <form action="" class="form-horizontal">
+        <input type="text" placeholder="Contact">
+    </form>
+    <form action="" class="form-horizontal">
+        <input type="text" placeholder="FOR QUESTIONS OR INQUIRIES">
     </form>
 
     <div id="content"></div>
-     <script>
-        $(document).ready(function(){
-
-            $('#nameOfHotel').change(function(){
-                $.ajax({
-                    type: "POST",
-                    url: "127.0.0.1/contact",
-                    data: "username="+$("#username").val(),
-                    success: function(html){
-                        $("#content").html(html);
-                    }
-                });
-                return false;
-            });
-
-        });
-    </script>
-
-
 </body>
 </html>
