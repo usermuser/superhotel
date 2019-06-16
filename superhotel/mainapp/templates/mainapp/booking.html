@@ -97,137 +97,16 @@
                     <form action="/properties/resielbalatadirect?locale=en" accept-charset="UTF-8" method="get"><input
                                 name="utf8" type="hidden" value="&#x2713;"/>
                         <input type="hidden" name="locale" id="locale" value="en"/>
-
-                        <!--  <tr>
-                            <th class='currency_picker' colspan='3'>
-                                <label for='currency'>Показывать цену в</label>
-
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ currencyForm.as_p }}
-                                </form>
-                                <select name="currency">
-                                    <option value="ALL">Albania Leke (ALL)</option>
-                                    <option value="AUD">Australia Dollars (AUD)</option>
-                                    <option value="BWP">Botswana Pulas (BWP)</option>
-                                    <option value="CNY">China Yuan Renminbi (CNY)</option>
-                                    <option value="JPY">Japan Yen (JPY)</option>
-                                </select>
-                            </th>
-                            <th class='date_navigation' colspan='14'>
-                                <table>
-                                    <tr>
-                                        <th class='date_nav top_left_corner'>
-                                            <ul class='back'>
-                                                <li>
-                                                    <a class="week" id="back_1_week" data-date="08 Jun 2019"
-                                                       href="/properties/resielbalatadirect?currency=USD&amp;locale=en&amp;start_date=2019-06-08"><i
-                                                            class='fa fa-backward'></i>
-                                                        Неделя
-                                                    </a></li>
-                                                <li>
-                                                    <a class="day" id="back_1_day" data-date="08 Jun 2019"
-                                                       href="/properties/resielbalatadirect?currency=USD&amp;locale=en&amp;start_date=2019-06-08"><i
-                                                            class='fa fa-caret-left'></i>
-                                                        День
-                                                    </a></li>
-                                            </ul>
-
-                                        </th>
-                                        <th class='date_nav date_from_nav'>
-                                            <div class='date_from'>
-                                                <label for="start_date_display">Дата от</label>
-                                                <input type="text" name="start_date_display" id="start_date_display"
-                                                       value="08 Jun 2019" class="calendar"/>
-                                                <input type="hidden" name="start_date" id="start_date"
-                                                       value="2019-06-08"/>
-                                            </div>
-                                        </th>
-                                        <th class='date_nav top_right_corner'>
-                                            <ul class='forward'>
-                                                <li>
-                                                    <a class="day" id="forward_1_day" data-date="09 Jun 2019"
-                                                       href="/properties/resielbalatadirect?currency=USD&amp;locale=en&amp;start_date=2019-06-09">День
-                                                        <i class='fa fa-caret-right'></i>
-                                                    </a></li>
-                                                <li>
-                                                    <a class="week" id="forward_1_week" data-date="15 Jun 2019"
-                                                       href="/properties/resielbalatadirect?currency=USD&amp;locale=en&amp;start_date=2019-06-15">Неделя
-                                                        <i class='fa fa-forward'></i>
-                                                    </a></li>
-                                            </ul>
-
-                                        </th>
-                                    </tr> -->
                                 </form>
                                 </table>
                             </th>
                         </tr>
-
-
-
-
                     </thead>
                 </table>
                 <table cellspacing='0' class='rates' id='rates'>
 
                     <tbody>
-                    <!-- <tr>
-                        <td class='room_name'>
-                            <p>Эконом Стандарт </p>
-                            <a rel=".photo_overlay[data-id=room_107199]" class="photos" href="#">Фото</a>
-                            <a class="details" href="#room_107199">Подробности</a>
-                        </td>
-                        <td class='book_now'>
-                            <a class="book dynamic en"
-                               href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-08"><span
-                                    class='fa fa-chevron-circle-right'></span>
-                                Забронировать
-                            </a></td>
-                        <td class='rack_rate'>$</td>
-                        <td class='rate start weekend' data-id='124780416'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-08">30</a>
-                        </td>
-                        <td class='end rate weekend' data-id='124780417'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-09">30</a>
-                        </td>
-                        <td class='rate' data-id='124780418'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-10">30</a>
-                        </td>
-                        <td class='rate' data-id='124780419'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-11">30</a>
-                        </td>
-                        <td class='rate' data-id='124780420'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-12">30</a>
-                        </td>
-                        <td class='rate' data-id='124780421'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-13">30</a>
-                        </td>
-                        <td class='rate' data-id='124780422'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-14">30</a>
-                        </td>
-                        <td class='rate start weekend' data-id='124780423'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-15">30</a>
-                        </td>
-                        <td class='end rate weekend' data-id='124780424'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-16">30</a>
-                        </td>
-                        <td class='rate' data-id='124780425'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-17">30</a>
-                        </td>
-                        <td class='rate' data-id='124780426'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-18">30</a>
-                        </td>
-                        <td class='rate' data-id='124780427'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-19">30</a>
-                        </td>
-                        <td class='rate' data-id='124780428'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-20">30</a>
-                        </td>
-                        <td class='rate' data-id='124780429'>
-                            <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-21">30</a>
-                        </td>
-                    </tr>
-                     -->
+
                     
                      <tr>
                         <!-- Здесь я думаю использовать formset -->
@@ -367,19 +246,44 @@
                     <div class='features'>
                         <h3>Удобства</h3>
                         <ol>
-                            <li class='feature'>Номера для некурящих</li>
-                            <li class='feature'>Прачечная для гостей (за дополнительную плату)</li>
-                            <li class='feature'>TV</li>
-                            <li class='feature'>USB-штекеры</li>
-                            <li class='feature'>WiFi Интернет</li>
-                            <li class='feature'>Smart TV</li>
-                            <li class='feature'>Кофе бар</li>
-                            <li class='feature'>Бесплатная парковка</li>
-                            <li class='feature'>Сал</li>
-                            <li class='feature'>Терраса</li>
-                            <li class='feature'>Площадка для барбекю</li>
-                            <li class='feature'>Security Parking</li>
-                        </ol>
+                            <li class='feature'>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                    {{ feature1.as_p }}
+                                </form>
+                            </li>
+                            <li class='feature'>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                    {{ feature2.as_p }}
+                                </form>
+                            </li>
+                            <li class='feature'>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                    {{ feature3.as_p }}
+                                </form>
+                            </li>
+                            <li class='feature'>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                    {{ feature4.as_p }}
+                                </form>
+                            </li>
+                            <li class='feature'>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                    {{ feature5.as_p }}
+                                </form>
+                            </li>
+                            <li class='feature'>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                    {{ feature6.as_p }}
+                                </form>
+                            </li>
+                            <li class='feature'>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                    {{ feature7.as_p }}
+                                </form>
+                            </li>
+                            <li class='feature'><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                    {{ feature8.as_p }}
+                                </form></li>
                     </div>
                 </div>
                 <h2>Детали размещения</h2>
