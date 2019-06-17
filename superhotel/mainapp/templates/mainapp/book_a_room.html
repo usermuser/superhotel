@@ -413,12 +413,12 @@
                                     <td class='error roomcol'>
                                         <ol>
                                             <li>
-                                                <strong>Room 1:</strong>
+                                                <strong>Комната 1:</strong>
                                             </li>
                                         </ol>
                                         <ol>
                                             <li>
-                                                <label for='number_adults'>Adults</label>
+                                                <label for='number_adults'>Взрослых</label>
                                                 <select name="reservation[reservation_room_types][0][number_adults]"
                                                         id="reservation_reservation_room_types_0_number_adults"
                                                         class="number_adults">
@@ -427,7 +427,7 @@
                                                 </select>
                                             </li>
                                             <li>
-                                                <label for='number_children'>Children</label>
+                                                <label for='number_children'>Детей</label>
                                                 <select name="reservation[reservation_room_types][0][number_children]"
                                                         id="reservation_reservation_room_types_0_number_children"
                                                         class="number_children">
@@ -436,7 +436,7 @@
                                                 </select>
                                             </li>
                                             <li>
-                                                <label for='number_infants'>Infants</label>
+                                                <label for='number_infants'>Младенцев</label>
                                                 <select name="reservation[reservation_room_types][0][number_infants]"
                                                         id="reservation_reservation_room_types_0_number_infants"
                                                         class="number_infants">
@@ -446,87 +446,18 @@
                                             </li>
                                         </ol>
                                     </td>
-                                    <td class='date'>Sun 16 Jun</td>
+                                    <td class='date'>Суб 16 Июнь</td>
                                     <td class='inclusions'></td>
-                                    <td class='rrt_rate_date numeric'>$30</td>
-                                    <td class='extra_adult numeric'>$0</td>
-                                    <td class='extra_child numeric'>$0</td>
-                                    <td class='extra_infant numeric'>$0</td>
-                                    <td class='rrt_date_tax numeric'>0</td>
-                                    <td class='rrt_date_total numeric'>$30</td>
+                                    <td class='rrt_rate_date numeric'>{{ room.price }}</td>
+                                    <td class='extra_adult numeric'>{{ room.extraAdultPrice }}</td>
+                                    <td class='extra_child numeric'>{{ room.extraChildrenPrice }}</td>
+                                    <td class='extra_infant numeric'>{{ room.extraInfantPrice }}</td>
+                                    <td class='rrt_date_tax numeric'>{{ hotel.tax }}</td>
+                                    <td class='rrt_date_total numeric'>{{ total }}</td>
                                 </tr>
                                 </tbody>
                                 <tbody class='extras'>
-                                <tr class='subheader'>
-                                    <td colspan='9'>
-                                        <h4>Extras available for this room</h4>
-                                    </td>
-                                </tr>
-                                <tr data-adult-price='5.5' data-allow-multiple='true' data-category='Per Person'
-                                    data-child-price='5.5' data-entered-adult-price='5.5' data-entered-child-price='5.5'
-                                    data-extra-index='0' data-nightly='false' data-number-of-nights='1'>
-                                    <td>
-                                        <input type="checkbox" name="reservation[reservation_extras][24961][selected]"
-                                               id="reservation_reservation_extras_24961_selected" value="1"
-                                               data-extra-id="24961"/>
-                                        <label for='reservation_reservation_extras_24961_selected'>
-                                            DESAYUNO
-                                            (
-                                            <input type="text"
-                                                   name="reservation[reservation_extras][24961][adult_quantity]"
-                                                   id="reservation_reservation_extras_24961_adult_quantity" size="2"/>
-                                            adults,
-                                            <input type="text"
-                                                   name="reservation[reservation_extras][24961][child_quantity]"
-                                                   id="reservation_reservation_extras_24961_child_quantity" size="2"/>
-                                            children)
-                                        </label>
-                                    </td>
-                                    <td class='description' colspan='2'>
-                                        <p class='brief'></p>
-                                        <div class='full hidden'></div>
-                                        <div class='photo_overlay overlay' data-id='extra_24961'>
-                                            <div class='header'>
-                                                <h3>DESAYUNO</h3>
-                                            </div>
-                                            <div class='hero'>
-                                                <div class='thumbs'>
-                                                    <ul class='carousel-thumb'>
-                                                        <li class='photo'>
-                                                            <a data-slide-index="0" href="#"><img alt="DESAYUNO"
-                                                                                                  src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Extra/000/144/742/standard/16178783_1216350715066843_405770871677342396_o.jpg?1525410215"/>
-                                                            </a></li>
-                                                        <li class='photo'>
-                                                            <a data-slide-index="1" href="#"><img alt="DESAYUNO"
-                                                                                                  src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Extra/000/144/743/standard/16388011_1219371014764813_4625786763151468521_n.jpg?1525410247"/>
-                                                            </a></li>
-                                                        <li class='photo'>
-                                                            <a data-slide-index="2" href="#"><img alt="DESAYUNO"
-                                                                                                  src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Extra/000/144/744/standard/20170225_102738.jpg?1525410321"/>
-                                                            </a></li>
-                                                        <li class='photo'>
-                                                            <a data-slide-index="3" href="#"><img alt="DESAYUNO"
-                                                                                                  src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Extra/000/144/745/standard/20170225_102815.jpg?1525410359"/>
-                                                            </a></li>
-                                                    </ul>
-                                                </div>
-                                                <span class='edge'></span>
-                                                <span class='container'>
-<ul class='carousel-standard'>
-<a href="#"><li class='photo'><img alt="Habitación Economy Standard "
-                                   src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Extra/000/144/742/standard/16178783_1216350715066843_405770871677342396_o.jpg?1525410215"/></li>
-</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "
-                                       src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Extra/000/144/743/standard/16388011_1219371014764813_4625786763151468521_n.jpg?1525410247"/></li>
-</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "
-                                       src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Extra/000/144/744/standard/20170225_102738.jpg?1525410321"/></li>
-</a><li class='photo'><img alt="Habitación Economy Standard "
-                           src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/Extra/000/144/745/standard/20170225_102815.jpg?1525410359"/></li>
-</ul>
-</span>
-                                            </div>
-                                        </div>
-                                        <a rel=".photo_overlay[data-id=extra_24961]" class="photos" href="#">Photos</a>
-                                    </td>
+                                
                                     <td colspan='4'>$5.50 per adult and $5.50 per child</td>
                                     <td class='numeric extra_tax'>$0</td>
                                     <td class='numeric extra_amount'>$0</td>
