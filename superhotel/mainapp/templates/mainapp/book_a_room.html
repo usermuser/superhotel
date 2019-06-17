@@ -157,27 +157,27 @@
                                         <option value="10">10</option>
                                     </select>
                                 </li>
-                                <!--<li class='arrow'>-->
-                                    <!--<label for='check_in_date'>Check In Date</label>-->
-                                    <!--<input type="text" name="check_in_date_display" id="check_in_date_display"-->
-                                           <!--value="16 Jun 2019" class="calendar"/>-->
-                                    <!--<input type="hidden" name="check_in_date" id="check_in_date" value="2019-06-16"/>-->
-                                    <!--<input type="hidden" name="previous_check_in_date" id="previous_check_in_date"-->
-                                           <!--value="2019-06-16"/>-->
-                                <!--</li>-->
-                                <!--<li>-->
-                                    <!--<label for='check_out_date'>Check Out Date</label>-->
-                                    <!--<input type="text" name="check_out_date_display" id="check_out_date_display"-->
-                                           <!--value="17 Jun 2019" class="calendar"/>-->
-                                    <!--<input type="hidden" name="check_out_date" id="check_out_date" value="2019-06-17"/>-->
-                                <!--</li>-->
+                                <li class='arrow'>
+                                    <label for='check_in_date'>Дата заезда</label>
+                                    <input type="text" name="check_in_date_display" id="check_in_date_display"
+                                           value="16 Jun 2019" class="calendar"/>
+                                    <input type="hidden" name="check_in_date" id="check_in_date" value="2019-06-16"/>
+                                    <input type="hidden" name="previous_check_in_date" id="previous_check_in_date"
+                                           value="2019-06-16"/>
+                                </li>
+                                <li>
+                                    <label for='check_out_date'>Дата выезда</label>
+                                    <input type="text" name="check_out_date_display" id="check_out_date_display"
+                                           value="17 Jun 2019" class="calendar"/>
+                                    <input type="hidden" name="check_out_date" id="check_out_date" value="2019-06-17"/>
+                                </li>
                             </ol>
                         </fieldset>
                         <table cellspacing='0' class='no-margin rates-header'>
                             <thead class='controls'>
                             <tr>
                                 <th class='date_nav' colspan='2'>
-                                    <span>Check the availability</span>
+                                    <span>Проверить доступность</span>
                                 </th>
                                 <th class='date_navigation' colspan='14'>
                                     <table>
@@ -188,13 +188,13 @@
                                                         <a class="week" id="back_1_week" data-date="16 Jun 2019"
                                                            href="/reservations/resielbalatadirect/107199?currency=USD&amp;locale=en&amp;start_date=2019-06-16"><i
                                                                 class='fa fa-backward'></i>
-                                                            Week
+                                                            Неделя
                                                         </a></li>
                                                     <li>
                                                         <a class="day" id="back_1_day" data-date="16 Jun 2019"
                                                            href="/reservations/resielbalatadirect/107199?currency=USD&amp;locale=en&amp;start_date=2019-06-16"><i
                                                                 class='fa fa-caret-left'></i>
-                                                            Day
+                                                            День
                                                         </a></li>
                                                 </ul>
 
@@ -226,93 +226,96 @@
 
                             </thead>
                         </table>
+                        <!--TODO проверить необходимость этого блока-->
                         <table cellspacing='0' class='rates' id='rates'>
                             <thead>
                             <tr>
-                                <th>Room Selection</th>
+                                <th><form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
+                                    {{ roomSelectionText.as_p }}
+                                </form></th>
                                 <th class='rack_rate'></th>
                                 <th class='date end weekend'>
-                                    <span class='day_name'>Sun</span>
+                                    <span class='day_name'>Вос</span>
                                     <span class='day'>16</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date'>
-                                    <span class='day_name'>Mon</span>
+                                    <span class='day_name'>Пон</span>
                                     <span class='day'>17</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date'>
-                                    <span class='day_name'>Tue</span>
+                                    <span class='day_name'>Вт</span>
                                     <span class='day'>18</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date'>
-                                    <span class='day_name'>Wed</span>
+                                    <span class='day_name'>Ср</span>
                                     <span class='day'>19</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date'>
-                                    <span class='day_name'>Thu</span>
+                                    <span class='day_name'>Чт</span>
                                     <span class='day'>20</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date'>
-                                    <span class='day_name'>Fri</span>
+                                    <span class='day_name'>Пт</span>
                                     <span class='day'>21</span>
                                     <span class='month'>Jun</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date start weekend'>
-                                    <span class='day_name'>Sat</span>
+                                    <span class='day_name'>Суб</span>
                                     <span class='day'>22</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date end weekend'>
-                                    <span class='day_name'>Sun</span>
+                                    <span class='day_name'>Вос</span>
                                     <span class='day'>23</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date'>
-                                    <span class='day_name'>Mon</span>
+                                    <span class='day_name'>Пон</span>
                                     <span class='day'>24</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date'>
-                                    <span class='day_name'>Tue</span>
+                                    <span class='day_name'>Вт</span>
                                     <span class='day'>25</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date'>
-                                    <span class='day_name'>Wed</span>
+                                    <span class='day_name'>Ср</span>
                                     <span class='day'>26</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date'>
-                                    <span class='day_name'>Thu</span>
+                                    <span class='day_name'>Чт</span>
                                     <span class='day'>27</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date'>
-                                    <span class='day_name'>Fri</span>
+                                    <span class='day_name'>Пт</span>
                                     <span class='day'>28</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
                                 <th class='date start weekend'>
-                                    <span class='day_name'>Sat</span>
+                                    <span class='day_name'>Суб</span>
                                     <span class='day'>29</span>
-                                    <span class='month'>Jun</span>
+                                    <span class='month'>Июнь</span>
                                     <span class='year'>2019</span>
                                 </th>
 
@@ -326,111 +329,68 @@
                                     <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate' data-id='124780425'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate' data-id='124780426'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate' data-id='124780427'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate' data-id='124780428'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate' data-id='124780429'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate start weekend' data-id='124780430'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='end rate weekend' data-id='124780431'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate' data-id='124780432'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate' data-id='124780433'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate' data-id='124780434'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate' data-id='124780435'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate' data-id='124780436'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                                 <td class='rate start weekend' data-id='124780437'>
-                                    <span class='tooltip'>30</span>
+                                    <span class='tooltip'>{{ room.price }}</span>
                                 </td>
                             </tr>
                             </tbody>
                             <tfoot>
                             <tr>
                                 <th class='bottom_left_corner bottom_right_corner' colspan='17'>
-                                    <em>Move the mouse over the price for inclusions, occupancy and minimum stay</em>
+                                    <em>
+                                        <form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
+                                            {{ roomBokingInstructions.as_p }}
+                                        </form>
+                                    </em>
                                 </th>
                             </tr>
                             </tfoot>
                         </table>
-                        <script id='tool_tip_template' type='text/x-jquery-tmpl'>
-<tbody>
-<tr>
-<th>Minimum Stay</th>
-<td>${min_stay}</td>
-{{if max_stay}}
-<tr>
-<th>Maximum Stay</th>
-<td>${max_stay}</td>
-</tr>
-{{/if}}
-{{if availability }}
-<tr>
-<th>Availability</th>
-<td>${availability}</td>
-</tr>
-{{/if}}
-<tr>
-<th>Included Occupancy</th>
-<td>${incl_occ}</td>
-</tr>
-<tr>
-<th>Maximum Occupancy</th>
-<td>${max_occ}</td>
-</tr>
-{{if cta }}
-<tr>
-<th>Closed To Arrival</th>
-<td></td>
-</tr>
-{{/if}}
-{{if ctd }}
-<tr>
-<th>Closed To Departure</th>
-<td></td>
-</tr>
-{{/if}}
-{{if inclusions }}
-<tr class='inclusions'>
-<td colspan='2'></td>
-</tr>
-{{/if}}
-<tr>
-<th>${display_rates}</th>
-</tr>
-</tr>
-</tbody>
-
-                        </script>
-
-
+                        <script id='tool_tip_template' type='text/x-jquery-tmpl'></script>
                     </li>
                     <li class='step step2'>
                         <h3>
-                            <em>Step <strong>2</strong></em>
-                            <span class='directions'>Choose room occupants and optional extras</span>
-                            <span class='note'>Prices are in USD</span>
+                            <em>Шаг<strong>2</strong></em>
+                            <span class='directions'>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
+                                    {{ secondStepDirections.as_p }}
+                                </form></span>
+                            <span class='note'>Цены в рублях</span>
                         </h3>
                         <div class='flash hidden' id='flash_error'>
                             <strong>This room allows a maximum of 2 people per room.</strong>
