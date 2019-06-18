@@ -656,7 +656,7 @@
                                 <li>
                                     <a class='book_now confirm dynamic' href='#' rel='#confirm_dialog'>
                                         <i class='fa fa-chevron-circle-right'></i>
-                                        Book Now
+                                       Забронировать
                                     </a>
                                 </li>
                                 <li class="action input_action commit" id="reservation_submit_action"><input
@@ -669,7 +669,7 @@
                                     <img src='/assets/payments-padlock-69f16def44dbc3e0b3bba2a0ed68d589.png'>
                                 </li>
                                 <li>
-                                    <p>All payments are processed securely with PayPal</p>
+                                    <p>Все платежи обрабатываются безопасно с PayPal</p>
                                 </li>
                                 <li>
                                     <img class='cards' src='/assets/payments-visa-959dfd6bc47de174d650ba457052bca6.png'>
@@ -689,15 +689,8 @@
             </form>
         </div>
         <div class='terms_conditions' id='terms_conditions'>
-            <h2>Terms &amp; Conditions</h2>
-            <p>No se admiten mascotas
-                <br>Hay zonas específicas para fumar</p>
-
-            <h4>Cancellation Policy</h4>
-            <p>El cliente puede cancelar la reserva de forma gratuita hasta 3 días antes de la fecha de llegada.</p>
-
-            <p>El cliente tendrá que pagar el precio de las 2 primeras noches si cancela durante los 3 días antes de la
-                fecha de llegada.</p>
+            <h2>Условия и соглашения</h2>
+            <p>{{ hotel.termsAndConditions }}</p>
         </div>
 
         <div class='modal overlay' id='confirm_dialog'>
