@@ -423,7 +423,7 @@
                                                         id="reservation_reservation_room_types_0_number_adults"
                                                         class="number_adults">
                                                     <option value="1">1</option>
-                                                    <option selected="selected" value="2">2</option>
+                                                    <option selected="selected" value="2">{{ room.adults }}</option>
                                                 </select>
                                             </li>
                                             <li>
@@ -431,7 +431,7 @@
                                                 <select name="reservation[reservation_room_types][0][number_children]"
                                                         id="reservation_reservation_room_types_0_number_children"
                                                         class="number_children">
-                                                    <option selected="selected" value="0">0</option>
+                                                    <option selected="selected" value="0">{{ room.children }}</option>
                                                     <option value="1">1</option>
                                                 </select>
                                             </li>
@@ -440,7 +440,7 @@
                                                 <select name="reservation[reservation_room_types][0][number_infants]"
                                                         id="reservation_reservation_room_types_0_number_infants"
                                                         class="number_infants">
-                                                    <option selected="selected" value="0">0</option>
+                                                    <option selected="selected" value="0">{{ room.infants }}</option>
                                                     <option value="1">1</option>
                                                 </select>
                                             </li>
@@ -457,30 +457,27 @@
                                 </tr>
                                 </tbody>
                                 <tbody class='extras'>
-                                
-                                    <td colspan='4'>$5.50 per adult and $5.50 per child</td>
-                                    <td class='numeric extra_tax'>$0</td>
-                                    <td class='numeric extra_amount'>$0</td>
+
+                                    <td colspan='4'>{{ room.extraAdult }} рублей за взрослого и {{ room.extraChild }} рублей за ребенка</td>
                                 </tr>
                                 </tbody>
                                 <tbody class='totals'>
                                 <tr class='subheader'>
                                     <td colspan='9'>
-                                        <h4>Totals</h4>
+                                        <h4>Итого</h4>
                                     </td>
                                 </tr>
                                 <tr class='subtotal'>
-                                    <td class='total' colspan='8'>Room Charges</td>
-                                    <td class='numeric room_total'>$30</td>
+                                    <td class='total' colspan='8'>Стоимость номера</td>
+                                    <td class='numeric room_total'>{{ room.price }}</td>
                                 </tr>
                                 <tr class='subtotal'>
-                                    <td class='total' colspan='8'>Extras Total</td>
-                                    <td class='numeric extra_total'>$0</td>
+                                    <td class='total' colspan='8'>Дополнительно Итого</td>
+                                    <td class='numeric extra_total'>{{ extra }}</td>
                                 </tr>
                                 <tr class='subtotal'>
                                     <td class='total' colspan='8'>
-                                        ITBS
-                                        18%
+                                        Налог
 
                                     </td>
                                     <td class='numeric tax_total'></td>
@@ -489,7 +486,7 @@
                                 <tr class='grand_total'>
                                     <td class='total' colspan='8'>Grand Total</td>
                                     <td class='numeric' id='total_payment'>
-                                        <span>$35.40</span>
+                                        <span>{{ total }}</span>
                                         <input type="hidden" name="reservation[payment_total_confirmation]"
                                                id="reservation_payment_total_confirmation" value="35.4"/>
                                     </td>
@@ -498,8 +495,8 @@
                                 <tfoot>
                                 <tr>
                                     <th class='bottom_left_corner bottom_right_corner' colspan='9'>
-                                        <em>Note: Infants are not included in the maximum occupancy or per person
-                                            extras</em>
+                                        <em>Примечание: младенцы не включены в максимальную вместимость или на человека
+                                             дополнительные услуги</em>
                                     </th>
                                 </tr>
                                 </tfoot>
@@ -511,27 +508,23 @@
 
             </form>
 
-            <form novalidate="novalidate" class="formtastic reservation" id="new_reservation"
-                  action="/reservations/resielbalatadirect/107199?locale=en" accept-charset="UTF-8" method="post"><input
-                    name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token"
-                                                                       value="e5FoT1VSwQnFqzud5wSfmDFFdmGoxDRKmnLqA11Sc7w4lmjom0iEGsdi2/hVE4t3a4a1fSlw3+bnMQ5dTUUO0Q=="/><input
-                    type="hidden" name="reservation[promotion_code]" id="reservation_promotion_code"/>
+
                 <div class='other_form'></div>
                 <ol class='final_step'>
                     <li class='step'>
                         <h3>
-                            <em>Step <strong>3</strong></em>
-                            <span class='directions'>Enter guest and payment details</span>
-                            <span class='note'>Please fill in required information</span>
+                            <em>Шаг <strong>3</strong></em>
+                            <span class='directions'>Введите информацию о госте и оплате</span>
+                            <span class='note'>Пожалуйста, заполните необходимую информацию</span>
                         </h3>
                         <div class='sections'>
                             <div class='section section1'>
                                 <fieldset class="inputs">
-                                    <legend><span>Guest Details</span></legend>
+                                    <legend><span>Сведения о госте</span></legend>
                                     <ol>
                                         <li class="string input required stringish"
                                             id="reservation_guest_first_name_input"><label
-                                                for="reservation_guest_first_name" class="label">First name<abbr
+                                                for="reservation_guest_first_name" class="label">Имя<abbr
                                                 title="required">*</abbr></label><input maxlength="255" size="50"
                                                                                         id="reservation_guest_first_name"
                                                                                         class="required" type="text"
@@ -540,7 +533,7 @@
                                         </li>
                                         <li class="string input required stringish"
                                             id="reservation_guest_last_name_input"><label
-                                                for="reservation_guest_last_name" class="label">Last name<abbr
+                                                for="reservation_guest_last_name" class="label">Фамилия<abbr
                                                 title="required">*</abbr></label><input maxlength="255" size="50"
                                                                                         id="reservation_guest_last_name"
                                                                                         class="required" type="text"
@@ -558,342 +551,55 @@
                                         </li>
                                         <li class="phone input required stringish"
                                             id="reservation_guest_phone_number_input"><label
-                                                for="reservation_guest_phone_number" class="label">Contact Number
-                                            (mobile preferred)<abbr title="required">*</abbr></label><input
+                                                for="reservation_guest_phone_number" class="label">Номер телефона
+                                            <abbr title="required">*</abbr></label><input
                                                 maxlength="255" size="20" id="reservation_guest_phone_number"
                                                 class="required" type="tel" name="reservation[guest_phone_number]"/>
 
                                         </li>
                                         <li class="string input optional stringish"
                                             id="reservation_guest_organisation_input"><label
-                                                for="reservation_guest_organisation" class="label">Organisation (if
-                                            applicable)</label><input maxlength="255" size="50"
+                                                for="reservation_guest_organisation" class="label">Организация (если
+                                             применимо)</label><input maxlength="255" size="50"
                                                                       id="reservation_guest_organisation" type="text"
                                                                       name="reservation[guest_organisation]"/>
 
                                         </li>
                                         <li class="string input required stringish"
                                             id="reservation_guest_address_input"><label for="reservation_guest_address"
-                                                                                        class="label">Address line
+                                                                                        class="label">Адресная строка
                                             1<abbr title="required">*</abbr></label><input maxlength="255" size="50"
                                                                                            id="reservation_guest_address"
                                                                                            class="required" type="text"
                                                                                            name="reservation[guest_address]"/>
 
                                         </li>
-                                        <li class="string input optional stringish"
-                                            id="reservation_guest_address2_input"><label
-                                                for="reservation_guest_address2" class="label">Address line
-                                            2</label><input maxlength="255" size="50" id="reservation_guest_address2"
-                                                            type="text" name="reservation[guest_address2]"/>
+
 
                                         </li>
                                         <li class="string input required stringish" id="reservation_guest_city_input">
-                                            <label for="reservation_guest_city" class="label">City<abbr
+                                            <label for="reservation_guest_city" class="label">Город<abbr
                                                     title="required">*</abbr></label><input maxlength="100" size="50"
                                                                                             id="reservation_guest_city"
                                                                                             class="required" type="text"
                                                                                             name="reservation[guest_city]"/>
 
                                         </li>
-                                        <li class="string input optional stringish" id="reservation_guest_state_input">
-                                            <label for="reservation_guest_state" class="label">State</label><input
-                                                maxlength="100" size="50" id="reservation_guest_state" type="text"
-                                                name="reservation[guest_state]"/>
-
-                                        </li>
                                         <li class="country input required" id="reservation_guest_country_input"><label
-                                                for="reservation_guest_country" class="label">Country/Region<abbr
+                                                for="reservation_guest_country" class="label"><abbr
                                                 title="required">*</abbr></label><select id="reservation_guest_country"
                                                                                          class="required"
                                                                                          name="reservation[guest_country]">
                                             <option value=""></option>
-                                            <option value="Australia">Australia</option>
-                                            <option value="Canada">Canada</option>
-                                            <option value="New Zealand">New Zealand</option>
-                                            <option value="South Africa">South Africa</option>
-                                            <option value="Spain">Spain</option>
-                                            <option value="United Kingdom">United Kingdom</option>
-                                            <option value="United States">United States</option>&lt;option value=&quot;&quot;
-                                            disabled=&quot;disabled&quot;&gt;-------------&lt;/option&gt;
-                                            <option value="Afghanistan">Afghanistan</option>
-                                            <option value="Aland Islands">Aland Islands</option>
-                                            <option value="Albania">Albania</option>
-                                            <option value="Algeria">Algeria</option>
-                                            <option value="American Samoa">American Samoa</option>
-                                            <option value="Andorra">Andorra</option>
-                                            <option value="Angola">Angola</option>
-                                            <option value="Anguilla">Anguilla</option>
-                                            <option value="Antarctica">Antarctica</option>
-                                            <option value="Antigua And Barbuda">Antigua And Barbuda</option>
-                                            <option value="Argentina">Argentina</option>
-                                            <option value="Armenia">Armenia</option>
-                                            <option value="Aruba">Aruba</option>
-                                            <option value="Australia">Australia</option>
-                                            <option value="Austria">Austria</option>
-                                            <option value="Azerbaijan">Azerbaijan</option>
-                                            <option value="Bahamas">Bahamas</option>
-                                            <option value="Bahrain">Bahrain</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Barbados">Barbados</option>
-                                            <option value="Belarus">Belarus</option>
-                                            <option value="Belgium">Belgium</option>
-                                            <option value="Belize">Belize</option>
-                                            <option value="Benin">Benin</option>
-                                            <option value="Bermuda">Bermuda</option>
-                                            <option value="Bhutan">Bhutan</option>
-                                            <option value="Bolivia">Bolivia</option>
-                                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-                                            <option value="Botswana">Botswana</option>
-                                            <option value="Bouvet Island">Bouvet Island</option>
-                                            <option value="Brazil">Brazil</option>
-                                            <option value="British Indian Ocean Territory">British Indian Ocean
-                                                Territory
-                                            </option>
-                                            <option value="Brunei Darussalam">Brunei Darussalam</option>
-                                            <option value="Bulgaria">Bulgaria</option>
-                                            <option value="Burkina Faso">Burkina Faso</option>
-                                            <option value="Burundi">Burundi</option>
-                                            <option value="Cambodia">Cambodia</option>
-                                            <option value="Cameroon">Cameroon</option>
-                                            <option value="Canada">Canada</option>
-                                            <option value="Cape Verde">Cape Verde</option>
-                                            <option value="Cayman Islands">Cayman Islands</option>
-                                            <option value="Central African Republic">Central African Republic</option>
-                                            <option value="Chad">Chad</option>
-                                            <option value="Chile">Chile</option>
-                                            <option value="China">China</option>
-                                            <option value="Christmas Island">Christmas Island</option>
-                                            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                                            <option value="Colombia">Colombia</option>
-                                            <option value="Comoros">Comoros</option>
-                                            <option value="Congo">Congo</option>
-                                            <option value="Congo, the Democratic Republic of the">Congo, the Democratic
-                                                Republic of the
-                                            </option>
-                                            <option value="Cook Islands">Cook Islands</option>
-                                            <option value="Costa Rica">Costa Rica</option>
-                                            <option value="Cote d&#39;Ivoire">Cote d&#39;Ivoire</option>
-                                            <option value="Croatia">Croatia</option>
-                                            <option value="Cuba">Cuba</option>
-                                            <option value="Curacao">Curacao</option>
-                                            <option value="Cyprus">Cyprus</option>
-                                            <option value="Czech Republic">Czech Republic</option>
-                                            <option value="Denmark">Denmark</option>
-                                            <option value="Djibouti">Djibouti</option>
-                                            <option value="Dominica">Dominica</option>
-                                            <option value="Dominican Republic">Dominican Republic</option>
-                                            <option value="Ecuador">Ecuador</option>
-                                            <option value="Egypt">Egypt</option>
-                                            <option value="El Salvador">El Salvador</option>
-                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                            <option value="Eritrea">Eritrea</option>
-                                            <option value="Estonia">Estonia</option>
-                                            <option value="Ethiopia">Ethiopia</option>
-                                            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)
-                                            </option>
-                                            <option value="Faroe Islands">Faroe Islands</option>
-                                            <option value="Fiji">Fiji</option>
-                                            <option value="Finland">Finland</option>
-                                            <option value="France">France</option>
-                                            <option value="French Guiana">French Guiana</option>
-                                            <option value="French Polynesia">French Polynesia</option>
-                                            <option value="French Southern Territories">French Southern Territories
-                                            </option>
-                                            <option value="Gabon">Gabon</option>
-                                            <option value="Gambia">Gambia</option>
-                                            <option value="Georgia">Georgia</option>
-                                            <option value="Germany">Germany</option>
-                                            <option value="Ghana">Ghana</option>
-                                            <option value="Gibraltar">Gibraltar</option>
-                                            <option value="Greece">Greece</option>
-                                            <option value="Greenland">Greenland</option>
-                                            <option value="Grenada">Grenada</option>
-                                            <option value="Guadeloupe">Guadeloupe</option>
-                                            <option value="Guam">Guam</option>
-                                            <option value="Guatemala">Guatemala</option>
-                                            <option value="Guernsey">Guernsey</option>
-                                            <option value="Guinea">Guinea</option>
-                                            <option value="Guinea-Bissau">Guinea-Bissau</option>
-                                            <option value="Guyana">Guyana</option>
-                                            <option value="Haiti">Haiti</option>
-                                            <option value="Heard and McDonald Islands">Heard and McDonald Islands
-                                            </option>
-                                            <option value="Holy See (Vatican City State)">Holy See (Vatican City
-                                                State)
-                                            </option>
-                                            <option value="Honduras">Honduras</option>
-                                            <option value="Hong Kong">Hong Kong</option>
-                                            <option value="Hungary">Hungary</option>
-                                            <option value="Iceland">Iceland</option>
-                                            <option value="India">India</option>
-                                            <option value="Indonesia">Indonesia</option>
-                                            <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
-                                            <option value="Iraq">Iraq</option>
-                                            <option value="Ireland">Ireland</option>
-                                            <option value="Isle of Man">Isle of Man</option>
-                                            <option value="Israel">Israel</option>
-                                            <option value="Italy">Italy</option>
-                                            <option value="Jamaica">Jamaica</option>
-                                            <option value="Japan">Japan</option>
-                                            <option value="Jersey">Jersey</option>
-                                            <option value="Jordan">Jordan</option>
-                                            <option value="Kazakhstan">Kazakhstan</option>
-                                            <option value="Kenya">Kenya</option>
-                                            <option value="Kiribati">Kiribati</option>
-                                            <option value="Korea, Democratic People&#39;s Republic of">Korea, Democratic
-                                                People&#39;s Republic of
-                                            </option>
-                                            <option value="Korea, Republic of">Korea, Republic of</option>
-                                            <option value="Kuwait">Kuwait</option>
-                                            <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                            <option value="Lao People&#39;s Democratic Republic">Lao People&#39;s
-                                                Democratic Republic
-                                            </option>
-                                            <option value="Latvia">Latvia</option>
-                                            <option value="Lebanon">Lebanon</option>
-                                            <option value="Lesotho">Lesotho</option>
-                                            <option value="Liberia">Liberia</option>
-                                            <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
-                                            <option value="Liechtenstein">Liechtenstein</option>
-                                            <option value="Lithuania">Lithuania</option>
-                                            <option value="Luxembourg">Luxembourg</option>
-                                            <option value="Macao">Macao</option>
-                                            <option value="Macedonia, The Former Yugoslav Republic Of">Macedonia, The
-                                                Former Yugoslav Republic Of
-                                            </option>
-                                            <option value="Madagascar">Madagascar</option>
-                                            <option value="Malawi">Malawi</option>
-                                            <option value="Malaysia">Malaysia</option>
-                                            <option value="Maldives">Maldives</option>
-                                            <option value="Mali">Mali</option>
-                                            <option value="Malta">Malta</option>
-                                            <option value="Marshall Islands">Marshall Islands</option>
-                                            <option value="Martinique">Martinique</option>
-                                            <option value="Mauritania">Mauritania</option>
-                                            <option value="Mauritius">Mauritius</option>
-                                            <option value="Mayotte">Mayotte</option>
-                                            <option value="Mexico">Mexico</option>
-                                            <option value="Micronesia, Federated States of">Micronesia, Federated States
-                                                of
-                                            </option>
-                                            <option value="Moldova, Republic of">Moldova, Republic of</option>
-                                            <option value="Monaco">Monaco</option>
-                                            <option value="Mongolia">Mongolia</option>
-                                            <option value="Montenegro">Montenegro</option>
-                                            <option value="Montserrat">Montserrat</option>
-                                            <option value="Morocco">Morocco</option>
-                                            <option value="Mozambique">Mozambique</option>
-                                            <option value="Myanmar">Myanmar</option>
-                                            <option value="Namibia">Namibia</option>
-                                            <option value="Nauru">Nauru</option>
-                                            <option value="Nepal">Nepal</option>
-                                            <option value="Netherlands">Netherlands</option>
-                                            <option value="New Caledonia">New Caledonia</option>
-                                            <option value="New Zealand">New Zealand</option>
-                                            <option value="Nicaragua">Nicaragua</option>
-                                            <option value="Niger">Niger</option>
-                                            <option value="Nigeria">Nigeria</option>
-                                            <option value="Niue">Niue</option>
-                                            <option value="Norfolk Island">Norfolk Island</option>
-                                            <option value="Northern Mariana Islands">Northern Mariana Islands</option>
-                                            <option value="Norway">Norway</option>
-                                            <option value="Oman">Oman</option>
-                                            <option value="Pakistan">Pakistan</option>
-                                            <option value="Palau">Palau</option>
-                                            <option value="Palestinian Territory, Occupied">Palestinian Territory,
-                                                Occupied
-                                            </option>
-                                            <option value="Panama">Panama</option>
-                                            <option value="Papua New Guinea">Papua New Guinea</option>
-                                            <option value="Paraguay">Paraguay</option>
-                                            <option value="Peru">Peru</option>
-                                            <option value="Philippines">Philippines</option>
-                                            <option value="Pitcairn">Pitcairn</option>
-                                            <option value="Poland">Poland</option>
-                                            <option value="Portugal">Portugal</option>
-                                            <option value="Puerto Rico">Puerto Rico</option>
-                                            <option value="Qatar">Qatar</option>
-                                            <option value="Reunion">Reunion</option>
-                                            <option value="Romania">Romania</option>
-                                            <option value="Russian Federation">Russian Federation</option>
-                                            <option value="Rwanda">Rwanda</option>
-                                            <option value="Saint Barthelemy">Saint Barthelemy</option>
-                                            <option value="Saint Helena">Saint Helena</option>
-                                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
-                                            <option value="Saint Lucia">Saint Lucia</option>
-                                            <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                                            <option value="Saint Vincent and the Grenadines">Saint Vincent and the
-                                                Grenadines
-                                            </option>
-                                            <option value="Samoa">Samoa</option>
-                                            <option value="San Marino">San Marino</option>
-                                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
-                                            <option value="Saudi Arabia">Saudi Arabia</option>
-                                            <option value="Senegal">Senegal</option>
-                                            <option value="Serbia">Serbia</option>
-                                            <option value="Seychelles">Seychelles</option>
-                                            <option value="Sierra Leone">Sierra Leone</option>
-                                            <option value="Singapore">Singapore</option>
-                                            <option value="Sint Maarten">Sint Maarten</option>
-                                            <option value="Slovakia">Slovakia</option>
-                                            <option value="Slovenia">Slovenia</option>
-                                            <option value="Solomon Islands">Solomon Islands</option>
-                                            <option value="Somalia">Somalia</option>
-                                            <option value="South Africa">South Africa</option>
-                                            <option value="South Georgia and the South Sandwich Islands">South Georgia
-                                                and the South Sandwich Islands
-                                            </option>
-                                            <option value="Spain">Spain</option>
-                                            <option value="Sri Lanka">Sri Lanka</option>
-                                            <option value="Sudan">Sudan</option>
-                                            <option value="Suriname">Suriname</option>
-                                            <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
-                                            <option value="Swaziland">Swaziland</option>
-                                            <option value="Sweden">Sweden</option>
-                                            <option value="Switzerland">Switzerland</option>
-                                            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
-                                            <option value="Taiwan">Taiwan</option>
-                                            <option value="Tajikistan">Tajikistan</option>
-                                            <option value="Tanzania, United Republic of">Tanzania, United Republic of
-                                            </option>
-                                            <option value="Thailand">Thailand</option>
-                                            <option value="Timor-Leste">Timor-Leste</option>
-                                            <option value="Togo">Togo</option>
-                                            <option value="Tokelau">Tokelau</option>
-                                            <option value="Tonga">Tonga</option>
-                                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                                            <option value="Tunisia">Tunisia</option>
-                                            <option value="Turkey">Turkey</option>
-                                            <option value="Turkmenistan">Turkmenistan</option>
-                                            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
-                                            <option value="Tuvalu">Tuvalu</option>
-                                            <option value="Uganda">Uganda</option>
-                                            <option value="Ukraine">Ukraine</option>
-                                            <option value="United Arab Emirates">United Arab Emirates</option>
-                                            <option value="United Kingdom">United Kingdom</option>
-                                            <option value="United States Minor Outlying Islands">United States Minor
-                                                Outlying Islands
-                                            </option>
-                                            <option value="United States">United States</option>
-                                            <option value="Uruguay">Uruguay</option>
-                                            <option value="Uzbekistan">Uzbekistan</option>
-                                            <option value="Vanuatu">Vanuatu</option>
-                                            <option value="Venezuela">Venezuela</option>
-                                            <option value="Viet Nam">Viet Nam</option>
-                                            <option value="Virgin Islands, British">Virgin Islands, British</option>
-                                            <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
-                                            <option value="Wallis and Futuna">Wallis and Futuna</option>
-                                            <option value="Western Sahara">Western Sahara</option>
-                                            <option value="Yemen">Yemen</option>
-                                            <option value="Zambia">Zambia</option>
-                                            <option value="Zimbabwe">Zimbabwe</option>
+                                            {% for area in areas %}
+                                            <option value="Australia">{{ area }}</option>
+                                            {% endfor %}
                                         </select>
 
                                         </li>
                                         <li class="string input required stringish"
                                             id="reservation_guest_post_code_input"><label
-                                                for="reservation_guest_post_code" class="label">Post Code<abbr
+                                                for="reservation_guest_post_code" class="label">Почтовый код<abbr
                                                 title="required">*</abbr></label><input maxlength="12" size="12"
                                                                                         id="reservation_guest_post_code"
                                                                                         class="required" type="text"
@@ -905,39 +611,24 @@
                             </div>
                             <div class='section section2'>
                                 <fieldset class="inputs">
-                                    <legend><span>Extra Details</span></legend>
+                                    <legend><span>Дополнительные детали</span></legend>
                                     <ol>
                                         <li class="select input optional" id="reservation_arrival_time_input"><label
-                                                for="reservation_arrival_time" class="label">Estimated arrival
-                                            time</label><select name="reservation[arrival_time]"
+                                                for="reservation_arrival_time" class="label">Предположительное время прибытия</label><select name="reservation[arrival_time]"
                                                                 id="reservation_arrival_time">
                                             <option value=""></option>
-                                            <option value="04:00 PM">04:00 PM</option>
-                                            <option value="05:00 PM">05:00 PM</option>
-                                            <option value="06:00 PM">06:00 PM</option>
-                                            <option value="07:00 PM">07:00 PM</option>
-                                            <option value="08:00 PM">08:00 PM</option>
-                                            <option value="09:00 PM">09:00 PM</option>
-                                            <option value="10:00 PM">10:00 PM</option>
+                                            {% for time in times %}
+                                            <option value="04:00 PM">{{ time }}</option>
+                                            {% endfor %}
                                         </select>
 
-                                            <p class="inline-hints">For arrivals outside the available times, please
-                                                contact the property</p></li>
+                                            <p class="inline-hints">Если вы прибываете в нерабочее время, пожалуйста,
+                                                 связаться с собственностью</p></li>
                                         <li class="text input optional" id="reservation_guest_comments_input"><label
-                                                for="reservation_guest_comments" class="label">Comments</label><textarea
+                                                for="reservation_guest_comments" class="label">Комментарий</label><textarea
                                                 cols="50" rows="2" id="reservation_guest_comments"
                                                 name="reservation[guest_comments]">
 </textarea>
-
-                                        </li>
-                                        <li class="boolean input optional" id="reservation_requested_newsletter_input">
-                                            <input type="hidden" name="reservation[requested_newsletter]"
-                                                   value="0"/><label for="reservation_requested_newsletter"
-                                                                     class=""><input type="checkbox"
-                                                                                     name="reservation[requested_newsletter]"
-                                                                                     id="reservation_requested_newsletter"
-                                                                                     value="1"/>Would you like to
-                                            receive the newsletter?</label>
 
                                         </li>
                                     </ol>
@@ -952,9 +643,9 @@
                                             for="reservation_terms_and_conditions" class=""><input type="checkbox"
                                                                                                    name="reservation[terms_and_conditions]"
                                                                                                    id="reservation_terms_and_conditions"
-                                                                                                   value="1"/>I have
-                                        read and accepted the <strong><a href="#terms_conditions">terms and
-                                            conditions</a></strong></label>
+                                                                                                   value="1"/>Я прочитал и принял
+                                        <strong><a href="#terms_conditions">условия и соглашения
+                                           </a></strong></label>
 
                                     </li>
                                 </ol>
