@@ -1,5 +1,7 @@
 from django import forms
 
+# forms for booking.html
+
 class HeaderPhotoForm(forms.Form):
     photos = forms.FileField()
 
@@ -60,7 +62,7 @@ class FeatureForm(forms.Form):
 class TermsAndConditionsForm(forms.Form):
     terms = forms.CharField(max_length=3000)
 
-
+# forms for book_a_room.html
 
 
 
