@@ -45,13 +45,6 @@
                      <span class="border"></span>
                 </form>
                 </label>
-                <form class="form-horizontal" action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ register_form.as_p }}
-        <br>
-        <input class="form-control" type="submit" value="зарегистрироваться">
-    </form>
-                
                 </dl>
                <h3>Выберите количество звезд</h3>
                <!--  {% for choice in starsForm.choises %}
@@ -184,7 +177,7 @@
                         <div class='adr'>
                             <div class='street-address'> Адрес
                                 <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ addresForm.as_p }}</form>
+                                {{ addressForm.as_p }}</form>
                                 <br>
 
                             </div>
@@ -216,28 +209,16 @@
                 <div class='main'>
                     <div class='photo_overlay overlay' id='property_overlay'>
                         <div class='header'>
-                            <h3><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ nameOfHotel_form.as_p }}</form></h3>
+                            <h3>{{ hotelName }}</h3>
                         </div>
                         <div class='hero'>
                             <div class='thumbs'>
                                 
                                     Добавте фото
                                 <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ uploadPhotoInfoForm1.as_p }}
+                                    {{ uploadPhotoInfoForm.as_p }}
                                 </form>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ uploadPhotoInfoForm2.as_p }}
-                                </form>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ uploadPhotoInfoForm3.as_p }}
-                                </form>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ uploadPhotoInfoForm4.as_p }}
-                                </form>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ uploadPhotoInfoForm5.as_p }}
-                                </form>
+
                             </div>
                     <div class='description'>
                         <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
@@ -248,42 +229,9 @@
                         <ol>
                             <li class='feature'>
                                 <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ feature1.as_p }}
+                                    {{ featureForm.as_p }}
                                 </form>
                             </li>
-                            <li class='feature'>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ feature2.as_p }}
-                                </form>
-                            </li>
-                            <li class='feature'>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ feature3.as_p }}
-                                </form>
-                            </li>
-                            <li class='feature'>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ feature4.as_p }}
-                                </form>
-                            </li>
-                            <li class='feature'>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ feature5.as_p }}
-                                </form>
-                            </li>
-                            <li class='feature'>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ feature6.as_p }}
-                                </form>
-                            </li>
-                            <li class='feature'>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ feature7.as_p }}
-                                </form>
-                            </li>
-                            <li class='feature'><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ feature8.as_p }}
-                                </form></li>
                     </div>
                 </div>
                 <h2>Детали размещения</h2>
