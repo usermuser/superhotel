@@ -5,6 +5,6 @@ from django.urls import re_path
 import mainapp.views as mainapp
 
 urlpatterns = [
-    path('booking/', mainapp.dataFromInputBooking, name='booking'),
+    path('booking/', mainapp.dataFromInputBooking, name='dataFromInputBooking'),
     # path('book_a_room/', mainapp.book_a_room, name='book')
 ]
