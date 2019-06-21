@@ -49,6 +49,9 @@ class UploadPhotoInfoForm(forms.Form):
     photo5 = forms.FileField()
     photo6 = forms.FileField()
 
+class LongDescriptionOfHotel(forms.Form):
+    longdescr = forms.CharField(max_length=10000)
+
 class FeatureForm(forms.Form):
     feature1 = CharField(max_length=100)
     feature2 = CharField(max_length=100)
