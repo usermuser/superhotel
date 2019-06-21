@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404, HttpResponseRedirect
-import mainapp.forms
+from django import forms
 # Create your views here.
 def dataFromInputBooking(request):
     headerPhoto = HeaderPhotoForm(request.POST)
