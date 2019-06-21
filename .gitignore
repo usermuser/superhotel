@@ -4,3 +4,6 @@
 *.git
 /conf
 __pycache__
+superhotel/.idea/workspace.xml
+superhotel/mainapp/__pycache__/urls.cpython-37.pyc
+superhotel/mainapp/__pycache__/urls.cpython-37.pyc
