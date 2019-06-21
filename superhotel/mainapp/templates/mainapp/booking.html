@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -104,44 +104,7 @@
                      <tr>
                         <!-- Здесь я думаю использовать formset -->
                         <!-- TODO здесь возникли сложности  -->
-                        <td class="room_name">
-                            <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ nameOfRoom.as_p }}
-                                <table class="table">
-                                    {{ roomitems.management_form }}
-                                    {% for form in roomitems.forms %}
-                                        {% if forloop.first %}
-                                            <thead>
-                                                <tr>
-                                                    {% for field in form.visible_fields %}
-                                                        <th class="{% cycle 'td1' 'td2' 'td3' %}" orderformset_td>
-                                                            {{ field.label|caplist }}
-
-                                                        </th>
-                                                    {% endfor %}
-                                                </tr>
-                                            </thead>
-
-                                        {% endif %}
-                                        <tr class="formset_row">
-                                            {% for field in form.visible_vields %}
-                                                <td class="{% cycle 'td1' 'td2' 'td3' %}" orderformset_td>
-                                                            {% if forloop.first %}
-                                                                {% for hidden in form.hidden_fields %}
-                                                                    {{ hidden }}
-                                                                {% endfor %}
-                                                            {% endif %}
-                                                            {{ field.errors.as_ul }}
-                                                            {{ field }}
-
-                                                        </td>
-                                            {% endfor %}
-                                        </tr>
-                                    {% endfor %}
-                                </table>
-                                    <button type="submit" value="Сохранить" class="btn btn-default btn-round form-control-last">Сохранить</button>
-                            </form>
-                        </td>
+                        Здесь будет регистрация номера, кусок кода перемещен из-за ошибки
                     </tbody>
                     <tfoot>
                     <tr>
