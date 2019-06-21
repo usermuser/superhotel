@@ -14,4 +14,16 @@ def dataFromInputBooking(request):
     postal_codeForm = PostalCodeForm(request.POST)
     mapLinkForm = MapLinkForm(request.POST)
     uploadPhotoInfoForm = UploadPhotoInfoForm(request.POST)
-    longDescriptionOfHotel =
+    longDescriptionOfHotel = LongDescriptionOfHotel(request.POST)
+    featureForm = FeatureForm(request.POST)
+    termsAndConditions = TermsAndConditionsForm(request.POST)
+
+    context = {'headerPhoto':headerPhoto, 'nameOfHotel_form':nameOfHotel_form,
+               'starsForm':starsForm, 'nameOfHotelInfo':nameOfHotelInfo,
+               'telephoneNumberForm':telephoneNumberForm, 'addressForm':addressForm,
+               'localityForm':localityForm, 'regionForm':regionForm,
+               'postal_codeForm':postal_codeForm, 'mapLinkForm':mapLinkForm,
+               'uploadPhotoInfoForm':uploadPhotoInfoForm, 'longDescriptionOfHotel':longDescriptionOfHotel,
+               'featureForm':featureForm, 'termsAndConditions':termsAndConditions}
+
+    return render(request, 'mainapp/booking.html', context)
