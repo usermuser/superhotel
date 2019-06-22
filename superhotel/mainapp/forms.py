@@ -1,25 +1,25 @@
 from django import forms
-
+from django_starfield import Stars
 # forms for booking.html
 
 class HeaderPhotoForm(forms.Form):
     photos = forms.FileField()
 
 class NameOfHotelForm(forms.Form):
-    name_of_hotel = forms.CharField(max_length=100)
+    name_of_hotel = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'El Balata, например'}))
 
 class StarsForm(forms.Form):
     STARS_CHOICES = (
-        (1, ("1 star hotel")),
-        (2, ("2 star hotel")),
-        (3, ("3 star hotel")),
-        (4, ("4 star hotel")),
-        (5, ("5 star hotel"))
+        (1, ("1-звездочный отель")),
+        (2, ("2-звездочный отель")),
+        (3, ("3-звездочный отель")),
+        (4, ("4-звездочный отель")),
+        (5, ("5-звездочный отель"))
     )
     stars = forms.ChoiceField(choices=STARS_CHOICES, label="", initial='', required=True)
 
 class NameOfHotelInfoForm(forms.Form):
-    info = forms.CharField(max_length=6000)
+    info = forms.CharField(max_length=6000, widget=forms.Textarea(attrs={'placeholder': 'Добавьте небольшое описание','cols': 45, 'rows': 10}))
 
 class TelephoneNumberForm(forms.Form):
     number = forms.IntegerField(required=True)
@@ -37,7 +37,7 @@ class PostalCodeForm(forms.Form):
     postalCode = forms.IntegerField(required=True)
 
 class MapLinkForm(forms.Form):
-    link = forms.CharField(max_length=2000)
+    link = forms.URLField()
 
 class UploadPhotoInfoForm(forms.Form):
     # for x in range(6):
@@ -50,17 +50,17 @@ class UploadPhotoInfoForm(forms.Form):
     photo6 = forms.FileField()
 
 class LongDescriptionOfHotel(forms.Form):
-    longdescr = forms.CharField(max_length=10000)
+    longdescr = forms.CharField(max_length=10000, widget=forms.Textarea(attrs={'placeholder': 'Добавьте большое описание','cols': 45, 'rows': 10}))
 
 class FeatureForm(forms.Form):
-    feature1 = forms.CharField(max_length=100)
-    feature2 = forms.CharField(max_length=100)
-    feature3 = forms.CharField(max_length=100)
-    feature4 = forms.CharField(max_length=100)
-    feature5 = forms.CharField(max_length=100)
-    feature6 = forms.CharField(max_length=100)
-    feature7 = forms.CharField(max_length=100)
-    feature8 = forms.CharField(max_length=100)
+    feature1 = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Добавьте преимущество'}))
+    feature2 = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Добавьте преимущество'}))
+    feature3 = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Добавьте преимущество'}))
+    feature4 = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Добавьте преимущество'}))
+    feature5 = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Добавьте преимущество'}))
+    feature6 = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Добавьте преимущество'}))
+    feature7 = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Добавьте преимущество'}))
+    feature8 = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Добавьте преимущество'}))
 
 class TermsAndConditionsForm(forms.Form):
     terms = forms.CharField(max_length=3000)

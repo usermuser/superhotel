@@ -6,56 +6,52 @@
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <meta content='Virginia y Pedro son una pareja Italo-Dominicana, juntos con sus hijos pequeños viven y dirigen este hotel con encanto. El Balata, refleja claramente la unión de estas dos familias de diferentes culturas y estilos, pero en completa armonía creando un pequeño hotel sin precedentes en el Caribe.&#x000A;&#x000A;'
           name='description'>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+
     <link rel="stylesheet" media="screen" href="{% static 'css/public-f6ccfa2f22ed0069d927e67be1fddc44.css' %}"/>
     <link rel="stylesheet" media="screen" href="{% static 'css/public.css' %} "/>
+    <link rel="stylesheet" media="screen" href="{% static 'public-print-f785708b5849f5f94a6a787a67fe4952.css' %} "/>
 
-    <!--<link rel="stylesheet" href="https://app.littlehotelier.com/assets/public-f6ccfa2f22ed0069d927e67be1fddc44.css">-->
-    <!--<link rel="stylesheet" href="https://app.littlehotelier.com/properties/9012/stylesheets/public.css">-->
-    <!--<link rel="stylesheet" href="https://app.littlehotelier.com/assets/public-print-f785708b5849f5f94a6a787a67fe4952.css">-->
+
     <meta name="csrf-param" content="authenticity_token"/>
     <meta name="csrf-token"
           content="UENh4MFnwXRSowg3jlH25Ki65IrHb2BuuiyHi3NGjjQTRGFHD32EZ1Bq6FI8RuIL8nknlkbbi8LHb2PVY1HzWQ=="/>
-    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </head>
 <body>
 
 
 <div id='main'>
     <div id='banner'>
-            <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                    {{ headerPhoto.as_p }}
-            </form>
+        <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+            {% for field in headerPhoto %}
+            {{ field }}
+            {% endfor %}
+        </form>
 
         <img
-            src="https://photos-app-prod.littlehotelier.com/attachments/properties/banners/9012/standard/20180710_141615.jpg?1531354274"
-            alt="20180710 141615"/>
+                src="https://photos-app-prod.littlehotelier.com/attachments/properties/banners/9012/standard/20180710_141615.jpg?1531354274"
+                alt="20180710 141615"/>
 
 
-        </div>
+    </div>
     <div id='content'>
         <div class='overview'>
             <div class='header'>
-                 <!-- <h1><input type="text" placeholder="Отель Победа"></h1> -->
-
-                 <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                    {{ nameOfHotel_form.as_p }}
-
-                </form>
-
-                </dl>
-               <h3>Выберите количество звезд</h3>
-               <!--  {% for choice in starsForm.choises %}
-                    <div>
-                        {{ choice }}
+                <!-- <h1><input type="text" placeholder="Отель Победа"></h1> -->
+                <div style="float:left">
+            <h1><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                    {% for field in nameOfHotel_form %}
+                        {{ field }}
+                    {% endfor %}
+                </form></h1>
                     </div>
-                {% endfor %} -->
-
+                <div style="float:right">
+                <h3>Выберите количество звезд</h3>
                 <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                    {{ starsForm.as_p }}
+                    {% for field in starsForm %}
+                        {{ field }}
+                    {% endfor %}
                 </form>
+                    </div>
                 <div class='top-right'>
                     <!-- <div class='locale_switcher'>
                         <ul>
@@ -74,278 +70,987 @@
                             </li>
                         </ul> -->
 
-                    </div>
+                </div>
 
+                <div class='website'>
+                    <!--TODO-->
+                </div>
+
+            </div>
+        </div>
+        <div class='availability'>
+            <table cellspacing='0' class='no-margin rates-header'>
+                <thead class='controls'>
+                <!-- Так и не понял для чего этот нужен быть input -->
+                <form action="/properties/resielbalatadirect?locale=en" accept-charset="UTF-8" method="get"><input
+                        name="utf8" type="hidden" value="&#x2713;"/>
+                    <input type="hidden" name="locale" id="locale" value="en"/>
+                </form>
+            </table>
+            </th>
+            </tr>
+            </thead>
+            </table>
+            <table cellspacing='0' class='rates' id='rates'>
+
+                <tbody>
+
+
+                <tr>
+                    <!-- Здесь я думаю использовать formset -->
+                    <!-- TODO здесь возникли сложности  -->
+                    <td class='room_name'>
+                        <p>Habitación Economy Standard </p>
+                        <a rel=".photo_overlay[data-id=room_107199]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107199">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124780430'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-22">30</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124780431'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-23">30</a>
+                    </td>
+                    <td class='rate' data-id='124780432'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-24">30</a>
+                    </td>
+                    <td class='rate' data-id='124780433'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-25">30</a>
+                    </td>
+                    <td class='rate' data-id='124780434'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-26">30</a>
+                    </td>
+                    <td class='rate' data-id='124780435'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-27">30</a>
+                    </td>
+                    <td class='rate' data-id='124780436'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-28">30</a>
+                    </td>
+                    <td class='rate start weekend' data-id='124780437'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-29">30</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124780438'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-06-30">30</a>
+                    </td>
+                    <td class='rate' data-id='124780439'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-07-01">30</a>
+                    </td>
+                    <td class='rate' data-id='124780440'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-07-02">30</a>
+                    </td>
+                    <td class='rate' data-id='124780441'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-07-03">30</a>
+                    </td>
+                    <td class='rate' data-id='124780442'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-07-04">30</a>
+                    </td>
+                    <td class='rate' data-id='124780443'>
+                        <a href="/reservations/resielbalatadirect/107199?locale=en&amp;start_date=2019-07-05">30</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>One Bedroom Apartment Standard</p>
+                        <a rel=".photo_overlay[data-id=room_107215]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107215">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124792126'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-06-22">45</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124792127'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-06-23">45</a>
+                    </td>
+                    <td class='rate' data-id='124792128'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-06-24">45</a>
+                    </td>
+                    <td class='rate' data-id='124792129'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-06-25">45</a>
+                    </td>
+                    <td class='rate' data-id='124792130'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-06-26">45</a>
+                    </td>
+                    <td class='rate' data-id='124792131'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-06-27">45</a>
+                    </td>
+                    <td class='rate' data-id='124792132'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-06-28">45</a>
+                    </td>
+                    <td class='rate start weekend' data-id='124792133'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-06-29">45</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124792134'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-06-30">45</a>
+                    </td>
+                    <td class='rate' data-id='124792135'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-07-01">45</a>
+                    </td>
+                    <td class='rate' data-id='124792136'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-07-02">45</a>
+                    </td>
+                    <td class='rate' data-id='124792137'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-07-03">45</a>
+                    </td>
+                    <td class='rate' data-id='124792138'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-07-04">45</a>
+                    </td>
+                    <td class='rate' data-id='124792139'>
+                        <a href="/reservations/resielbalatadirect/107215?locale=en&amp;start_date=2019-07-05">45</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>Apartamento con terraza Standard </p>
+                        <a rel=".photo_overlay[data-id=room_107218]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107218">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124794319'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='end rate weekend' data-id='124794320'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-06-23">100</a>
+                    </td>
+                    <td class='rate' data-id='124794321'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-06-24">100</a>
+                    </td>
+                    <td class='rate' data-id='124794322'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-06-25">100</a>
+                    </td>
+                    <td class='rate' data-id='124794323'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-06-26">100</a>
+                    </td>
+                    <td class='rate' data-id='124794324'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-06-27">100</a>
+                    </td>
+                    <td class='rate' data-id='124794325'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-06-28">100</a>
+                    </td>
+                    <td class='rate start weekend' data-id='124794326'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-06-29">100</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124794327'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-06-30">100</a>
+                    </td>
+                    <td class='rate' data-id='124794328'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-07-01">100</a>
+                    </td>
+                    <td class='rate' data-id='124794329'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-07-02">100</a>
+                    </td>
+                    <td class='rate' data-id='124794330'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-07-03">100</a>
+                    </td>
+                    <td class='rate' data-id='124794331'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-07-04">100</a>
+                    </td>
+                    <td class='rate' data-id='124794332'>
+                        <a href="/reservations/resielbalatadirect/107218?locale=en&amp;start_date=2019-07-05">100</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>Two Bedroom Apartment 4 pax Standard </p>
+                        <a rel=".photo_overlay[data-id=room_107216]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107216">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124792857'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-06-22">75</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124792858'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-06-23">75</a>
+                    </td>
+                    <td class='rate' data-id='124792859'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-06-24">75</a>
+                    </td>
+                    <td class='rate' data-id='124792860'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-06-25">75</a>
+                    </td>
+                    <td class='rate' data-id='124792861'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-06-26">75</a>
+                    </td>
+                    <td class='rate' data-id='124792862'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-06-27">75</a>
+                    </td>
+                    <td class='rate' data-id='124792863'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-06-28">75</a>
+                    </td>
+                    <td class='rate start weekend' data-id='124792864'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-06-29">75</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124792865'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-06-30">75</a>
+                    </td>
+                    <td class='rate' data-id='124792866'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-07-01">75</a>
+                    </td>
+                    <td class='rate' data-id='124792867'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-07-02">75</a>
+                    </td>
+                    <td class='rate' data-id='124792868'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-07-03">75</a>
+                    </td>
+                    <td class='rate' data-id='124792869'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-07-04">75</a>
+                    </td>
+                    <td class='rate' data-id='124792870'>
+                        <a href="/reservations/resielbalatadirect/107216?locale=en&amp;start_date=2019-07-05">75</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>Two Bedroom Apartment 6 pax Standard </p>
+                        <a rel=".photo_overlay[data-id=room_107217]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107217">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124793588'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='end rate weekend' data-id='124793589'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-06-23">85</a>
+                    </td>
+                    <td class='rate' data-id='124793590'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-06-24">85</a>
+                    </td>
+                    <td class='rate' data-id='124793591'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-06-25">85</a>
+                    </td>
+                    <td class='rate' data-id='124793592'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-06-26">85</a>
+                    </td>
+                    <td class='rate' data-id='124793593'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='rate' data-id='124793594'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='rate start weekend' data-id='124793595'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-06-29">85</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124793596'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-06-30">85</a>
+                    </td>
+                    <td class='rate' data-id='124793597'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-07-01">85</a>
+                    </td>
+                    <td class='rate' data-id='124793598'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-07-02">85</a>
+                    </td>
+                    <td class='rate' data-id='124793599'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-07-03">85</a>
+                    </td>
+                    <td class='rate' data-id='124793600'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-07-04">85</a>
+                    </td>
+                    <td class='rate' data-id='124793601'>
+                        <a href="/reservations/resielbalatadirect/107217?locale=en&amp;start_date=2019-07-05">85</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>Habitación Family Standard </p>
+                        <a rel=".photo_overlay[data-id=room_107206]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107206">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107206?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124785547'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='end rate weekend' data-id='124785548'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='rate' data-id='124785549'>
+                        <a href="/reservations/resielbalatadirect/107206?locale=en&amp;start_date=2019-06-24">35</a>
+                    </td>
+                    <td class='rate' data-id='124785550'>
+                        <a href="/reservations/resielbalatadirect/107206?locale=en&amp;start_date=2019-06-25">35</a>
+                    </td>
+                    <td class='rate' data-id='124785551'>
+                        <a href="/reservations/resielbalatadirect/107206?locale=en&amp;start_date=2019-06-26">35</a>
+                    </td>
+                    <td class='rate' data-id='124785552'>
+                        <a href="/reservations/resielbalatadirect/107206?locale=en&amp;start_date=2019-06-27">35</a>
+                    </td>
+                    <td class='rate' data-id='124785553'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='rate start weekend' data-id='124785554'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='end rate weekend' data-id='124785555'>
+                        <a href="/reservations/resielbalatadirect/107206?locale=en&amp;start_date=2019-06-30">35</a>
+                    </td>
+                    <td class='rate' data-id='124785556'>
+                        <a href="/reservations/resielbalatadirect/107206?locale=en&amp;start_date=2019-07-01">35</a>
+                    </td>
+                    <td class='rate' data-id='124785557'>
+                        <a href="/reservations/resielbalatadirect/107206?locale=en&amp;start_date=2019-07-02">35</a>
+                    </td>
+                    <td class='rate' data-id='124785558'>
+                        <a href="/reservations/resielbalatadirect/107206?locale=en&amp;start_date=2019-07-03">35</a>
+                    </td>
+                    <td class='rate' data-id='124785559'>
+                        <a href="/reservations/resielbalatadirect/107206?locale=en&amp;start_date=2019-07-04">35</a>
+                    </td>
+                    <td class='rate' data-id='124785560'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>Habitación Standard Standard </p>
+                        <a rel=".photo_overlay[data-id=room_107209]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107209">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124787740'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-06-22">35</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124787741'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-06-23">35</a>
+                    </td>
+                    <td class='rate' data-id='124787742'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-06-24">35</a>
+                    </td>
+                    <td class='rate' data-id='124787743'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-06-25">35</a>
+                    </td>
+                    <td class='rate' data-id='124787744'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-06-26">35</a>
+                    </td>
+                    <td class='rate' data-id='124787745'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-06-27">35</a>
+                    </td>
+                    <td class='rate' data-id='124787746'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-06-28">35</a>
+                    </td>
+                    <td class='rate start weekend' data-id='124787747'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-06-29">35</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124787748'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-06-30">35</a>
+                    </td>
+                    <td class='rate' data-id='124787749'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-07-01">35</a>
+                    </td>
+                    <td class='rate' data-id='124787750'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-07-02">35</a>
+                    </td>
+                    <td class='rate' data-id='124787751'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-07-03">35</a>
+                    </td>
+                    <td class='rate' data-id='124787752'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-07-04">35</a>
+                    </td>
+                    <td class='rate' data-id='124787753'>
+                        <a href="/reservations/resielbalatadirect/107209?locale=en&amp;start_date=2019-07-05">35</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>Habitación Panoramic Standard</p>
+                        <a rel=".photo_overlay[data-id=room_107201]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107201">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124781892'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-06-22">35</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124781893'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-06-23">35</a>
+                    </td>
+                    <td class='rate' data-id='124781894'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-06-24">35</a>
+                    </td>
+                    <td class='rate' data-id='124781895'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-06-25">35</a>
+                    </td>
+                    <td class='rate' data-id='124781896'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-06-26">35</a>
+                    </td>
+                    <td class='rate' data-id='124781897'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-06-27">35</a>
+                    </td>
+                    <td class='rate' data-id='124781898'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-06-28">35</a>
+                    </td>
+                    <td class='rate start weekend' data-id='124781899'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-06-29">35</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124781900'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-06-30">35</a>
+                    </td>
+                    <td class='rate' data-id='124781901'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-07-01">35</a>
+                    </td>
+                    <td class='rate' data-id='124781902'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-07-02">35</a>
+                    </td>
+                    <td class='rate' data-id='124781903'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-07-03">35</a>
+                    </td>
+                    <td class='rate' data-id='124781904'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-07-04">35</a>
+                    </td>
+                    <td class='rate' data-id='124781905'>
+                        <a href="/reservations/resielbalatadirect/107201?locale=en&amp;start_date=2019-07-05">35</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>Loft Romántica Standard </p>
+                        <a rel=".photo_overlay[data-id=room_107210]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107210">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124788471'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-06-22">45</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124788472'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-06-23">45</a>
+                    </td>
+                    <td class='rate' data-id='124788473'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-06-24">45</a>
+                    </td>
+                    <td class='rate' data-id='124788474'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-06-25">45</a>
+                    </td>
+                    <td class='rate' data-id='124788475'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-06-26">45</a>
+                    </td>
+                    <td class='rate' data-id='124788476'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-06-27">45</a>
+                    </td>
+                    <td class='rate' data-id='124788477'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-06-28">45</a>
+                    </td>
+                    <td class='rate start weekend' data-id='124788478'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-06-29">45</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124788479'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-06-30">45</a>
+                    </td>
+                    <td class='rate' data-id='124788480'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-07-01">45</a>
+                    </td>
+                    <td class='rate' data-id='124788481'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-07-02">45</a>
+                    </td>
+                    <td class='rate' data-id='124788482'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-07-03">45</a>
+                    </td>
+                    <td class='rate' data-id='124788483'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-07-04">45</a>
+                    </td>
+                    <td class='rate' data-id='124788484'>
+                        <a href="/reservations/resielbalatadirect/107210?locale=en&amp;start_date=2019-07-05">45</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>Loft Quádruple Standard </p>
+                        <a rel=".photo_overlay[data-id=room_107211]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107211">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124789202'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-06-22">55</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124789203'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-06-23">55</a>
+                    </td>
+                    <td class='rate' data-id='124789204'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-06-24">55</a>
+                    </td>
+                    <td class='rate' data-id='124789205'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-06-25">55</a>
+                    </td>
+                    <td class='rate' data-id='124789206'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-06-26">55</a>
+                    </td>
+                    <td class='rate' data-id='124789207'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='rate' data-id='124789208'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-06-28">55</a>
+                    </td>
+                    <td class='rate start weekend' data-id='124789209'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-06-29">55</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124789210'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-06-30">55</a>
+                    </td>
+                    <td class='rate' data-id='124789211'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-07-01">55</a>
+                    </td>
+                    <td class='rate' data-id='124789212'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-07-02">55</a>
+                    </td>
+                    <td class='rate' data-id='124789213'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-07-03">55</a>
+                    </td>
+                    <td class='rate' data-id='124789214'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-07-04">55</a>
+                    </td>
+                    <td class='rate' data-id='124789215'>
+                        <a href="/reservations/resielbalatadirect/107211?locale=en&amp;start_date=2019-07-05">55</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>Deluxe Rústica Standard</p>
+                        <a rel=".photo_overlay[data-id=room_107212]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107212">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124789933'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='end rate weekend' data-id='124789934'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-06-23">55</a>
+                    </td>
+                    <td class='rate' data-id='124789935'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-06-24">55</a>
+                    </td>
+                    <td class='rate' data-id='124789936'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-06-25">55</a>
+                    </td>
+                    <td class='rate' data-id='124789937'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-06-26">55</a>
+                    </td>
+                    <td class='rate' data-id='124789938'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-06-27">55</a>
+                    </td>
+                    <td class='rate' data-id='124789939'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-06-28">55</a>
+                    </td>
+                    <td class='rate start weekend' data-id='124789940'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-06-29">55</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124789941'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-06-30">55</a>
+                    </td>
+                    <td class='rate' data-id='124789942'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-07-01">55</a>
+                    </td>
+                    <td class='rate' data-id='124789943'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-07-02">55</a>
+                    </td>
+                    <td class='rate' data-id='124789944'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-07-03">55</a>
+                    </td>
+                    <td class='rate' data-id='124789945'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-07-04">55</a>
+                    </td>
+                    <td class='rate' data-id='124789946'>
+                        <a href="/reservations/resielbalatadirect/107212?locale=en&amp;start_date=2019-07-05">55</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class='room_name'>
+                        <p>Deluxe Caribe Standard </p>
+                        <a rel=".photo_overlay[data-id=room_107213]" class="photos" href="#">Photos</a>
+                        <a class="details" href="#room_107213">Details</a>
+                    </td>
+                    <td class='book_now'>
+                        <a class="book dynamic en"
+                           href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-06-22"><span
+                                class='fa fa-chevron-circle-right'></span>
+                            Book
+                        </a></td>
+                    <td class='rack_rate'>$</td>
+                    <td class='rate start weekend' data-id='124790664'>
+                        <span class='unavailable'>Sold</span>
+                    </td>
+                    <td class='end rate weekend' data-id='124790665'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-06-23">55</a>
+                    </td>
+                    <td class='rate' data-id='124790666'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-06-24">55</a>
+                    </td>
+                    <td class='rate' data-id='124790667'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-06-25">55</a>
+                    </td>
+                    <td class='rate' data-id='124790668'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-06-26">55</a>
+                    </td>
+                    <td class='rate' data-id='124790669'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-06-27">55</a>
+                    </td>
+                    <td class='rate' data-id='124790670'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-06-28">55</a>
+                    </td>
+                    <td class='rate start weekend' data-id='124790671'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-06-29">55</a>
+                    </td>
+                    <td class='end rate weekend' data-id='124790672'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-06-30">55</a>
+                    </td>
+                    <td class='rate' data-id='124790673'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-07-01">55</a>
+                    </td>
+                    <td class='rate' data-id='124790674'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-07-02">55</a>
+                    </td>
+                    <td class='rate' data-id='124790675'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-07-03">55</a>
+                    </td>
+                    <td class='rate' data-id='124790676'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-07-04">55</a>
+                    </td>
+                    <td class='rate' data-id='124790677'>
+                        <a href="/reservations/resielbalatadirect/107213?locale=en&amp;start_date=2019-07-05">55</a>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th class='bottom_left_corner bottom_right_corner' colspan='17'>
+                        <em>Наведите указатель мыши на цену для включения, размещения и минимального пребывания</em>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+            <script id='tool_tip_template' type='text/x-jquery-tmpl'>
+
+
+            </script>
+
+
+        </div>
+        <div class='property'>
+            <h2>Информация об отеле</h2>
+            <div class='location'>
+                <div class='vcard'>
+                    <div class='fn org'>
+                        <strong>Информация об отеле
+                            <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                {% for field in nameOfHotelInfo %}
+                                    {{ field }}
+                                {% endfor %}
+                            </form>
+                        </strong>
+                    </div>
+                    <div class='phone'> Телефон
+                        <span class='tel'><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}"
+                                                method="post">
+
+                            {% for field in telephoneNumberForm %}
+                                {{ field }}
+                                {% endfor %}
+                            </span>
+                        </form>
+                    </div>
+                    <div class='adr'>
+                        <div class='street-address'> Адрес
+                            <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                {% for field in addressForm %}
+                                {{ field }}
+                                {% endfor %}
+                            </form>
+                            <br>
+
+                        </div>
+                        <div>
+                                <span class='locality'> местонахождение
+                                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}"
+                                          method="post">
+                                    {% for field in localityForm %}
+                                        {{ field }}
+                                    {% endfor %}
+                                    </form></span><br>
+                            <span class='region'> регион
+                                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}"
+                                          method="post">
+                                    {% for field in regionForm %}
+                                        {{ field }}
+                                    {% endfor %}
+                                    </form> </span><br>
+                            <span class='postal-code'> Почтовый код <form class="form-horizontal"
+                                                                          action="{% url 'main:dataFromInputBooking' %}"
+                                                                          method="post">
+                                 {% for field in postal_codeForm %}
+                                        {{ field }}
+                                    {% endfor %}
+                                </form></span><br>
+                        </div>
+                    </div>
                     <div class='website'>
                         <!--TODO-->
+
                     </div>
 
                 </div>
+                <div class='actions'>
+                    <h3>Сслыка на карту Гугл</h3>
+                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                        {% for field in mapLinkForm %}
+                        {{ field }}
+                        {% endfor %}
+                    </form>
+                    </a>
+                    <!--TODO-->
+                </div>
             </div>
-            <div class='availability'>
-                <table cellspacing='0' class='no-margin rates-header'>
-                    <thead class='controls'>
-                        <!-- Так и не понял для чего этот нужен быть input -->
-                    <form action="/properties/resielbalatadirect?locale=en" accept-charset="UTF-8" method="get"><input
-                                name="utf8" type="hidden" value="&#x2713;"/>
-                        <input type="hidden" name="locale" id="locale" value="en"/>
-                                </form>
-                                </table>
-                            </th>
-                        </tr>
-                    </thead>
-                </table>
-                <table cellspacing='0' class='rates' id='rates'>
+            <div class='main'>
 
-                    <tbody>
+                <!--<div class='photo_overlay overlay' id='property_overlay'>-->
 
-                    
-                     <tr>
-                        <!-- Здесь я думаю использовать formset -->
-                        <!-- TODO здесь возникли сложности  -->
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima nulla odio voluptate. Animi harum nam nobis quas recusandae repellendus totam unde velit vero voluptates. Deserunt iste nisi sequi veniam voluptatem.
-                        Номер
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                        <th class='bottom_left_corner bottom_right_corner' colspan='17'>
-                            <em>Наведите указатель мыши на цену для включения, размещения и минимального пребывания</em>
-                        </th>
-                    </tr>
-                    </tfoot>
-                </table>
-                <script id='tool_tip_template' type='text/x-jquery-tmpl'>
-
-
-                </script>
-
-
-            </div>
-            <div class='property'>
-                <h2>Информация об отеле</h2>
-                <div class='location'>
-                    <div class='vcard'>
-                        <div class='fn org'>
-                            <strong>Информация об отеле
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ nameOfHotelInfo.as_p }}
-                                </form>
-                            </strong>
-                        </div>
-                        <div class='phone'> Телефон
-                            <span class='tel'><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ telephoneNumberForm.as_p }}</span>
-                        </form>
-                        </div>
-                        <div class='adr'>
-                            <div class='street-address'> Адрес
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ addressForm.as_p }}</form>
-                                <br>
-
-                            </div>
-                            <div>
-                                <span class='locality'> местонахождение
-                                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ localityForm.as_p }}</form></span>
-                                <span class='region'> регион
-                                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ regionForm.as_p }}</form> </span>
-                                <span class='postal-code'> Почтовый код <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ postal_codeForm.as_p }}</form></span>
-                            </div>
-                        </div>
-                        <div class='website'>
-                            <!--TODO-->
-
-                        </div>
-
-                    </div>
-                    <div class='actions'>
-                        <h3>Сслыка на карту Гугл</h3>
+                <div class='header'>
+                    <h3>{{ hotelName }}</h3>
+                </div>
+                <div class='hero'>
+                    <div class='thumbs'>
+                        Добавьте фото
                         <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ mapLinkForm.as_p }}</form>
-                        </a>
-                        <!--TODO-->
-                        </div>
-                </div>
-                <div class='main'>
-                    <div class='photo_overlay overlay' id='property_overlay'>
-                        <div class='header'>
-                            <h3>{{ hotelName }}</h3>
-                        </div>
-                        <div class='hero'>
-                            <div class='thumbs'>
-                                
-                                    Добавте фото
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ uploadPhotoInfoForm.as_p }}
-                                </form>
-
-                            </div>
+                            {% for field in uploadPhotoInfoForm %}
+                            {{ field }}
+                            {% endfor %}
+                        </form>
+                        <br>
+                    </div>
                     <div class='description'>
                         <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ longDescriptionOfHotel.as_p }}</form>
+                            {% for field in longDescriptionOfHotel %}
+                            {{ field }}
+                            {% endfor %}
+                        </form>
                     </div>
                     <div class='features'>
                         <h3>Удобства</h3>
                         <ol>
                             <li class='feature'>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                    {{ featureForm.as_p }}
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}"
+                                      method="post">
+                                    {% for field in featureForm %}
+                                    <br>
+                                    {{ field }}
+                                    {% endfor %}
                                 </form>
                             </li>
+                        </ol>
                     </div>
                 </div>
                 <h2>Детали размещения</h2>
                 {% if rooms %}
-                    {% for room in rooms %}
-                    <div class="room">
-                        <div class='header'>
-                                <h4>{{ room.name }}</h4>
-                            </div>
-                          <div class='description_features'>
-                            <div class='description'>
-                                <h3>
-                                    <a class="book dynamic"
-                                       href="{% url 'main:roomView' id %}"><span
-                                            class='fa fa-chevron-circle-right'></span>
-                                        Бронь
-                                    </a></h3>
-                            </div>
-                            <div class='features'>
-                                <ol>
-                                    {% for feature in room %}
-                                        <li class='feature'>{{ feature }}</li>
-                                    {% endfor %}
-                                </ol>
-                            </div>
-                        </div>    
-
+                {% for room in rooms %}
+                <div class="room">
+                    <div class='header'>
+                        <h4>{{ room.name }}</h4>
+                    </div>
+                    <div class='description_features'>
+                        <div class='description'>
+                            <h3>
+                                <a class="book dynamic"
+                                   href="{% url 'main:roomView' id %}"><span
+                                        class='fa fa-chevron-circle-right'></span>
+                                    Бронь
+                                </a></h3>
+                        </div>
+                        <div class='features'>
+                            <ol>
+                                {% for feature in room %}
+                                <li class='feature'>{{ feature }}</li>
+                                {% endfor %}
+                            </ol>
+                        </div>
                     </div>
 
-                    {% endfor %}
+                </div>
+
+                {% endfor %}
                 {% endif %}
                 <div class='rooms'>
                     <!--<div class='room' id='room_107199'>-->
-                        <!--<div class='photo_overlay overlay' data-id='room_107199'>-->
-                            <!--<div class='header'>-->
-                                <!--<h3>Residencia El Balata</h3>-->
-                                <!--<h4>Habitación Economy Standard </h4>-->
-                            <!--</div>-->
-                            <!--<div class='hero'>-->
-                                <!--<div class='thumbs'>-->
-                                    <!--<ul class='carousel-thumb'>-->
-                                        <!--<li class='photo'>-->
-                                            <!--<a data-slide-index="0" href="#"><img alt="Habitación Economy Standard "-->
-                                                                                  <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/thumb/20180525_161001_1_.jpg?1527303679"-->
-                                                                                  <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
-                                                                                  <!--width="100" height="100"/>-->
-                                            <!--</a></li>-->
-                                        <!--<li class='photo'>-->
-                                            <!--<a data-slide-index="1" href="#"><img alt="Habitación Economy Standard "-->
-                                                                                  <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/668/thumb/20180525_161035_1_.jpg?1527303748"-->
-                                                                                  <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
-                                                                                  <!--width="100" height="100"/>-->
-                                            <!--</a></li>-->
-                                        <!--<li class='photo'>-->
-                                            <!--<a data-slide-index="2" href="#"><img alt="Habitación Economy Standard "-->
-                                                                                  <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/669/thumb/20180525_161344_1_.jpg?1527303825"-->
-                                                                                  <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
-                                                                                  <!--width="100" height="100"/>-->
-                                            <!--</a></li>-->
-                                        <!--<li class='photo'>-->
-                                            <!--<a data-slide-index="3" href="#"><img alt="Habitación Economy Standard "-->
-                                                                                  <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/670/thumb/20180525_161512_1_.jpg?1527303917"-->
-                                                                                  <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
-                                                                                  <!--width="100" height="100"/>-->
-                                            <!--</a></li>-->
-                                    <!--</ul>-->
-                                <!--</div>-->
-                                <!--<span class='edge'></span>-->
-                                <!--<span class='container'>-->
-<!--<ul class='carousel-standard'>-->
-<!--<a href="#"><li class='photo'><img alt="Habitación Economy Standard "-->
-                                   <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/standard/20180525_161001_1_.jpg?1527303679"-->
-                                   <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
-                                   <!--height="225"/></li>-->
-<!--</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "-->
-                                       <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/668/standard/20180525_161035_1_.jpg?1527303748"-->
-                                       <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
-                                       <!--height="225"/></li>-->
-<!--</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "-->
-                                       <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/669/standard/20180525_161344_1_.jpg?1527303825"-->
-                                       <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
-                                       <!--height="225"/></li>-->
-<!--</a><li class='photo'><img alt="Habitación Economy Standard "-->
-                           <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/670/standard/20180525_161512_1_.jpg?1527303917"-->
-                           <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
-                           <!--height="225"/></li>-->
-<!--</ul>-->
-<!--</span>-->
-                            <!--</div>-->
-                        <!--</div>-->
+                    <!--<div class='photo_overlay overlay' data-id='room_107199'>-->
+                    <!--<div class='header'>-->
+                    <!--<h3>Residencia El Balata</h3>-->
+                    <!--<h4>Habitación Economy Standard </h4>-->
+                    <!--</div>-->
+                    <!--<div class='hero'>-->
+                    <!--<div class='thumbs'>-->
+                    <!--<ul class='carousel-thumb'>-->
+                    <!--<li class='photo'>-->
+                    <!--<a data-slide-index="0" href="#"><img alt="Habitación Economy Standard "-->
+                    <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/thumb/20180525_161001_1_.jpg?1527303679"-->
+                    <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
+                    <!--width="100" height="100"/>-->
+                    <!--</a></li>-->
+                    <!--<li class='photo'>-->
+                    <!--<a data-slide-index="1" href="#"><img alt="Habitación Economy Standard "-->
+                    <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/668/thumb/20180525_161035_1_.jpg?1527303748"-->
+                    <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
+                    <!--width="100" height="100"/>-->
+                    <!--</a></li>-->
+                    <!--<li class='photo'>-->
+                    <!--<a data-slide-index="2" href="#"><img alt="Habitación Economy Standard "-->
+                    <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/669/thumb/20180525_161344_1_.jpg?1527303825"-->
+                    <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
+                    <!--width="100" height="100"/>-->
+                    <!--</a></li>-->
+                    <!--<li class='photo'>-->
+                    <!--<a data-slide-index="3" href="#"><img alt="Habitación Economy Standard "-->
+                    <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/670/thumb/20180525_161512_1_.jpg?1527303917"-->
+                    <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png"-->
+                    <!--width="100" height="100"/>-->
+                    <!--</a></li>-->
+                    <!--</ul>-->
+                    <!--</div>-->
+                    <!--<span class='edge'></span>-->
+                    <!--<span class='container'>-->
+                    <!--<ul class='carousel-standard'>-->
+                    <!--<a href="#"><li class='photo'><img alt="Habitación Economy Standard "-->
+                    <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/standard/20180525_161001_1_.jpg?1527303679"-->
+                    <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
+                    <!--height="225"/></li>-->
+                    <!--</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "-->
+                    <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/668/standard/20180525_161035_1_.jpg?1527303748"-->
+                    <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
+                    <!--height="225"/></li>-->
+                    <!--</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "-->
+                    <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/669/standard/20180525_161344_1_.jpg?1527303825"-->
+                    <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
+                    <!--height="225"/></li>-->
+                    <!--</a><li class='photo'><img alt="Habitación Economy Standard "-->
+                    <!--data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/670/standard/20180525_161512_1_.jpg?1527303917"-->
+                    <!--src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"-->
+                    <!--height="225"/></li>-->
+                    <!--</ul>-->
+                    <!--</span>-->
+                    <!--</div>-->
+                    <!--</div>-->
 
-                        <!--<div class='photo'>-->
-                            <!--<a rel=".photo_overlay[data-id=room_107199]" class="photo_small" href="#"><img-->
-                                    <!--alt="Habitación Economy Standard "-->
-                                    <!--src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/thumb/20180525_161001_1_.jpg?1527303679"/>-->
-                            <!--</a><a rel=".photo_overlay[data-id=room_107199]" class="photos" href="#">Photos</a>-->
-                        <!--</div>-->
-                        <!--<div class='description_features'>-->
-                            <!--<div class='description'>-->
-                                <!--<h3>-->
-                                    <!--Habitación Economy Standard-->
-                                    <!--<a class="book dynamic"-->
-                                       <!--href="/reservations/resielbalatadirect/107199?locale=en"><span-->
-                                            <!--class='fa fa-chevron-circle-right'></span>-->
-                                        <!--Book-->
-                                    <!--</a></h3>-->
-                                <!--<p>Actualice por favor</p>-->
-                            <!--</div>-->
-                            <!--<div class='features'>-->
-                                <!--<ol>-->
-                                    <!--<li class='feature'>1 Full Bed</li>-->
-                                    <!--<li class='feature'>Shower over bath</li>-->
-                                    <!--<li class='feature'>Linen and Towels Provided</li>-->
-                                    <!--<li class='feature'>Ceiling Fans</li>-->
-                                    <!--<li class='feature'>WIFI</li>-->
-                                    <!--<li class='feature'>Shower</li>-->
-                                    <!--<li class='feature'>Daily Room Service</li>-->
-                                    <!--<li class='feature'>Flat Screen TV</li>-->
-                                    <!--<li class='feature'>Queen Bed</li>-->
-                                    <!--<li class='feature'>En-Suite</li>-->
-                                <!--</ol>-->
-                            <!--</div>-->
-                        <!--</div>-->
+                    <!--<div class='photo'>-->
+                    <!--<a rel=".photo_overlay[data-id=room_107199]" class="photo_small" href="#"><img-->
+                    <!--alt="Habitación Economy Standard "-->
+                    <!--src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/thumb/20180525_161001_1_.jpg?1527303679"/>-->
+                    <!--</a><a rel=".photo_overlay[data-id=room_107199]" class="photos" href="#">Photos</a>-->
+                    <!--</div>-->
+                    <!--<div class='description_features'>-->
+                    <!--<div class='description'>-->
+                    <!--<h3>-->
+                    <!--Habitación Economy Standard-->
+                    <!--<a class="book dynamic"-->
+                    <!--href="/reservations/resielbalatadirect/107199?locale=en"><span-->
+                    <!--class='fa fa-chevron-circle-right'></span>-->
+                    <!--Book-->
+                    <!--</a></h3>-->
+                    <!--<p>Actualice por favor</p>-->
+                    <!--</div>-->
+                    <!--<div class='features'>-->
+                    <!--<ol>-->
+                    <!--<li class='feature'>1 Full Bed</li>-->
+                    <!--<li class='feature'>Shower over bath</li>-->
+                    <!--<li class='feature'>Linen and Towels Provided</li>-->
+                    <!--<li class='feature'>Ceiling Fans</li>-->
+                    <!--<li class='feature'>WIFI</li>-->
+                    <!--<li class='feature'>Shower</li>-->
+                    <!--<li class='feature'>Daily Room Service</li>-->
+                    <!--<li class='feature'>Flat Screen TV</li>-->
+                    <!--<li class='feature'>Queen Bed</li>-->
+                    <!--<li class='feature'>En-Suite</li>-->
+                    <!--</ol>-->
+                    <!--</div>-->
+                    <!--</div>-->
                     <!--</div>-->
 
                 </div>
                 <div class='terms_conditions' id='terms_conditions'>
                     <h2>Условия</h2>
-                    <p><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
-                                {{ termsAndConditions.as_p }}
-                        </form>
+                    <p>
+                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                        {% for field in termsAndConditions %}
+                        {{ field }}
+                        {% endfor %}
+                    </form>
                     </p>
                 </div>
+                <!--</div>-->
             </div>
+
+
         </div>
-
-
+        <div id='footer'></div>
     </div>
-    <div id='footer'></div>
-</div>
-<div id='loading'></div>
-<!--<script src="/assets/public-2543e3bbf9498af7a04eb305280afed3.js"></script>-->
+    <div id='loading'></div>
+    <!--<script src="/assets/public-2543e3bbf9498af7a04eb305280afed3.js"></script>-->
 
 
-<div class='tip' id='room_type_date_tooltip'>
-    <div class='special_header'>Hot Deal!</div>
-    <table>
-        <tbody></tbody>
-    </table>
-</div>
-<div class='tip' id='extra_tooltip'></div>
-<div class='tip' id='room_tooltip'></div>
+    <div class='tip' id='room_type_date_tooltip'>
+        <div class='special_header'>Hot Deal!</div>
+        <table>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class='tip' id='extra_tooltip'></div>
+    <div class='tip' id='room_tooltip'></div>
 </body>
 </html>
