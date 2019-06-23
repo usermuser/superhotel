@@ -1,0 +1,879 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>Бронирование номера</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta content='Virginia y Pedro son una pareja Italo-Dominicana, juntos con sus hijos pequeños viven y dirigen este hotel con encanto. El Balata, refleja claramente la unión de estas dos familias de diferentes culturas y estilos, pero en completa armonía creando un pequeño hotel sin precedentes en el Caribe.&#x000A;&#x000A;'
+          name='description'>
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">-->
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">-->
+    <!--<link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">-->
+    <!--<link rel="stylesheet" media="screen" href="{% static 'public-f6ccfa2f22ed0069d927e67be1fddc44.css' %}"/>-->
+    <!--<link rel="stylesheet" media="screen" href="{% static 'public.css' %} "/>-->
+    <!--<link rel="stylesheet" media="print" href="{% static 'public-print-f785708b5849f5f94a6a787a67fe4952.css' %} "/>-->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" media="screen" href="https://app.littlehotelier.com/assets/public-f6ccfa2f22ed0069d927e67be1fddc44.css "/>
+    <link rel="stylesheet" media="screen" href="https://app.littlehotelier.com/properties/9012/stylesheets/public.css"/>
+    <link rel="stylesheet" media="print" href="https://app.littlehotelier.com/assets/public-print-f785708b5849f5f94a6a787a67fe4952.css"/>
+
+    <!--<meta name="csrf-param" content="authenticity_token"/>-->
+    <!--<meta name="csrf-token"-->
+          <!--content="UENh4MFnwXRSowg3jlH25Ki65IrHb2BuuiyHi3NGjjQTRGFHD32EZ1Bq6FI8RuIL8nknlkbbi8LHb2PVY1HzWQ=="/>-->
+    <!--<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>-->
+    <!--<script src="{% static 'js/bootstrap.min.js' %}"></script>-->
+</head>
+<body>
+
+<div id='main'>
+    <div id='banner'><img
+            src="{{ hotel.banner.url }}"
+            alt="20180710 141615"/></div>
+    <div id='content'>
+        <div class='reservation'>
+            <div class='header'>
+                <h1>{{ roomName }}</h1>
+                <div class='hotel'>
+                    <h2><a href="/properties/resielbalatadirect?locale=en">{{ hotelName }}</a></h2>
+                    {% if hotel.stars == 1 %}
+                    <dl class='large rating stars_10_large'>
+                        <dt>Rating</dt>
+                        <dd>3.0 stars</dd>
+                    </dl>
+                    {% elif hotel.stars == 2 %}
+                    <dl class='large rating stars_20_large'>
+                        <dt>Rating</dt>
+                        <dd>3.0 stars</dd>
+                    </dl>
+                    {% elif hotel.stars == 3 %}
+                    <dl class='large rating stars_30_large'>
+                        <dt>Rating</dt>
+                        <dd>3.0 stars</dd>
+                    </dl>
+                    {% elif hotel.stars == 4 %}
+                    <dl class='large rating stars_40_large'>
+                        <dt>Rating</dt>
+                        <dd>3.0 stars</dd>
+                    </dl>
+                    {% elif hotel.stars == 5 %}
+                    <dl class='large rating stars_50_large'>
+                        <dt>Rating</dt>
+                        <dd>3.0 stars</dd>
+                    {% endif %}
+                    </dl>
+                </div>
+            </div>
+            <div class='room' id='room_107199'>
+                <div class='photo_overlay overlay' data-id='room_107199'>
+                    <div class='header'>
+                        <h3>{{ hotel.hotelName }}</h3>
+                        <h4>Название номера</h4>
+                    </div>
+                    <div class='hero'>
+                        <div class='thumbs'>
+                            <ul class='carousel-thumb'>
+                                <li class='photo'>
+                                    <a data-slide-index="0" href="#"><img alt="{{ room.roomName }}"
+                                                                          src="{{ room.image.url }}"
+                                                                          width="100" height="100"/>
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                        <span class='edge'></span>
+                        <span class='container'>
+<ul class='carousel-standard'>
+<a href="#"><li class='photo'><img alt="Habitación Economy Standard "
+                                   data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/667/standard/20180525_161001_1_.jpg?1527303679"
+                                   src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
+                                   height="225"/></li>
+</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "
+                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/668/standard/20180525_161035_1_.jpg?1527303748"
+                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
+                                       height="225"/></li>
+</a><a href="#"><li class='photo'><img alt="Habitación Economy Standard "
+                                       data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/669/standard/20180525_161344_1_.jpg?1527303825"
+                                       src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
+                                       height="225"/></li>
+</a><li class='photo'><img alt="Habitación Economy Standard "
+                           data-src="https://photos-app-prod.littlehotelier.com/attachments/photos/images/RoomType/000/148/670/standard/20180525_161512_1_.jpg?1527303917"
+                           src="/assets/placeholder-ec51415fcec5fc700429a07859b31264.png" width="400"
+                           height="225"/></li>
+</ul>
+</span>
+                    </div>
+                </div>
+
+                <div class='photo'>
+                    <a rel=".photo_overlay[data-id=room_107199]" class="photo_small" href="#"><img
+                            alt="{{ room.roomName }}"
+                            src="{{ room.image.url }}"/>
+                    <!--</a><a rel=".photo_overlay[data-id=room_107199]" class="photos" href="#">Photos</a>-->
+                </div>
+                <div class='description_features'>
+                    <div class='description'>
+                        <p>Актуальность</p>
+                    </div>
+                    <div class='features'>
+                        <ol>
+                            {% for feature in features %}
+                            <li class='feature'>{{ feature }}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <form id="update" class="formtastic" action="/reservations/resielbalatadirect/107199/calculate?locale=en"
+                  accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+                <ol class='initial_steps'>
+                    <li class='step'>
+                        <h3>
+                            <em>
+                                Шаг <strong>1</strong>
+                            </em>
+                            <span class='directions'>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
+                                    {{ firstStepDirections.as_p }}
+                                </form>
+                            </span>
+                        </h3>
+                        <fieldset class='checkin'>
+                            <ol>
+                                <li class='arrow'>
+                                    <label for='num_rooms'>Количество комнат</label>
+                                    <select name="num_rooms" id="num_rooms">
+                                        <option selected="selected" value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </li>
+                                <li class='arrow'>
+                                    <label for='check_in_date'>Дата заезда</label>
+                                    <input type="text" name="check_in_date_display" id="check_in_date_display"
+                                           value="16 Jun 2019" class="calendar"/>
+                                    <input type="hidden" name="check_in_date" id="check_in_date" value="2019-06-16"/>
+                                    <input type="hidden" name="previous_check_in_date" id="previous_check_in_date"
+                                           value="2019-06-16"/>
+                                </li>
+                                <li>
+                                    <label for='check_out_date'>Дата выезда</label>
+                                    <input type="text" name="check_out_date_display" id="check_out_date_display"
+                                           value="17 Jun 2019" class="calendar"/>
+                                    <input type="hidden" name="check_out_date" id="check_out_date" value="2019-06-17"/>
+                                </li>
+                            </ol>
+                        </fieldset>
+                        <table cellspacing='0' class='no-margin rates-header'>
+                            <thead class='controls'>
+                            <tr>
+                                <th class='date_nav' colspan='2'>
+                                    <span>Проверить доступность</span>
+                                </th>
+                                <th class='date_navigation' colspan='14'>
+                                    <table>
+                                        <tr>
+                                            <th class='date_nav top_left_corner'>
+                                                <ul class='back'>
+                                                    <li>
+                                                        <a class="week" id="back_1_week" data-date="16 Jun 2019"
+                                                           href="/reservations/resielbalatadirect/107199?currency=USD&amp;locale=en&amp;start_date=2019-06-16"><i
+                                                                class='fa fa-backward'></i>
+                                                            Неделя
+                                                        </a></li>
+                                                    <li>
+                                                        <a class="day" id="back_1_day" data-date="16 Jun 2019"
+                                                           href="/reservations/resielbalatadirect/107199?currency=USD&amp;locale=en&amp;start_date=2019-06-16"><i
+                                                                class='fa fa-caret-left'></i>
+                                                            День
+                                                        </a></li>
+                                                </ul>
+
+                                            </th>
+                                            <th class='date_nav date_from_nav'>
+                                                <input type="hidden" name="start_date" id="start_date"
+                                                       value="2019-06-16"/>
+                                            </th>
+                                            <th class='date_nav top_right_corner'>
+                                                <ul class='forward'>
+                                                    <li>
+                                                        <a class="day" id="forward_1_day" data-date="17 Jun 2019"
+                                                           href="/reservations/resielbalatadirect/107199?currency=USD&amp;locale=en&amp;start_date=2019-06-17">Day
+                                                            <i class='fa fa-caret-right'></i>
+                                                        </a></li>
+                                                    <li>
+                                                        <a class="week" id="forward_1_week" data-date="23 Jun 2019"
+                                                           href="/reservations/resielbalatadirect/107199?currency=USD&amp;locale=en&amp;start_date=2019-06-23">Week
+                                                            <i class='fa fa-forward'></i>
+                                                        </a></li>
+                                                </ul>
+
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </th>
+                            </tr>
+
+
+                            </thead>
+                        </table>
+                        <!--TODO проверить необходимость этого блока-->
+                        <table cellspacing='0' class='rates' id='rates'>
+                            <thead>
+                            <tr>
+                                <th><form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
+                                    {{ roomSelectionText.as_p }}
+                                </form></th>
+                                <th class='rack_rate'></th>
+                                <th class='date end weekend'>
+                                    <span class='day_name'>Вос</span>
+                                    <span class='day'>16</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date'>
+                                    <span class='day_name'>Пон</span>
+                                    <span class='day'>17</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date'>
+                                    <span class='day_name'>Вт</span>
+                                    <span class='day'>18</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date'>
+                                    <span class='day_name'>Ср</span>
+                                    <span class='day'>19</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date'>
+                                    <span class='day_name'>Чт</span>
+                                    <span class='day'>20</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date'>
+                                    <span class='day_name'>Пт</span>
+                                    <span class='day'>21</span>
+                                    <span class='month'>Jun</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date start weekend'>
+                                    <span class='day_name'>Суб</span>
+                                    <span class='day'>22</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date end weekend'>
+                                    <span class='day_name'>Вос</span>
+                                    <span class='day'>23</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date'>
+                                    <span class='day_name'>Пон</span>
+                                    <span class='day'>24</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date'>
+                                    <span class='day_name'>Вт</span>
+                                    <span class='day'>25</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date'>
+                                    <span class='day_name'>Ср</span>
+                                    <span class='day'>26</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date'>
+                                    <span class='day_name'>Чт</span>
+                                    <span class='day'>27</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date'>
+                                    <span class='day_name'>Пт</span>
+                                    <span class='day'>28</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+                                <th class='date start weekend'>
+                                    <span class='day_name'>Суб</span>
+                                    <span class='day'>29</span>
+                                    <span class='month'>Июнь</span>
+                                    <span class='year'>2019</span>
+                                </th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class='room_name'>Habitación Economy Standard</td>
+                                <td class='rack_rate'>$</td>
+                                <td class='end rate selected weekend' data-id='124780424'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate' data-id='124780425'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate' data-id='124780426'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate' data-id='124780427'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate' data-id='124780428'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate' data-id='124780429'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate start weekend' data-id='124780430'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='end rate weekend' data-id='124780431'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate' data-id='124780432'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate' data-id='124780433'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate' data-id='124780434'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate' data-id='124780435'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate' data-id='124780436'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                                <td class='rate start weekend' data-id='124780437'>
+                                    <span class='tooltip'>{{ room.price }}</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th class='bottom_left_corner bottom_right_corner' colspan='17'>
+                                    <em>
+                                        <form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
+                                            {{ roomBokingInstructions.as_p }}
+                                        </form>
+                                    </em>
+                                </th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        <script id='tool_tip_template' type='text/x-jquery-tmpl'></script>
+                    </li>
+                    <li class='step step2'>
+                        <h3>
+                            <em>Шаг<strong>2</strong></em>
+                            <span class='directions'>
+                                <form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
+                                    {{ secondStepDirections.as_p }}
+                                </form></span>
+                            <span class='note'>Цены в рублях</span>
+                        </h3>
+                        <div class='pricing'>
+                            <table cellspacing='0'>
+                                <thead>
+                                <tr>
+                                    <th class='roomcol'>Заполняемость<br/><span class='age_limits'>(дети до 10 лет, дети до 3 лет)</span>
+                                    </th>
+                                    <th class='date'>Дата</th>
+                                    <th class='inclusions'>Ежедневные включения</th>
+                                    <th class='numeric'>Стоимость номера</th>
+                                    <th class='numeric'>Взрослый</th>
+                                    <th class='numeric'>Ребенок</th>
+                                    <th class='numeric'>Младенец</th>
+                                    <th class='numeric'>Налоги</th>
+                                    <th class='numeric'>Итого</th>
+                                </tr>
+                                </thead>
+                                <tbody class='rooms'>
+                                <tr class='control' data-room-index='0'>
+                                    <td class='error roomcol'>
+                                        <ol>
+                                            <li>
+                                                <strong>Комната 1:</strong>
+                                            </li>
+                                        </ol>
+                                        <ol>
+                                            <li>
+                                                <label for='number_adults'>Взрослых</label>
+                                                <select name="reservation[reservation_room_types][0][number_adults]"
+                                                        id="reservation_reservation_room_types_0_number_adults"
+                                                        class="number_adults">
+                                                    <option value="1">1</option>
+                                                    <option selected="selected" value="2">{{ room.adults }}</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <label for='number_children'>Детей</label>
+                                                <select name="reservation[reservation_room_types][0][number_children]"
+                                                        id="reservation_reservation_room_types_0_number_children"
+                                                        class="number_children">
+                                                    <option selected="selected" value="0">{{ room.children }}</option>
+                                                    <option value="1">1</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <label for='number_infants'>Младенцев</label>
+                                                <select name="reservation[reservation_room_types][0][number_infants]"
+                                                        id="reservation_reservation_room_types_0_number_infants"
+                                                        class="number_infants">
+                                                    <option selected="selected" value="0">{{ room.infants }}</option>
+                                                    <option value="1">1</option>
+                                                </select>
+                                            </li>
+                                        </ol>
+                                    </td>
+                                    <td class='date'>Суб 16 Июнь</td>
+                                    <td class='inclusions'></td>
+                                    <td class='rrt_rate_date numeric'>{{ room.price }}</td>
+                                    <td class='extra_adult numeric'>{{ room.extraAdultPrice }}</td>
+                                    <td class='extra_child numeric'>{{ room.extraChildrenPrice }}</td>
+                                    <td class='extra_infant numeric'>{{ room.extraInfantPrice }}</td>
+                                    <td class='rrt_date_tax numeric'>{{ hotel.tax }}</td>
+                                    <td class='rrt_date_total numeric'>{{ total }}</td>
+                                </tr>
+                                </tbody>
+                                <tbody class='extras'>
+
+                                    <td colspan='4'>{{ room.extraAdult }} рублей за взрослого и {{ room.extraChild }} рублей за ребенка</td>
+                                </tr>
+                                </tbody>
+                                <tbody class='totals'>
+                                <tr class='subheader'>
+                                    <td colspan='9'>
+                                        <h4>Итого</h4>
+                                    </td>
+                                </tr>
+                                <tr class='subtotal'>
+                                    <td class='total' colspan='8'>Стоимость номера</td>
+                                    <td class='numeric room_total'>{{ room.price }}</td>
+                                </tr>
+                                <tr class='subtotal'>
+                                    <td class='total' colspan='8'>Дополнительно Итого</td>
+                                    <td class='numeric extra_total'>{{ extra }}</td>
+                                </tr>
+                                <tr class='subtotal'>
+                                    <td class='total' colspan='8'>
+                                        Налог
+
+                                    </td>
+                                    <td class='numeric tax_total'></td>
+                                </tr>
+
+                                <tr class='grand_total'>
+                                    <td class='total' colspan='8'>Grand Total</td>
+                                    <td class='numeric' id='total_payment'>
+                                        <span>{{ total }}</span>
+                                        <input type="hidden" name="reservation[payment_total_confirmation]"
+                                               id="reservation_payment_total_confirmation" value="35.4"/>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th class='bottom_left_corner bottom_right_corner' colspan='9'>
+                                        <em>Примечание: младенцы не включены в максимальную вместимость или на человека
+                                             дополнительные услуги</em>
+                                    </th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                    </li>
+                </ol>
+
+            </form>
+
+
+                <div class='other_form'></div>
+                <ol class='final_step'>
+                    <li class='step'>
+                        <h3>
+                            <em>Шаг <strong>3</strong></em>
+                            <span class='directions'>Введите информацию о госте и оплате</span>
+                            <span class='note'>Пожалуйста, заполните необходимую информацию</span>
+                        </h3>
+                        <div class='sections'>
+                            <div class='section section1'>
+                                <fieldset class="inputs">
+                                    <legend><span>Сведения о госте</span></legend>
+                                    <ol>
+                                        <li class="string input required stringish"
+                                            id="reservation_guest_first_name_input"><label
+                                                for="reservation_guest_first_name" class="label">Имя<abbr
+                                                title="required">*</abbr></label><input maxlength="255" size="50"
+                                                                                        id="reservation_guest_first_name"
+                                                                                        class="required" type="text"
+                                                                                        name="reservation[guest_first_name]"/>
+
+                                        </li>
+                                        <li class="string input required stringish"
+                                            id="reservation_guest_last_name_input"><label
+                                                for="reservation_guest_last_name" class="label">Фамилия<abbr
+                                                title="required">*</abbr></label><input maxlength="255" size="50"
+                                                                                        id="reservation_guest_last_name"
+                                                                                        class="required" type="text"
+                                                                                        name="reservation[guest_last_name]"/>
+
+                                        </li>
+                                        <li class="email input required stringish" id="reservation_guest_email_input">
+                                            <label for="reservation_guest_email" class="label">Email<abbr
+                                                    title="required">*</abbr></label><input maxlength="100" size="50"
+                                                                                            id="reservation_guest_email"
+                                                                                            class="required email"
+                                                                                            type="email"
+                                                                                            name="reservation[guest_email]"/>
+
+                                        </li>
+                                        <li class="phone input required stringish"
+                                            id="reservation_guest_phone_number_input"><label
+                                                for="reservation_guest_phone_number" class="label">Номер телефона
+                                            <abbr title="required">*</abbr></label><input
+                                                maxlength="255" size="20" id="reservation_guest_phone_number"
+                                                class="required" type="tel" name="reservation[guest_phone_number]"/>
+
+                                        </li>
+                                        <li class="string input optional stringish"
+                                            id="reservation_guest_organisation_input"><label
+                                                for="reservation_guest_organisation" class="label">Организация (если
+                                             применимо)</label><input maxlength="255" size="50"
+                                                                      id="reservation_guest_organisation" type="text"
+                                                                      name="reservation[guest_organisation]"/>
+
+                                        </li>
+                                        <li class="string input required stringish"
+                                            id="reservation_guest_address_input"><label for="reservation_guest_address"
+                                                                                        class="label">Адресная строка
+                                            1<abbr title="required">*</abbr></label><input maxlength="255" size="50"
+                                                                                           id="reservation_guest_address"
+                                                                                           class="required" type="text"
+                                                                                           name="reservation[guest_address]"/>
+
+                                        </li>
+
+
+                                        </li>
+                                        <li class="string input required stringish" id="reservation_guest_city_input">
+                                            <label for="reservation_guest_city" class="label">Город<abbr
+                                                    title="required">*</abbr></label><input maxlength="100" size="50"
+                                                                                            id="reservation_guest_city"
+                                                                                            class="required" type="text"
+                                                                                            name="reservation[guest_city]"/>
+
+                                        </li>
+                                        <li class="country input required" id="reservation_guest_country_input"><label
+                                                for="reservation_guest_country" class="label"><abbr
+                                                title="required">*</abbr></label><select id="reservation_guest_country"
+                                                                                         class="required"
+                                                                                         name="reservation[guest_country]">
+                                            <option value=""></option>
+                                            {% for area in areas %}
+                                            <option value="Australia">{{ area }}</option>
+                                            {% endfor %}
+                                        </select>
+
+                                        </li>
+                                        <li class="string input required stringish"
+                                            id="reservation_guest_post_code_input"><label
+                                                for="reservation_guest_post_code" class="label">Почтовый код<abbr
+                                                title="required">*</abbr></label><input maxlength="12" size="12"
+                                                                                        id="reservation_guest_post_code"
+                                                                                        class="required" type="text"
+                                                                                        name="reservation[guest_post_code]"/>
+
+                                        </li>
+                                    </ol>
+                                </fieldset>
+                            </div>
+                            <div class='section section2'>
+                                <fieldset class="inputs">
+                                    <legend><span>Дополнительные детали</span></legend>
+                                    <ol>
+                                        <li class="select input optional" id="reservation_arrival_time_input"><label
+                                                for="reservation_arrival_time" class="label">Предположительное время прибытия</label><select name="reservation[arrival_time]"
+                                                                id="reservation_arrival_time">
+                                            <option value=""></option>
+                                            {% for time in times %}
+                                            <option value="04:00 PM">{{ time }}</option>
+                                            {% endfor %}
+                                        </select>
+
+                                            <p class="inline-hints">Если вы прибываете в нерабочее время, пожалуйста,
+                                                 связаться с собственностью</p></li>
+                                        <li class="text input optional" id="reservation_guest_comments_input"><label
+                                                for="reservation_guest_comments" class="label">Комментарий</label><textarea
+                                                cols="50" rows="2" id="reservation_guest_comments"
+                                                name="reservation[guest_comments]">
+</textarea>
+
+                                        </li>
+                                    </ol>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class='section terms'>
+                            <fieldset class="inputs">
+                                <ol>
+                                    <li class="boolean input optional" id="reservation_terms_and_conditions_input">
+                                        <input type="hidden" name="reservation[terms_and_conditions]" value="0"/><label
+                                            for="reservation_terms_and_conditions" class=""><input type="checkbox"
+                                                                                                   name="reservation[terms_and_conditions]"
+                                                                                                   id="reservation_terms_and_conditions"
+                                                                                                   value="1"/>Я прочитал и принял
+                                        <strong><a href="#terms_conditions">условия и соглашения
+                                           </a></strong></label>
+
+                                    </li>
+                                </ol>
+                            </fieldset>
+                        </div>
+                        <div class='actions'>
+                            <ul>
+                                <li>
+                                    <a class='book_now confirm dynamic' href='#' rel='#confirm_dialog'>
+                                        <i class='fa fa-chevron-circle-right'></i>
+                                       Забронировать
+                                    </a>
+                                </li>
+                                <li class="action input_action commit" id="reservation_submit_action"><input
+                                        type="submit" name="commit" value="Book Now" class="create"/></li>
+                            </ul>
+                        </div>
+                        <div class='payments_paypal_message'>
+                            <ol>
+                                <li>
+                                    <img src='/assets/payments-padlock-69f16def44dbc3e0b3bba2a0ed68d589.png'>
+                                </li>
+                                <li>
+                                    <p>Все платежи обрабатываются безопасно с PayPal</p>
+                                </li>
+                                <li>
+                                    <img class='cards' src='/assets/payments-visa-959dfd6bc47de174d650ba457052bca6.png'>
+                                </li>
+                                <li>
+                                    <img class='cards'
+                                         src='/assets/payments-mastercard-b48a0f2fbeb21af2324ee51573d00ddd.png'>
+                                </li>
+                                <li>
+                                    <img class='cards'
+                                         src='/assets/payments-paypal-a5234ce06df93e4cbd1f906ddba20891.png'>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                </ol>
+            </form>
+        </div>
+        <div class='terms_conditions' id='terms_conditions'>
+            <h2>Условия и соглашения</h2>
+            <p>{{ hotel.termsAndConditions }}</p>
+        </div>
+
+        <div class='modal overlay' id='confirm_dialog'>
+            <h3>Please Confirm Your Booking</h3>
+            <p>Confirm the details of your booking and press 'Book Now' to proceed.</p>
+            <h4>Habitación Economy Standard </h4>
+            <ul class='aligned'>
+                <li>
+                    <strong>Number Of Room</strong>
+                    <span class='rooms'></span>
+                </li>
+                <li>
+                    <strong>Check In Date</strong>
+                    <span class='checkin'></span>
+                </li>
+                <li>
+                    <strong>Check Out Date</strong>
+                    <span class='checkout'></span>
+                </li>
+                <li>
+                    <strong>Number Of Nights</strong>
+                    <span class='number_of_nights'></span>
+                </li>
+            </ul>
+            <h4>Booking Summary</h4>
+            <ul class='aligned'>
+                <li class='room_total_without_extra'>
+                    <strong>Room</strong>
+                    <span></span>
+                </li>
+                <li class='extra_adult'>
+                    <strong>Extra Adult Total</strong>
+                    <span></span>
+                </li>
+                <li class='extra_child'>
+                    <strong>Extra Child Total</strong>
+                    <span></span>
+                </li>
+                <li class='extra_infant'>
+                    <strong>Extra Infant Total</strong>
+                    <span></span>
+                </li>
+                <li class='extra_total'>
+                    <strong>Extras Total</strong>
+                    <span></span>
+                </li>
+                <li class='surcharge'>
+                    <strong>Credit Card Surcharge</strong>
+                    <span></span>
+                </li>
+                <li class='gst_total percentage_taxes'></li>
+                <li class='fixed_taxes'></li>
+                <li class='total_taxes'>
+                    <strong>
+                        Taxes
+                    </strong>
+                    <span></span>
+                </li>
+                <li class='grand_total'>
+                    <strong>Total</strong>
+                    <span></span>
+                </li>
+            </ul>
+            <p>
+            <div class='cc-payment-notice'></div>
+            </p>
+            <h4>Payment Summary</h4>
+            <ul class='aligned'>
+                <li class='deposit'>
+                    <strong>Deposit amount</strong>
+                    <span></span>
+                </li>
+                <li class='surcharge_incl_taxes'>
+                    <strong>Credit Card Surcharge</strong>
+                    <span></span>
+                </li>
+                <li class='total'>
+                    <strong>Total</strong>
+                    <span></span>
+                </li>
+                <li class='outstanding'>
+                    <strong>Outstanding balance</strong>
+                    <span class='outstanding'></span>
+                </li>
+            </ul>
+            <div class='actions'>
+                <a class='cancel close'>Cancel</a>
+                <a class='book_now dynamic' href='#'>
+                    <i class='fa fa-chevron-circle-right'></i>
+                    Book Now
+                </a>
+            </div>
+        </div>
+        <div class='overlay' id='enquiry'>
+            <h3>Make an enquiry</h3>
+            <form novalidate="novalidate" class="formtastic enquiry"
+                  action="/properties/resielbalatadirect/enquiry?locale=en" accept-charset="UTF-8" method="post"><input
+                    name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token"
+                                                                       value="3D7DZVeti0DYc117i+IHLoA7fGXLpu/6d8qlooJnj9afOcPCmbfOU9q6vR459RPB2vi/eUoSBFYKiUH8knDyuw=="/><input
+                    type="hidden" name="st" id="st" value="BAhvOg1TcGFtVGVzdAY6DkBxdWVzdGlvbkkiCjcgKyAyBjoGRVQ="/>
+                <fieldset class="inputs">
+                    <ol>
+                        <li class="hidden input required" id="enquiry_rate_plan_id_input"><input
+                                id="enquiry_rate_plan_id" type="hidden" name="enquiry[rate_plan_id]"/>
+
+                        </li>
+                        <li class="hidden input required" id="enquiry_date_input"><input id="enquiry_date" type="hidden"
+                                                                                         name="enquiry[date]"/>
+
+                        </li>
+                        <li class="string input optional stringish" id="enquiry_name_input"><label for="enquiry_name"
+                                                                                                   class="label">Name</label><input
+                                id="enquiry_name" type="text" name="enquiry[name]"/>
+
+                        </li>
+                        <li class="string input optional stringish" id="enquiry_phone_input"><label for="enquiry_phone"
+                                                                                                    class="label">Phone</label><input
+                                id="enquiry_phone" type="text" name="enquiry[phone]"/>
+
+                        </li>
+                        <li class="string input optional stringish" id="enquiry_email_input"><label for="enquiry_email"
+                                                                                                    class="label">Email</label><input
+                                id="enquiry_email" type="text" name="enquiry[email]"/>
+
+                        </li>
+                        <li class='string optional' id='enquiry_answer_input'>
+                            <label for='enquiry_answer'>
+                                Please answer the following maths question:
+                                <br>
+                                7 + 2 =
+                                <input id='enquiry_answer' name='enquiry[answer]' size='50' type='text'>
+                                <p class='inline-hints'>Required to bypass the spam filter</p>
+                            </label>
+                        </li>
+                        <li class="text input optional" id="enquiry_message_input"><label for="enquiry_message"
+                                                                                          class="label">Message</label><textarea
+                                rows="20" id="enquiry_message" name="enquiry[message]">
+</textarea>
+
+                        </li>
+                    </ol>
+                </fieldset>
+                <fieldset class="buttons">
+                    <ol>
+                        <li>
+                            <a class='enquire dynamic'>
+                                <i class='fa fa-chevron-circle-right'></i>
+                                Enquire
+                            </a>
+                        </li>
+                    </ol>
+                </fieldset>
+            </form>
+        </div>
+
+        <script id='surcharge_applied_message' type='text/x-jquery-tmpl'>
+<p class='inline-hints'>Please note: A surcharge of ${surchargePercentage}% applies for this card type</p>
+
+        </script>
+
+
+    </div>
+    <div id='footer'></div>
+</div>
+<div id='loading'></div>
+<script src="/assets/public-2543e3bbf9498af7a04eb305280afed3.js"></script>
+
+<!--[if lte IE 6]>
+
+<div class='tip' id='room_type_date_tooltip'>
+    <div class='special_header'>Hot Deal!</div>
+    <table>
+        <tbody></tbody>
+    </table>
+</div>
+<div class='tip' id='extra_tooltip'></div>
+<div class='tip' id='room_tooltip'></div>
+
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
