@@ -136,7 +136,9 @@
                             </em>
                             <span class='directions'>
                                 <form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
-                                    {{ firstStepDirections.as_p }}
+                                    {% for field in firstStepDirections %}
+                                        {{ field }}
+                                    {% endfor %}
                                 </form>
                             </span>
                         </h3>
@@ -230,7 +232,9 @@
                             <thead>
                             <tr>
                                 <th><form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
-                                    {{ roomSelectionText.as_p }}
+                                    {% for field in roomSelectionText %}
+                                        {{ field }}
+                                    {% endfor %}
                                 </form></th>
                                 <th class='rack_rate'></th>
                                 <th class='date end weekend'>
@@ -373,7 +377,9 @@
                                 <th class='bottom_left_corner bottom_right_corner' colspan='17'>
                                     <em>
                                         <form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
-                                            {{ roomBokingInstructions.as_p }}
+                                            {% for field in roomBokingInstructions %}
+                                                {{ field }}
+                                            {% endfor %}
                                         </form>
                                     </em>
                                 </th>
@@ -387,7 +393,9 @@
                             <em>Шаг<strong>2</strong></em>
                             <span class='directions'>
                                 <form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
-                                    {{ secondStepDirections.as_p }}
+                                    {% for field in secondStepDirections %}
+                                        {{ field }}
+                                    {% endfor %}
                                 </form></span>
                             <span class='note'>Цены в рублях</span>
                         </h3>
@@ -591,7 +599,7 @@
                                                                                          name="reservation[guest_country]">
                                             <option value=""></option>
                                             {% for area in areas %}
-                                            <option value="Australia">{{ area }}</option>
+                                                <option value="Australia">{{ area }}</option>
                                             {% endfor %}
                                         </select>
 
