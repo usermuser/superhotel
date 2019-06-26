@@ -8,7 +8,7 @@ class Hotel(models.Model):
 class Room(models.Model):
     name = models.CharField(verbose_name='имя', max_length=55, unique=True)
     price = models.PositiveIntegerField(verbose_name='Цена')
-    adults = models.PositiveIntegerField(verbose_name='Кол-во взрослых')
+    adults = models.PositiveIntegerField(verbose_name='Кол-во взрослых', default=1)
     kids = models.PositiveIntegerField(verbose_name='Кол-во детей')
     infants = models.PositiveIntegerField(verbose_name='Кол-во младенцев')
     extraPerson = models.PositiveIntegerField(verbose_name='Цена за доп. человека')
