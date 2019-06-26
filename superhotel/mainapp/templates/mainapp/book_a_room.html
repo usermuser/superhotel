@@ -35,7 +35,7 @@
     <div id='content'>
         <div class='reservation'>
             <div class='header'>
-                <h1>{{ roomName }}</h1>
+                <h1>{{ room.name }}</h1>
                 <div class='hotel'>
                     <h2><a href="/properties/resielbalatadirect?locale=en">{{ hotelName }}</a></h2>
                     {% if hotel.stars == 1 %}
@@ -226,7 +226,6 @@
 
                             </thead>
                         </table>
-                        <!--TODO проверить необходимость этого блока-->
                         <table cellspacing='0' class='rates' id='rates'>
                             <thead>
                             <tr>
