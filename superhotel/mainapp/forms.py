@@ -67,6 +67,18 @@ class TermsAndConditionsForm(forms.Form):
 
 # forms for book_a_room.html
 
+class FirstStepDirections(forms.Form):
+    directions = forms.CharField(max_length=200, widget=forms.TextInput(attrs={'placeholder': 'Указания'}))
+
+class RoomSelectionText(forms.Form):
+    text = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'Напишите что-нибудь'}))
+
+class RoomBookingInstructions(forms.Form):
+    instructions = forms.CharField(max_length=200, widget=forms.TextInput(attrs={'placeholder': 'Какое-нибудь предупреждение'}))
+
+class SecondStepDirections(forms.Form):
+    directions = forms.CharField(max_length=200, widget=forms.TextInput(attrs={'placeholder': 'Указания 2'}))
+
 
 
 
