@@ -121,6 +121,7 @@
                         <ol>
                             {% for feature in features %}
                             <li class='feature'>{{ feature }}</li>
+                            {% endfor %}
                         </ol>
                     </div>
                 </div>
@@ -377,7 +378,7 @@
                                 <th class='bottom_left_corner bottom_right_corner' colspan='17'>
                                     <em>
                                         <form class="form-horizontal" action="{% url 'main:dataFromInputBookARoom' %}" method="post">
-                                            {% for field in roomBokingInstructions %}
+                                            {% for field in roomBookingInstructions %}
                                                 {{ field }}
                                             {% endfor %}
                                         </form>

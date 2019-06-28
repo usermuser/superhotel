@@ -40,3 +40,6 @@ class DateItem(models.Model):
 class Data(models.Model):
     nameOfText = models.CharField(max_length=70)
     valueOfText = models.CharField(max_length=5000)
+
+class TableTime(models.Model):
+    field = models.CharField(max_length=100)    
