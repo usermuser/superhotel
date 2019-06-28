@@ -43,4 +43,4 @@ def dataFromInputBookARoom(request):
                'roomBookingInstructions':roomBookingInstructions,
                'secondStepDirections':secondStepDirections}
 
-    return render(request, 'mainapp/book_a_rom.html', context)
+    return render(request, 'mainapp/book_a_room.html', context)
