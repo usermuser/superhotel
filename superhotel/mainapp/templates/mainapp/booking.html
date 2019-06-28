@@ -22,10 +22,10 @@
 <div id='main'>
     <div id='banner'>
         <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+            {% csrf_token %}
             {% for field in headerPhoto %}
             {{ field }}
             {% endfor %}
-        </form>
 
         <img
                 src="https://photos-app-prod.littlehotelier.com/attachments/properties/banners/9012/standard/20180710_141615.jpg?1531354274"
@@ -38,21 +38,19 @@
             <div class='header'>
                 <!-- <h1><input type="text" placeholder="Отель Победа"></h1> -->
                 <div style="float:left">
-                    <h1>
-                        <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                    <h1>     {% csrf_token %}
                             {% for field in nameOfHotel_form %}
                             {{ field }}
                             {% endfor %}
-                        </form>
                     </h1>
                 </div>
                 <div style="float:right">
                     <h3>Выберите количество звезд</h3>
-                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                     {% csrf_token %}
                         {% for field in starsForm %}
                         {{ field }}
                         {% endfor %}
-                    </form>
+
                 </div>
                 <div class='top-right'>
                     <!-- <div class='locale_switcher'>
@@ -84,7 +82,7 @@
             <table cellspacing='0' class='no-margin rates-header'>
                 <thead class='controls'>
                 <thead class='controls'>
-                <form action="/properties/resielbalatadirect?locale=en" accept-charset="UTF-8" method="get"><input
+                <input
                         name="utf8" type="hidden" value="&#x2713;"/>
                     <input type="hidden" name="locale" id="locale" value="en"/>
                     <tr>
@@ -248,7 +246,6 @@
                         </th>
                     </tr>
 
-                </form>
 
 
                 </thead>
@@ -1051,55 +1048,51 @@
                 <div class='vcard'>
                     <div class='fn org'>
                         <strong>Информация об отеле
-                            <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                                {% csrf_token %}
                                 {% for field in nameOfHotelInfo %}
                                 {{ field }}
                                 {% endfor %}
-                            </form>
+
                         </strong>
                     </div>
                     <div class='phone'> Телефон
-                        <span class='tel'><form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}"
-                                                method="post">
-
+                        <span class='tel'>
+                             {% csrf_token %}
                             {% for field in telephoneNumberForm %}
                                 {{ field }}
                                 {% endfor %}
                             </span>
-                        </form>
+
                     </div>
                     <div class='adr'>
                         <div class='street-address'> Адрес
-                            <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                             {% csrf_token %}
                                 {% for field in addressForm %}
                                 {{ field }}
                                 {% endfor %}
-                            </form>
+
                             <br>
 
                         </div>
                         <div>
                                 <span class='locality'> местонахождение
-                                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}"
-                                          method="post">
+                                     {% csrf_token %}
                                     {% for field in localityForm %}
                                         {{ field }}
                                     {% endfor %}
-                                    </form></span><br>
+                                    </span><br>
                             <span class='region'> регион
-                                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}"
-                                          method="post">
+                                 {% csrf_token %}
                                     {% for field in regionForm %}
                                         {{ field }}
                                     {% endfor %}
-                                    </form> </span><br>
-                            <span class='postal-code'> Почтовый код <form class="form-horizontal"
-                                                                          action="{% url 'main:dataFromInputBooking' %}"
-                                                                          method="post">
+                                    </span><br>
+                            <span class='postal-code'> Почтовый код
+                                 {% csrf_token %}
                                  {% for field in postal_codeForm %}
                                         {{ field }}
                                     {% endfor %}
-                                </form></span><br>
+                                </span><br>
                         </div>
                     </div>
                     <div class='website'>
@@ -1110,11 +1103,11 @@
                 </div>
                 <div class='actions'>
                     <h3>Сслыка на карту Гугл</h3>
-                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                     {% csrf_token %}
                         {% for field in mapLinkForm %}
                         {{ field }}
                         {% endfor %}
-                    </form>
+
                     </a>
                     <!--TODO-->
                 </div>
@@ -1129,31 +1122,29 @@
                 <div class='hero'>
                     <div class='thumbs'>
                         Добавьте фото
-                        <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                         {% csrf_token %}
                             {% for field in uploadPhotoInfoForm %}
                             {{ field }}
                             {% endfor %}
-                        </form>
+
                         <br>
                     </div>
                     <div class='description'>
-                        <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                         {% csrf_token %}
                             {% for field in longDescriptionOfHotel %}
                             {{ field }}
                             {% endfor %}
-                        </form>
+
                     </div>
                     <div class='features'>
                         <h3>Удобства</h3>
                         <ol>
                             <li class='feature'>
-                                <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}"
-                                      method="post">
+                                 {% csrf_token %}
                                     {% for field in featureForm %}
                                     <br>
                                     {{ field }}
                                     {% endfor %}
-                                </form>
                             </li>
                         </ol>
                     </div>
@@ -1285,10 +1276,12 @@
                 <div class='terms_conditions' id='terms_conditions'>
                     <h2>Условия</h2>
                     <p>
-                    <form class="form-horizontal" action="{% url 'main:dataFromInputBooking' %}" method="post">
+                    {% csrf_token %}
                         {% for field in termsAndConditions %}
                         {{ field }}
                         {% endfor %}
+                        <br>
+                        <input class="form-control" type="submit" value="Следующий шаг">
                     </form>
                     </p>
                 </div>

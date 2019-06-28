@@ -21,6 +21,8 @@ def dataFromInputBooking(request):
     featureForm = FeatureForm(request.POST)
     termsAndConditions = TermsAndConditionsForm(request.POST)
 
+
+
     context = {'headerPhoto':headerPhoto, 'nameOfHotel_form':nameOfHotel_form,
                'starsForm':starsForm, 'nameOfHotelInfo':nameOfHotelInfo,
                'telephoneNumberForm':telephoneNumberForm, 'addressForm':addressForm,
@@ -30,6 +32,7 @@ def dataFromInputBooking(request):
                'featureForm':featureForm, 'termsAndConditions':termsAndConditions}
 
     return render(request, 'mainapp/booking.html', context)
+# из cleaned_data достаем данные и помещаем в файлы
 
 def dataFromInputBookARoom(request):
     firstStepDirections = FirstStepDirections(request.POST)
