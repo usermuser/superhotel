@@ -1,5 +1,5 @@
 from django import forms
-from django_starfield import Stars
+#from django_starfield import Stars
 # forms for booking.html
 
 class HeaderPhotoForm(forms.Form):
