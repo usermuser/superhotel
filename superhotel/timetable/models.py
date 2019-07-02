@@ -25,6 +25,8 @@ class Room(models.Model):
 
 class DateItem(models.Model):
     date_item = models.DateField('дата бронирования')
+    # check_in = models.DateField(verbose_name='дата заезда')
+    # check_out = models.DateField(verbose_name='дата выезда')
     room = models.ForeignKey('room', on_delete=models.CASCADE,)
     is_busy = models.BooleanField(verbose_name='занят', default=False)
 
@@ -40,3 +42,6 @@ class DateItem(models.Model):
 class Data(models.Model):
     nameOfText = models.CharField(max_length=70)
     valueOfText = models.CharField(max_length=5000)
+
+class TableTime(models.Model):
+    field = models.CharField(max_length=100)    
