@@ -22,7 +22,17 @@ def dataFromInputBooking(request):
     termsAndConditions = TermsAndConditionsForm(request.POST)
 
 
-
+    print('Перед иф в пост')
+    if request.method == 'POST':
+        print("Внутри первого иф")
+        headerPhoto = HeaderPhotoForm(request.POST)
+        print("Наполнил данными")
+        print("Перед валидацией")
+        if headerPhoto.is_valid():
+            print("Валидация")
+            print(headerPhoto.cleaned_data)
+    else:
+        headerPhoto = HeaderPhotoForm()
     context = {'headerPhoto':headerPhoto, 'nameOfHotel_form':nameOfHotel_form,
                'starsForm':starsForm, 'nameOfHotelInfo':nameOfHotelInfo,
                'telephoneNumberForm':telephoneNumberForm, 'addressForm':addressForm,

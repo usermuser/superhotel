@@ -25,6 +25,8 @@ class Room(models.Model):
 
 class DateItem(models.Model):
     date_item = models.DateField('дата бронирования')
+    # check_in = models.DateField(verbose_name='дата заезда')
+    # check_out = models.DateField(verbose_name='дата выезда')
     room = models.ForeignKey('room', on_delete=models.CASCADE,)
     is_busy = models.BooleanField(verbose_name='занят', default=False)
 
