@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    	{% block title %}{{ title|title }}{% endblock %}
+    </title>
+
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+	    <link rel="stylesheet" href="/static/fonts/font-awesome/css/font-awesome.css">
+    {% endblock %}
+
+    {% block js %}{% endblock %}
+
+</head>
+
+<body>
+    <ul>
+        {% for room in rooms%}
+            <li>{{ room.name }}</li>
+        {% endfor %}
+    </ul>
+     {% block menu %}{% endblock %}
+     {% block content %}{% endblock %}
+     {% block footer %}{% endblock %}
+
+</body>
+</html>
