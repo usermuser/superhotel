@@ -21,6 +21,17 @@
             <li>{{ room.name }}</li>
         {% endfor %}
     </ul>
+
+    <ul>
+        {% for day in days%}
+            <li> {{ day }}</li>
+        {% endfor %}
+    </ul>
+
+    <h4>  {{ today }} </h4>
+
+
+
      {% block menu %}{% endblock %}
      {% block content %}{% endblock %}
      {% block footer %}{% endblock %}

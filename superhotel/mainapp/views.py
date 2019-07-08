@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.shortcuts import get_object_or_404, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, HttpResponseRedirect, HttpResponse
 from mainapp.forms import HeaderPhotoForm, NameOfHotelForm, StarsForm, NameOfHotelInfoForm
 from mainapp.forms import TelephoneNumberForm, AddressForm, LocalityForm, RegionForm, PostalCodeForm
 from mainapp.forms import MapLinkForm, UploadPhotoInfoForm, LongDescriptionOfHotel, FeatureForm, TermsAndConditionsForm
@@ -57,3 +57,15 @@ def dataFromInputBookARoom(request):
                'secondStepDirections':secondStepDirections}
 
     return render(request, 'mainapp/book_a_room.html', context)
+
+def main(request):
+    return HttpResponse('<h2>'
+                            '<a href="timetable"> '
+                                'Link to timtable page'
+                            '</a>'
+                        '</h2>'
+                        
+                        '<a href="admin"> '
+                                'Link to admin page'
+                        '</a>'
+                        )

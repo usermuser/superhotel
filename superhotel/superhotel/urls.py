@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-# import mainapp.views as mainapp
+import mainapp.views as mainapp
 # import timetable.views as timetable
 
 
@@ -24,6 +24,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('main/', include('mainapp.urls', namespace='main')),
     path('timetable/', include('timetable.urls', namespace='timetable')),
+    path('', mainapp.main, name='main'),
+
+
 ]
 
 # from django.conf import settings

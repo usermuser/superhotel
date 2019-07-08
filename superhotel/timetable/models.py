@@ -60,13 +60,22 @@ class DateItem(models.Model):
 
 
 class Status(models.Model):
+    # def __init__(self):
+    #     super(Status, self).__init__()
+    # _status = _get_status
+
     is_busy = models.BooleanField(verbose_name='занят', default=False)
     room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='status')
-    date = models.ForeignKey(DateItem, on_delete=models.CASCADE, related_name='date_status')
+    date = models.ForeignKey(DateItem, on_delete=models.CASCADE, related_name='status')
+
+    def _get_status(self):
+        if self.is_busy:
+            return 'занят'
+        return 'свободен'
 
     class Meta:
         verbose_name = 'cтатус'
         verbose_name_plural = 'статусы'
 
     def __str__(self):
-        return str(self.is_busy)
+        return str('номер: {}, дата: {}, статус: {}'.format(self.room, self.date, self._get_status()))
