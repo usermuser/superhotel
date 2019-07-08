@@ -18,17 +18,18 @@
 <body>
     <ul>
         {% for room in rooms%}
-            <li>{{ room.name }}</li>
+            <li>{{ room.name }} and status: {{ room.status }}</li>
+
         {% endfor %}
     </ul>
 
     <ul>
-        {% for day in days%}
-            <li> {{ day }}</li>
+        {% for date in dates%}
+            <li> {{ date }}</li>
         {% endfor %}
     </ul>
 
-    <h4>  {{ today }} </h4>
+    <h4> today is  {{ today }} </h4>
 
 
 
