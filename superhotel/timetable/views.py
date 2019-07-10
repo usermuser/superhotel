@@ -20,10 +20,11 @@ def get_days(days_qty=6, date=None):
 
 def show_table(request):
     title = 'Timetable'
-    rooms = Room.objects.all()
+    rooms = Room.objects.order_by('order')
     statuses = Status.objects.all()  # test
     date = DateItem.objects.all()    # test
     print(type(date[0].date_item))   # test
+
 
     dates = get_days()
     today = datetime.date.today()

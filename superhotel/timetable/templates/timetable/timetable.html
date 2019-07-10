@@ -18,7 +18,7 @@
 <body>
     <ul>
         {% for room in rooms%}
-            <li>{{ room.name }} and status: {{ room.status }}</li>
+            <li>{{ room.name }} and status: {{ room__status.is_busy }}</li>
 
         {% endfor %}
     </ul>

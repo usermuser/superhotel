@@ -15,6 +15,7 @@ class Room(models.Model):
     image1 = models.ImageField(upload_to='rooms_img/%Y/%m/%d', blank=True)
     image2 = models.ImageField(upload_to='rooms_img/%Y/%m/%d', blank=True)
     description = models.TextField(verbose_name='описание номера', blank=True)
+    order = models.PositiveIntegerField(verbose_name='порядок') # при отображении на расписании
 
     class Meta:
         verbose_name = 'номер'
@@ -48,8 +49,10 @@ class Room(models.Model):
 
 
 class DateItem(models.Model):
-    # room = models.ForeignKey('room', on_delete=models.CASCADE,)
+    status_to_choose = [['f','свободен'], ['b','занят']]
     date_item = models.DateField('дата бронирования')
+    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='date')
+    status = models.CharField(max_length=1, choices=status_to_choose, default='f')
 
     class Meta:
         verbose_name = 'дата бронирования'
@@ -59,23 +62,22 @@ class DateItem(models.Model):
         return str(self.date_item)
 
 
-class Status(models.Model):
+# class Status(models.Model):
     # def __init__(self):
     #     super(Status, self).__init__()
     # _status = _get_status
 
-    is_busy = models.BooleanField(verbose_name='занят', default=False)
-    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='status')
-    date = models.ForeignKey(DateItem, on_delete=models.CASCADE, related_name='status')
+    # is_busy = models.BooleanField(verbose_name='занят', default=False)
+    # date = models.ForeignKey(DateItem, on_delete=models.CASCADE, related_name='status')
 
-    def _get_status(self):
-        if self.is_busy:
-            return 'занят'
-        return 'свободен'
+    # def _get_status(self):
+    #     if self.is_busy:
+    #         return 'занят'
+    #     return 'свободен'
 
-    class Meta:
-        verbose_name = 'cтатус'
-        verbose_name_plural = 'статусы'
-
-    def __str__(self):
-        return str('номер: {}, дата: {}, статус: {}'.format(self.room, self.date, self._get_status()))
+    # class Meta:
+    #     verbose_name = 'cтатус'
+    #     verbose_name_plural = 'статусы'
+    #
+    # def __str__(self):
+    #     return str('номер: {}, дата: {}, статус: {}'.format(self.room, self.date, self._get_status()))
