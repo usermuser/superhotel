@@ -25,11 +25,15 @@
 
     <ul>
         {% for date in dates%}
-            <li> {{ date }}</li>
+            <li> date: {{ date }}</li>
         {% endfor %}
     </ul>
 
     <h4> today is  {{ today }} </h4>
+
+    {% for status in statuses %}
+        <p>room: {{ status.room }}, date: {{ status.date }}</p>
+    {% endfor %}
 
 
 

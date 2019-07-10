@@ -33,6 +33,7 @@ def show_table(request):
         'rooms': rooms,
         'dates': dates,
         'today': today,
+        'statuses': statuses,
     }
 
     return render(request, 'timetable/timetable.html', ctx)
