@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .models import Room, DateItem, Status
+from .models import Room, DateItem #, Status
 
 import datetime
 
-def get_days(days_qty=6, date=None):
+def get_days(days_qty=2, date=None):
     one_day = datetime.timedelta(1) # we will add one day in cycle
     result = []
 
@@ -15,26 +15,29 @@ def get_days(days_qty=6, date=None):
         date+=one_day
         result.append(str(date))
 
-    return result
+    return result   # ['2019-07-11', '2019-07-12', '2019-07-13']
+
+
+# print(get_days(days_qty=1))
+
+all_dates = DateItem.objects.all().order_by('date_item')
+all_rooms = Room.objects.order_by('order')
+
+for room in all_rooms:
+    room_dates = all_dates.filter(room_id=room.id)
+    print(room_dates)
 
 
 def show_table(request):
     title = 'Timetable'
     rooms = Room.objects.order_by('order')
-    statuses = Status.objects.all()  # test
-    date = DateItem.objects.all()    # test
-    print(type(date[0].date_item))   # test
+    dates = DateItem.objects.all().order_by('date_item')
 
-
-    dates = get_days()
-    today = datetime.date.today()
 
     ctx = {
         'title': title,
         'rooms': rooms,
         'dates': dates,
-        'today': today,
-        'statuses': statuses,
     }
 
     return render(request, 'timetable/timetable.html', ctx)

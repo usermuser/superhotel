@@ -15,7 +15,8 @@ class Room(models.Model):
     image1 = models.ImageField(upload_to='rooms_img/%Y/%m/%d', blank=True)
     image2 = models.ImageField(upload_to='rooms_img/%Y/%m/%d', blank=True)
     description = models.TextField(verbose_name='описание номера', blank=True)
-    order = models.PositiveIntegerField(verbose_name='порядок') # при отображении на расписании
+    order = models.PositiveIntegerField(verbose_name='порядок', blank=True, null=True) # при отображении на расписании
+    # TODO: add filed 'available' to be able to hide some rooms for some reason
 
     class Meta:
         verbose_name = 'номер'
@@ -49,8 +50,8 @@ class Room(models.Model):
 
 
 class DateItem(models.Model):
-    status_to_choose = [['f','свободен'], ['b','занят']]
-    date_item = models.DateField('дата бронирования')
+    status_to_choose = [['f','свободен'], ['b','занят'], ['e', 'empty']]
+    date_item = models.DateField('дата бронирования') # TODO make this field unique to avoid doubles
     room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='date')
     status = models.CharField(max_length=1, choices=status_to_choose, default='f')
 

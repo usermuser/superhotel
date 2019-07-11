@@ -16,24 +16,17 @@
 </head>
 
 <body>
-    <ul>
-        {% for room in rooms%}
-            <li>{{ room.name }} and status: {{ room__status.is_busy }}</li>
 
-        {% endfor %}
-    </ul>
 
     <ul>
-        {% for date in dates%}
-            <li> date: {{ date }}</li>
+        {% for room in rooms %}
+            {% for date in dates%}
+                {% if date.room.order == room.order %}
+                    <li> {{ date.room.name }}: date: {{ date }} is {{ date.status }}</li>
+                {% endif %}
+            {% endfor %}
         {% endfor %}
     </ul>
-
-    <h4> today is  {{ today }} </h4>
-
-    {% for status in statuses %}
-        <p>room: {{ status.room }}, date: {{ status.date }}</p>
-    {% endfor %}
 
 
 
