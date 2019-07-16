@@ -17,14 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 import mainapp.views as mainapp
-# import timetable.views as timetable
+import timetable.views as timetable
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('main/', include('mainapp.urls', namespace='main')),
     path('timetable/', include('timetable.urls', namespace='timetable')),
-    path('', mainapp.main, name='main'),
+    path('', timetable.show_week, name='show_week'),
 
 
 ]
