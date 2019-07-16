@@ -85,7 +85,7 @@
                             <th scope="row">{{ room.name }}</th>
 
                             {% for date in dates %}
-                                <td>{{ date.status }}</td>
+                                <td> {{ date.get_status_display }}</td>
                             {% endfor %}
 
                         </tr>
