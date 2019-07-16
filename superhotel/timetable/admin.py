@@ -22,8 +22,9 @@ class DateItemAdmin(admin.ModelAdmin):
 #     list_display = ('is_busy', 'room', 'date')
 
 admin.site.register(Room)
-# admin.site.register(DateItem, DateItemAdmin)
+# admin.site.register(DateItem)
 admin.site.register(DateItem, DateItemAdmin)
+
 #admin.site.register(Status)
 
 

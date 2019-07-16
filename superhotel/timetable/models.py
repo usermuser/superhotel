@@ -8,16 +8,16 @@ from django.db import models
 class Room(models.Model):
     name = models.CharField(verbose_name='имя', max_length=55, unique=True)
     price = models.PositiveIntegerField(verbose_name='Цена')
-    # adults = models.PositiveIntegerField(verbose_name='Кол-во взрослых', default=0)
-    # kids = models.PositiveIntegerField(verbose_name='Кол-во детей', default=0)
-    # infants = models.PositiveIntegerField(verbose_name='Кол-во младенцев', default=0)
-    # extraPerson = models.PositiveIntegerField(verbose_name='Цена за доп. человека', default=0)
-    image1 = models.ImageField(upload_to='rooms_img/%Y/%m/%d', blank=True)
-    image2 = models.ImageField(upload_to='rooms_img/%Y/%m/%d', blank=True)
+#     # adults = models.PositiveIntegerField(verbose_name='Кол-во взрослых', default=0)
+#     # kids = models.PositiveIntegerField(verbose_name='Кол-во детей', default=0)
+#     # infants = models.PositiveIntegerField(verbose_name='Кол-во младенцев', default=0)
+#     # extraPerson = models.PositiveIntegerField(verbose_name='Цена за доп. человека', default=0)
+#     image1 = models.ImageField(upload_to='rooms_img/%Y/%m/%d', blank=True)
+#     image2 = models.ImageField(upload_to='rooms_img/%Y/%m/%d', blank=True)
     description = models.TextField(verbose_name='описание номера', blank=True)
     order = models.PositiveIntegerField(verbose_name='порядок', blank=True, null=True) # при отображении на расписании
-    # TODO: add filed 'available' to be able to hide some rooms for some reason
-
+#     # TODO: add field 'available' to be able to hide some rooms
+#
     class Meta:
         verbose_name = 'номер'
         verbose_name_plural = 'номера'
@@ -51,9 +51,11 @@ class Room(models.Model):
 
 class DateItem(models.Model):
     status_to_choose = [['f','свободен'], ['b','занят'], ['e', 'empty']]
-    date_item = models.DateField('дата бронирования') # TODO make this field unique to avoid doubles
-    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='date')
-    status = models.CharField(max_length=1, choices=status_to_choose, default='f')
+    date_item = models.DateField('дата бронирования')  # TODO make this field unique to avoid doubles
+    room = models.ForeignKey(Room,
+                             on_delete=models.CASCADE,
+                             related_name='date')  # limit_choices_to={'available': True}
+    status = models.CharField(max_length=1, choices=status_to_choose, default='e')
 
     class Meta:
         verbose_name = 'дата бронирования'
