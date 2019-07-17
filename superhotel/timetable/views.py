@@ -46,7 +46,7 @@ def show_week(request, start_date=None):
     rooms = Room.objects.order_by('order')
     all_dates = DateItem.objects.all()
     dates = all_dates.order_by('date_item').filter(date_item__gte=start_date)[:3]
-    distinct_dates = all_dates.distinct('room_id')
+    distinct_dates = all_dates.order_by().values('date_item').distinct()
     print(distinct_dates)
 
     ctx = {
