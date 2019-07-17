@@ -85,10 +85,10 @@
                             <th scope="row">{{ room.name }}</th>
 
                             {% for date in dates %}
+
                                 {% if date.room.id == room.id %}
                                     <td> {{ date.get_status_display }} - </td>
                                 {% endif %}
-
 
                             {% endfor %}
 
