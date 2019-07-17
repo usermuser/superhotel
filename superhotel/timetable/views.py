@@ -45,9 +45,9 @@ def show_week(request, start_date=None):
 
     rooms = Room.objects.order_by('order')
     all_dates = DateItem.objects.all()
-    dates = all_dates.order_by('date_item').filter(date_item__gte=start_date)[:3]
-    distinct_dates = all_dates.order_by().values('date_item').distinct()
-    print(distinct_dates)
+    dates = all_dates.order_by('date_item').filter(date_item__gte=start_date)
+    distinct_dates = all_dates.order_by().values('date_item').distinct()[:3]
+    print(dates)
 
     ctx = {
         'title': title,
@@ -57,5 +57,15 @@ def show_week(request, start_date=None):
     }
 
     return render(request, 'timetable/timetable.html', ctx)
+
+
+def query_as_dict(request, start_date=None):
+    title = 'dict'
+    if start_date is None:
+        start_date = datetime.date.today()
+    else:
+        start_date=start_date
+
+
 
 

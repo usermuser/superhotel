@@ -87,7 +87,8 @@
                             {% for date in dates %}
 
                                 {% if date.room.id == room.id %}
-                                    <td> {{ date.get_status_display }} - </td>
+                                    <td> {{ date.get_status_display }}</td>
+
                                 {% endif %}
 
                             {% endfor %}
